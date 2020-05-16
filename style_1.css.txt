@@ -1,0 +1,114 @@
+body { 
+background-image:  url("background12.png");
+background-size: 110%
+}
+
+h1 {
+font-family: verdana;
+color: #446F90;
+}
+
+div { }
+
+.picture { 
+width: 340; 
+height: 320;
+float: left;
+padding: 10px 5px 30px 40px;
+}
+
+.background {
+background-color: rgba(245, 245, 245, .8);
+width: 800;
+height: 650;
+border-radius: 50px 50px 50px 50px;
+position: absolute;
+top: 8%;
+left: 22%;
+border-style: solid;
+border-color:  #76B07C
+}
+
+.backgrounda {
+background-color: rgba(245, 245, 245, .8);
+width: 800;
+height: 1360;
+border-radius: 50px 50px 50px 50px;
+position: absolute;
+top: 8%;
+left: 22%;
+border-style: solid;
+border-color:  #76B07C
+}
+
+.backgroundb {
+background-color: rgba(245, 245, 245, .8);
+width: 1000;
+height: 1200;
+border-radius: 50px 50px 50px 50px;
+position: absolute;
+top: 8%;
+left: 18%;
+border-style: solid;
+border-color:  #76B07C
+}
+
+.backgroundc {
+background-color: rgba(245, 245, 245, .8);
+width: 800;
+height: 560;
+border-radius: 50px 50px 50px 50px;
+position: absolute;
+top: 8%;
+left: 22%;
+border-style: solid;
+border-color:  #76B07C
+}
+
+.backgroundd {
+background-color: rgba(245, 245, 245, .8);
+width: 1000;
+height: 2630;
+border-radius: 50px 50px 50px 50px;
+position: absolute;
+top: 8%;
+left: 18%;
+border-style: solid;
+border-color:  #76B07C
+}
+
+.intro {
+font-family: verdana;
+color: #213E55;
+}
+
+.about { 
+font-family: verdana;
+color: #213E55;
+clear: both;
+width: 710;
+margin: auto;
+}
+
+.abouta { 
+font-family: verdana;
+color: #213E55;
+clear: both;
+width: 960;
+margin: auto;
+}
+
+
+
+
+td { 
+font-family: verdana;
+color: #213E55;
+border-color:  #76B07C;
+border-style: solid;
+} 
+
+a { 
+font-family: verdana;
+color: #213E55;
+} 

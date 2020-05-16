@@ -1,0 +1,1915 @@
+﻿
+<title> Math 818 - Table of Contents
+</title>
+ 
+<body bgcolor="dfbfaf" link="0F0FFF"
+alink="FF0000" vlink="FF0000">
+
+<DIV ALIGN="CENTER"><FONT SIZE="+1"><b>
+Math 818 - Table of contents
+</b></FONT></DIV> 
+
+<P>
+
+
+
+<B>Chapter 5: Introduction to rings  </B>
+
+<p>
+
+
+<ul>
+<li><i>Section G: Further interactions between quotients,
+products, and isomorphism invariants </i> 
+
+<p>
+
+ <ul>
+ <li> Building integral domains and fields
+  <ul>
+  <li> Prop 5.126: (1) Let R be a ring with 1 &ne; 0 and let I be an ideal of R.
+  I = R if and only if I contains a unit. 
+  (2) If R is a field and h: R &rarr; S is a ring homomorphism,
+    then either h is the zero homomorphism or h is injective.
+  <li> Def 5.129:  An ideal I in a ring R is a <b>proper ideal</b> if I &ne; R.
+  <li> Def 5.130:  An ideal M in a ring R is a <b>maximal ideal</b> if 
+  M &ne; R and the only ideals of R containing M are M and R.
+  <li> Def 5.131:  Let R be a commutative ring with 1 &ne; 0.  An ideal
+  P of R is a <b>prime ideal</b> if P &ne; R and whenever a,b &isin; R and
+  ab &isin; p then either a &isin; P or b &isin; P.
+  <li> Thm 5.133:  Let R be a commutative ring with 1 &ne; 0, and let I
+  be an ideal of R.  
+  <br>(a) The ideal I is maximal if and only if R/I is a field.
+  <br>(b) The ideal I is prime if and only if R/I is an integral domain.
+  <br>(c) Every maximal ideal of R is prime.
+  <li> Examples
+     <ul>
+     <li> Ideals in <b>Z</b> and <b>Z</b>[x]
+     <li> Def 5.135: Let R be a commutative ring with 1 &ne; 0 and let
+     G be a group.  The <b>augmentation ideal</b> in the group ring RG
+     is the kernel of the <b>augmentation homomorphism</b> h: RG &rarr; R
+     defined by h(&sum;<sub>g &isin; G</sub> r<sub>g</sub>g) = 
+    &sum;<sub>g &isin; G</sub> r<sub>g</sub> for all
+    &sum;<sub>g &isin; G</sub> r<sub>g</sub>g &isin; RG.
+    <li> Ideals in (<b>Z</b>/2<b>Z</b>)C_3 &cong; <b>Z</b>[x]/(2,x<sup>3</sup>).
+    <li> Thm 5.136:  (<b>Binomial Theorem</b>):
+  Let R be a commutative ring with 1 &ne; 0.  Then
+(r+s)<sup>n</sup> = &sum;<sub>i=0</sub><sup>n</sup> b(n,i)r<sup>i</sup>s<sup>n-i</sup>
+for all r,s &isin; R and n &ge; 0, where
+b(n,i) is the sum 1 + 1 + &middot;&middot;&middot; + 1 of 
+(n!)/(i!)((n-i)!) copies of 1 in R.
+ 
+    <li> Def 5.136b: Let R be a commutative ring with 1 &ne; 0 and let I
+be an ideal of I.  The
+ <b>radical</b> of the ideal I in R is the
+set <b>rad(I)</b> = {r &isin; R | r<sup>n</sup> &isin; I for some n &ge; 1}.
+The ideal I is a <b>radical ideal</b> if rad(I) = I.
+The <b>nilradical</b> of the ring R is the ideal rad(0); that is,
+set of nilpotent elements of R, denoted <b>N(R)</b>.
+<li> The radical of an ideal is an ideal.  Every prime ideal of R is radical.
+   </ul>
+  <li> Thm 5.137:  If R is a ring with 1 &ne; 0 and I is a proper ideal
+  of R, then there is a maximal ideal of R containing I.
+  <li> Cor 5.138:  If R is a commutative ring with 1 &ne; 0 then
+  there is a quotient of R that is a field.
+  <li> Def 5.140:  A <b>partially ordered set</b>, or </b>poset</b>, is 
+   a set A with a relation &le; on A satisfying the following for all
+   x,y,z &isin; A:  (1) x &le; x.
+   (2) If x &le; y and y &le; x then x = y.
+   (3) If x &le; y and y &le; z then x &le; z.
+  <li> Axiom 5.141:  (<b>Zorn's Lemma</b>)  If A is a nonempty poset
+   satisfying the property that whenever a subset B &sube; A 
+    is totally ordered (that is,
+    for all b,b' &isin; B either b &le; b' or b' &le; b) then there is
+   an upper bound for B in A
+   (that is, an element u_B &isin; A such that b &le; u_B for all b &isin; B),
+   then there is a maximal element m &isin; A (that is, there is
+   an m &isin; A such that whenever x &isin; A and m &le; x then m = x).
+  <li> Def 5.143:  Let R be a commutative ring with 1 &ne; 0 and let
+   S be a multiplicatively closed subset of nonzero divisors of R such that
+   1 &isin; S and 0 &#x2209; S.  The <b>ring of fractions S<sup>-1</sup>R</b>
+   [also known as the <b>localization of R by S</b>]
+   is defined by:  Let X = {r/s | r &isin; R, s &isin; S}, and let ~ be
+   the equivalence relation on X defined by r/s ~ r'/s' if and only if
+   rs' = r's.  Then S<sup>-1</sup>R is the set X/~ of equivalence classes,
+   with addition r/s + r'/s' = (rs'+r's)/(ss') and multiplication
+   (r/s)(r'/s') = (rr')/(ss') for all r/s,r'/s' &isin; S<sup>-1</sup>R.
+  <li> Prop 5.145:  If R is a commutative ring with 1 &ne; 0 and
+   S is a multiplicatively closed subset of nonzero divisors of R such that
+   1 &isin; S and 0 &#x2209; S, then S<sup>-1</sup>R is a commutative
+   ring with 1 &ne; 0, and the function i: R &rarr; S<sup>-1</sup>R
+   defined by i(r) = r/1 for all r &isin; R is an embedding.
+  <li> Def 5.147:  Let R be an integral domain. The <b>field of fractions</b>
+   of R is the ring of fractions <b>Frac(R)</b> = (R-{0})<sup>-1</sup>R.
+  <li> Thm 5.148:  Let R be an integral domain. <br> (1) The field of fractions Frac(R)
+   of R is a field.  <br> (2) R is (isomorphic to) a subring of the field Frac(R).
+   <br> (3) If F' is any field containing R, then there
+   is an embedding h: Frac(R) &rarr; F' given by h(r/s) = rs<sup>-1</sup> for
+   all r &isin; R and s &isin; R-{0}.
+  <li> Examples
+    <ul>
+    <li> Def 5.150:  Let R be a commutative ring with 1 &ne; 0,
+    and let r &isin; R be a nonzerodivisor. The ring <b>R[1/r]</b> is the ring
+     S<sup>-1</sup>R where S = {r<sup>n</sup> | n &ge; 0}. 
+    <li> Let R be a commutative ring with 1 &ne; 0, 
+    let P be a prime ideal of R, and let S = R - P.  
+    </ul>
+  <li> Thm 5.152:  (<b>Homomorphism Building Theorem (HBT) for 
+    Rings of Fractions</b>):  Let R and T be commutative rings with 1 &ne; 0, let
+   S be a multiplicatively closed subset of nonzero divisors of R such that
+   1 &isin; S and 0 &#x2209; S, and let j: R &rarr; T be a ring homomorphism
+   satisfying the property that j(s) is a unit of T for all s &isin; S.  
+   Then there is a 
+   unique homomorphism h: S<sup>-1</sup>R &rarr; T such that h(r/1) = j(r)
+   For all r &isin; R.  Moreover, h(r/s) = j(r)j(s)<sup>-1</sup> for all
+   r/s &isin; S<sup>-1</sup>R.
+  <li> Thm 5.154:  Let R be a commutative ring with  1 &ne; 0, and let
+    G be a group.  Then the group ring RG is a quotient of a ring of 
+    noncommutative polynomials with coefficients in R.  Moreover, if G is
+    abelian, then RG is a quotient of a ring of 
+    commutative polynomials with coefficients in R.
+  </ul>
+ <li> The Chinese Remainder Theorem
+  <ul>
+  <li> Def 5.156:  Let R be a commutative ring with 1 &ne; 0.  Two ideals I,J of R
+   are <b>comaximal</b> if I + J = R.
+  <li> Thm 5.157: (<b>Chinese Remainder Theorem</b>):  Let R be a commutative
+  ring with 1 &ne; 0 and let I<sub>1</sub>,...,I<sub>n</sub> be ideals of R.
+  <br>(1) The function h: R &rarr; (R/I<sub>1</sub>) &times; &middot;&middot;&middot; &times; 
+  (R/I<sub>n</sub>) defined by h(r) = (r+I<sub>1</sub>,...,r+I<sub>n</sub>)
+  for all r &isin; R is a ring homomorphism with kernel 
+  I<sub>1</sub> &cap; &middot;&middot;&middot; &cap; I<sub>n</sub>.
+  <br>(2) If I<sub>i</sub> + I<sub>j</sub> = R for all i &ne; j, then
+  I<sub>1</sub> &cap; &middot;&middot;&middot; &cap; I<sub>n</sub> = 
+  I<sub>1</sub> &middot;&middot;&middot; I<sub>n</sub>, h is onto, and
+  R/(I<sub>1</sub> &middot;&middot;&middot; I<sub>n</sub>) &cong;
+  (R/I<sub>1</sub>) &times; &middot;&middot;&middot; &times; 
+  (R/I<sub>n</sub>).
+  <li> Examples
+  </ul>
+ </ul>
+</ul>
+
+<p>
+
+
+<B>Chapter 6: "Nice" integral domains and polynomial rings </B>
+
+<p>
+
+
+<ul>
+<li><i>Section A: Euclidean domains </i> 
+
+ <ul>
+ <li>  Def 6.1:  Let R be a commutative ring and let a,b &isin; R.
+  <br>(1) The element b is a <b>divisor</b> of a, and a is a <b>multiple</b> of b,
+    if there is an element x &isin; R with a = bx.
+  <br>(2) A <b>greatest common divisor</b>, or <b>gcd</b>, of a and b is an element d &isin; R
+   satisfying d | a, d | b, and whenever [d' | a and d' | b] then d' | d.
+   <!-- this is denoted <b>d &isin; gcd(a,b)</b> or <b>d=gcd(a,c)</b>.-->
+  <li> Def 6.2: Let R be a commutative ring with 1 &ne; 0    
+  and let a,b &isin; R with a,b &ne; 0.
+  A <b>least common multiple</b>, or <b>lcm</b>, of a and b is an element m &isin; R
+   satisfying a | m, b | m, and whenever [a | m' and b | m'] then m | m'.
+  <li> Rmk: If a and b have a lcm m, then the ideal (m)
+   is the unique largest principal ideal contained in (a) &cap; (b).
+
+ <li> Examples:  
+  <ul>
+  <li> R = <b>Z</b>; every pair of nonzero elements has 2 gcd's. 
+  <li> R = <b>Z</b>[&radic;(-3)] is an integral domain but a = 4, b = 2 + 2&radic;(-3)
+   have no gcd.
+  </ul>
+  <li> Rmk: 3 views on gcd's in <b>Z</b>:  Euclidean algorithm (&#8669; Euclidean domains),
+   linear combination d = ra + sb (&#8669; PID), product of common prime divisors
+   (&#8669; UFD).
+ <li> Def 6.3:  A <b>strict partial order</b> &lt; on a set A is an irreflexive (a &#8814; a
+  for all a &isin; A),
+  asymmetric (a &lt; b implies b &#8814; a for all a,b &isin; A), transitive relation on A. 
+  A strict partial order is <b>well-founded</b> if there is no infinite descending
+  chain a<sub>0</sub> &gt; a<sub>1</sub> &gt; a<sub>2</sub> &gt; &middot;&middot;&middot;. 
+ <li> Examples
+   <ul>
+   <li> A = <b>N</b><sub>0</sub>
+   <li> A = any set, f: A &rarr; <b>N</b><sub>0</sub>, a &lt; b iff f(a) &lt; f(b).
+   <li> B = any finite  set, A = B<sup>*</sup>, &lt; is "shortlex order"
+   <li> B = {x<sub>1</sub>,...,x<sub>k</sub>}, 
+    A =  {x<sub>1</sub><sup>n<sub>1</sub></sup>&middot;&middot;&middot;x<sub>k</sub><sup>n<sub>k</sub></sup>
+    | n<sub>1</sub>,...,n<sub>k</sub> &isin; <b>N</b><sub>0</sub>}, &lt; is "degree lex order"
+   </ul>
+ <li> Rmk: In order to prove that an algorithm terminates, show that a
+  well-founded strict partial order decreases with each step of the algorithm.
+ <li> Def 6.5:  A <b>Euclidean domain</b>, or <b>ED</b>, is an integral domain R together 
+  with a function N: R &rarr; <b>N</b><sub>0</sub> such that
+  for all a,b &isin; R with b &ne; 0 there exist elements q,r &isin; R
+  satisfying a = qb + r with either r = 0 or N(r) &lt; N(b).
+ <li> Lemma 6.6:  "Euclidean domain" is a ring isomorphism invariant.
+ <li> Thm 6.7: Let R be a Euclidean domain.  Then for all 
+  a,b &isin; R with b &ne; 0, there is  at least one gcd of a and b.
+   Moreover, if there is an algorithm that upon input of any a',b' &isin; R with b' &ne; 0
+  outputs a pair q,r &isin; R with a' = qb' + r, then there is an algorithm that
+   upon input of a,b &isin; R with b &ne; 0 outputs a gcd of a and b.
+  <li> Examples:
+    <ul>
+    <li> R = <b>Z</b>, R = S<sup>-1</sup><b>Z</b>
+    <li> R = any field
+  <li> Prop 6.10:  Let R be an integral domain.
+    <br>(1) R[x] is also an integral domain.  
+    <br>(2) For all p,q &isin; R[x] - {0}, degree(pq) = degree(p) + degree(q).
+    <br>(3) The units of R[x] are the units of R.
+    <li> Thm 6.12:  If F is a field, then F[x] is a Euclidean domain.
+    </ul>
+  
+
+
+ </ul>
+
+<li><i>Section B: Principal ideal domains </i> 
+
+ <ul>
+ <li>  Def 6.15:  A <b>principal ideal domain</b>, or <b>PID</b>, is an 
+  integral domain for which every ideal is principal.
+ <li>  Lemma 6.16:  "PID" is an isomorphism invariant.
+ <li>  Lemma 6.17:  If R is a PID and a,b are nonzero elements of R,
+   then for any d &isin; R with (d) = (a,b), d is a gcd of a and b.
+ <li> Examples/Interactions between isomorphism invariants and constructions
+   <ul>
+   <li>  Thm 6.20:  Every Euclidean domain is a PID.
+   <li>  <b>Z</b>[(1 - &radic;(-19))/2] is a PID that is not a
+                 Euclidean domain.
+   <li>  Cor 6.22: If F is a field, then F[x] is a PID.
+   <li> Lemma 6.23:  (<b>Z</b>/2<b>Z</b>)[x,y] is not a PID.
+<!--   <li>  Lemma 6.22: <b>Z</b>[x] is not a PID.  -->
+<!--   <li> Thm 6.25: Let R be a commutative ring with 1 &ne; 0,
+       let I be an ideal of R, and let (I) be the ideal of
+        R[x] generated by I.  Then R[x]/(I) &cong; (R/I)[x].--> 
+   <li> Lemma 6.26: (1) <b>Z</b> is a PID with quotient <b>Z</b>/6<b>Z</b>
+   that is not an integral domain.  
+    (2) (<b>Z</b>/2<b>Z</b>)[x] is a PID, and is a quotient of
+     a non-PID <b>Z</b>[x].  
+   </ul>
+ <li>  Def 6.30:  Let R be an integral domain.  
+  <br>(1) An element p &isin; R is a <b>prime element</b> if p &ne; 0 and the ideal  
+    (p) is a prime ideal.
+  <br>(2) An element r &isin; R is <b>irreducible</b> if  r is not a unit,
+   and whenever r = xy with x,y &isin; R then either x or y is a unit.
+  <br>(3) Two elements r,s &isin; R are <b>associates</b> if there is a 
+    unit u of R such that s = ur.
+  <li> Lemma 6.31:  Let R be an integral domain and let r,s &isin; R.
+   (1)  The element r is a prime element
+    if and only if whenever xy=rz for some x,y,z &isin; R then either
+    x or y is a multiple of p.
+   (2) If r is irreducible, then r &ne; 0.  
+   (3) The elements r and s are associates if and only if (r) = (s).  
+  <li> Cor 6.32:  If R is a PID and a,b &isin; R, then the gcd of a and b 
+  is unique up to multiplication by a unit.
+  <li> Thm 6.34:  Let R be an integral domain and let r &isin; R.  (1) If r is a prime element,
+   then r is irreducible.  (2)  If R is a PID and r is irreducible, then r is a prime element.
+  <li> Cor 6.35:  If R is a PID, then every nonzero prime ideal of R is maximal.
+  <li> Cor 6.36:  Let F be a field and let p &isin; F[x].  
+  Then F[x]/(p) is a field if and only if p is irreducible.
+ 
+ </ul>
+
+<li><i>Section C: Unique factorization domains </i> 
+
+ <ul>
+  <li>  Def 6.40:  A <b>unique factorization domain</b>, or <b>UFD</b>,
+   is an integral domain for which every nonzero, non-unit element r &isin; R
+   can be written as a finite product
+   r = p<sub>1</sub> &middot;&middot;&middot; p<sub>m</sub> with 
+   m &ge; 1 and each p<sub>i</sub> irreducible, and moreover
+   whenever r = p<sub>1</sub> &middot;&middot;&middot; p<sub>m</sub>
+   = q<sub>1</sub> &middot;&middot;&middot; q<sub>n</sub> with n &ge; 1
+   and each q<sub>j</sub> irreducible, then m = n and there is a permutation
+   &sigma; &isin; S<sub>m</sub> such that for all i,
+   p<sub>i</sub> and q<sub>&sigma;(i)</sub> are associates.
+ <li>  Lemma 6.41:  "UFD" is an isomorphism invariant.
+ <li>  Prop 6.43:  If R is a UFD and a,b &isin; R, then there is a gcd of a and b in R.
+ <li>  Lemma 6.44:  Let R be a  UFD and let r &isin; R.  Then r is prime if and only if
+   r is irreducible.
+ <li>  Def 6.46:  Let R be a commutative ring with 1 &ne; 0.
+  Let &lt; be the strict partial order on the set A of ideals of R
+   defined by I &lt; J if and only if I &#8843; J. The ring R
+   is called <b>Noetherian</b>, or satisfies the <b>ascending chain condition (acc)</b>,
+   if there is no infinite ascending chain
+   of ideals I<sub>1</sub> &#8842; I<sub>2</sub> &#8842; I<sub>3</sub> &#8842; ...;
+   that is, if the strict partial order is well-founded.
+  <li> Lemma 6.47:  Let R be a commutative ring with 1 &ne; 0.  Then
+    R is Noetherian if and only if every ideal of R is finitely generated.
+  <li> Lemma 6.49:  If R is a Noetherian integral domain, then every nonzero
+    nonunit element factors into a finite product of irreducible elements.
+  <li> Thm 6.51: If R is a Noetherian integral domain satisfying
+    that every irreducible element is a prime element, then R is a UFD.
+ <li>  Cor 6.52:  Every PID is a UFD.
+ <li> Examples
+    <ul> 
+    <li> Cor 6.54:  Every Euclidean domain is a UFD.
+    <li> Cor 6.55: (Fundamental Theorem of Arithmetic): <b>Z</b> is a UFD. 
+    <li> Cor 6.56:  If F is a field then F[x] is a UFD.
+    <li> Rmk 6.58:  (<b>Z</b>/2<b>Z</b>)[x,y] is a UFD that is not a PID.  
+    </ul>
+  <li> Rmk 6.60:  {fields} &#8842; {ED's}  &#8842; {PID's}  &#8842; {UFD's}  &#8842; 
+    {GCD domains}  &#8842; {integral domains}  &#8842; {commutative rings}
+     &#8842; {rings}
+  </ul>
+
+
+<li><i>Section D: Polynomial rings, irreducibles, and UFD's </i> 
+
+ <ul>
+ <li>  Rmk:  Common tools for proofs involving a polynomial ring R[x] over
+  an integral domain R:  (1)  Induction on polynomial degree.  (2) Consider
+  the ring R[x] as a subring of F[x], where F is the field of fractions of R.
+ <li>  Rmk:  Common tool for proofs involving UFD's:  Induction on the number
+   of irreducible factors in an irreducible factorization. 
+ <li>  Thm 6.65: (<b>Gauss' Lemma</b>):  Let R be a UFD with field of
+ fractions F and let f &isin; R[x]. [Using Thm 5.148(2), view R as a subring of F.]
+ If f is irreducible in R[x], then f is irreducible in F[x].  
+ <li> Prop 6.67:  Let R be a UFD with field of fractions F, and let f &isin; R[x].
+  Suppose that the coefficients of f have no common irreducible factor (that is,
+  1 is a gcd for the coefficients).  Then f is irreducible in R[x] if and only if
+  f is irreducible in F[x].
+ <li> Thm 6.69:  Let R be a ring.  Then R is a UFD if and only if
+   R[x] is a UFD.
+ <li> Cor 6.70: If R is a UFD, then R[x<sub>1</sub>,...,x<sub>n</sub>] is a
+   UFD for all n &ge; 1.
+ <li> Roots:
+  <ul>
+  <li> Prop 6.74:  Let F be a field and let p &isin; F[x].  
+  Then x-a divides p if and only if p(a) = 0.
+  <li> Def 6.75:  Let F be a field, p &isin; F[x], and a &isin; F.  The 
+    <b>multiplicity of a as a root of p</b> is the greatest integer n
+    such that (x-a)<sup>n</sup> divides p.
+  <li> Prop 6.77:  Let F be a field and p &isin; F[x].  Then p has at
+    most degree(p) roots, counted with multiplicity.
+  <li> Thm 6.78:  If G is a finite subgroup of the multiplicative
+   group of a field, then G is cyclic.
+
+  <li> Def 6.80:  Let R be a ring and let p &isin; R[x].
+   If p = a<sub>n</sub>x<sup>n</sup> + &middot;&middot;&middot; + a<sub>0</sub>
+   with each a<sub>i</sub> &isin; R and a<sub>n</sub> &ne; 0,
+   then a<sub>n</sub> is the <b>leading coefficient</b> of p and
+   a<sub>0</sub> is the <b>constant term</b> of p.
+  <li> Prop 6.81: (<b>Rational root test</b>):  
+   Let R be a UFD, let p &isin; R[x], and let F be the
+   field of fractions of R.  If r/s &isin; F is a root of p in F[x]
+   and 1 is a gcd of r,s, then r divides the constant coefficient of p
+   and s divides the leading coefficient of p.
+  </ul>
+ <li> Checking irreducibility:
+  <ul>
+  <li> Prop 6.83:  Let F be a field and let p &isin; F[x] be a polynomial of degree
+   2 or 3.  Then p has no root in F if and only if p is irreducible in F[x].
+  <li> Prop 6.84:  Let R be an integral domain  and let p &isin; R[x]
+   be a monic polynomial of positive degree.
+   If there is a proper ideal I of R such that
+   the image of p in (R/I)[x] cannot be factored as a product of polynomials
+   of positive degree, then p is irreducible in R[x].
+  <li> Thm 6.85:  (<b>Eisenstein's criterion</b>):  Let R be an integral
+   domain and let p &isin; R[x] be a monic polynomial of positive degree.
+   If there is a prime ideal Q of R containing all of the coefficients
+   of p except the leading coefficient, and if the constant term of p
+   is <i>not</i> in Q<sup>2</sup>, then p is irreducible in R[x].
+  <li> Examples
+  <li> Rmk 6.88:  Strategy/flow chart  for proving irreducibility of a nonzero nonunit
+polynomial p in F[x] (where F is a field):
+(Step a) Let p' = up, where u is the multiplicative inverse of
+ the leading coefficient of p.  (Then p' is monic and degree(p') &gt; 0.)
+Find a UFD R such that F = Frac(R) and p' &isin; R[x]
+(possibly R = F).
+(Step b) Split into cases depending on degree(p'):
+(Case b1) Suppose degree(p') &le; 3. Find a maximal ideal M of R (possibly 0)
+such that for all the divisors d of the constant term of p', d is not a root of
+p' in (R/M)[x] (and hence the rational root test Prop 6.81 says that p' has no roots
+in (R/M)[x]).
+(Case b2) Suppose that degree(p') &gt; 3.
+Either (Step b2i) find a proper ideal I of R (possibly 0) such that the image of
+p' is not a
+product of 2 polynomials of positive degree in (R/I)[x], or
+(Step b2ii) find a prime ideal Q of R such that the nonleading coefficients
+of p' are in Q and the constant term is not in Q<sup>2</sup>.
+  </ul>
+  </ul>
+
+
+<li><i>Section E: The word and ideal membership problems, rewriting systems, and Groebner bases </i> 
+
+ <ul>
+ <li>  Rmk:  Recall that for any set B, the set
+  B<sup>*</sup> is
+the set of all words (strings of letters) over B (including the empty word 1).
+ <li>  Def 6.92:  Let G be a group with a finite generating set A.
+  The <b>word problem (WP)</b> asks whether there is an algorithm that, upon input of
+  any element ("word") w of (A &cup; A<sup>-1</sup>)<sup>*</sup>, can determine 
+  whether w = e in G.
+ <li> Def 6.93:  A <b>rewriting system</b> over A is a subset S &sube; A<sup>*</sup> &times; A<sup>*</sup>
+such that the rewritings of the form:
+<br> xuy &rarr; xvy whenever (u,v) &isin; S and
+         x,y &isin; A<sup>*</sup> 
+<br>
+satisfy:
+<br>(1)  "Termination":  There is no infinite chain of rewritings z<sub>1</sub> &rarr;
+z<sub>2</sub> &rarr; z<sub>3</sub> &rarr; &middot;&middot;&middot;
+<br>(2a) Whenever (u'u'',v),(u''u''',w) &isin; S with u',u'',u''',v,w &isin; A<sup>*</sup>
+and u'' &ne; 1, then there is a word z and rewritings vu''' &rarr; &middot;&middot;&middot; &rarr; z
+and u'w &rarr; &middot;&middot;&middot; &rarr; z.
+<br>(2b) Whenever (u'u''u''',v),(u'',w) &isin; S with u',u'',u''',v,w &isin; A<sup>*</sup>
+and u'' &ne; 1, then there is a word z and rewritings v &rarr; &middot;&middot;&middot; &rarr; z
+and u'wu''' &rarr; &middot;&middot;&middot; &rarr; z.
+<br>  
+A <b>rewriting system for a group G</b> is a rewriting system S over 
+a generating set A' = A &cup; A<sup>-1</sup> of G
+such that {bb<sup>-1</sup> &rarr; 1 | b &isin; A'} &sube; R and
+G &cong; &lang; A | {u = v | (u,v) &isin; S} &rang;.
+<li> Thm 6.95:  If S is a finite rewriting system for a group G over a finite
+   generating set
+  A' = A &cup; A<sup>-1</sup> of G, then every element of G is represented by exactly one
+  unrewritable word.  Moreover, S solves the word problem:  A word w &isin; 
+  A'<sup>*</sup> satisfies w = e in G if and only if w rewrites (using S) to 1.
+  <li> Examples, termination orderings on B<sup>*</sup>, and the Knuth-Bendix algorithm
+    <ul>
+    <li> <b>Z</b> &times; <b>Z</b>, D<sub>6</sub>
+    </ul>
+   <li>  Def 6.99:  Let F be a field, let
+  R = F[x<sub>1</sub>,...,x<sub>n</sub>] be a polynomial ring with
+   variables in the set A = {x<sub>1</sub>,...,x<sub>n</sub>}, 
+   and let I be an ideal in R. 
+  The <b>ideal membership problem (IMP)</b> asks whether there is an algorithm that, 
+  upon input of any element w in R, can determine 
+  whether w &isin; I (that is, whether w + I = 0 + I in R/I).
+  <li> Def 6.100:  Let F be a field,  let A = {x<sub>1</sub>,...,x<sub>n</sub>}
+   be a finite set, and let MM(A) = {x<sub>1</sub><sup>a<sub>1</sub></sup>
+   &middot;&middot;&middot; x<sub>n</sub><sup>a<sub>n</sub></sup> |
+   a<sub>1</sub>,...,a<sub>n</sub> &isin; <b>N</b><sub>0</sub>} be the
+   set of monic monomials over A.  
+ A <b>Groebner basis</b> in F[x<sub>1</sub>,...,x<sub>n</sub>] is a subset 
+  S &sube; MM(A) &times; F[x<sub>1</sub>,...,x<sub>n</sub>]
+such that the rewritings of the form:
+<br> mu + q &rarr; mv+q whenever (u,v) &isin; S, m &isin; MM(A), and
+         q &isin; R[x<sub>1</sub>,...,x<sub>n</sub>]
+<br>
+satisfy:
+<br>(1)  "Termination":  There is no infinite chain of rewritings z<sub>1</sub> &rarr;
+z<sub>2</sub> &rarr; z<sub>3</sub> &rarr; &middot;&middot;&middot;
+<br>(2) Whenever (ud,v),(u'd,w) &isin; S,  d &isin; MM(A) - {1}, 
+  and d is a gcd of ud,u'd,
+  then  there is a polynomial p and rewritings 
+  vu' &rarr; &middot;&middot;&middot; &rarr; p 
+  and uw &rarr; &middot;&middot;&middot; &rarr; p.
+<br>  
+A <b>Groebner basis for an ideal I</b> in F[x<sub>1</sub>,...,x<sub>n</sub>]
+  is a Groebner basis S in F[x<sub>1</sub>,...,x<sub>n</sub>]
+such that I = ({u-v | (u,v) &isin; S}).
+<li> Thm 6.101:  If S is a finite Groebner basis for an ideal I 
+  in R = F[x<sub>1</sub>,...,x<sub>n</sub>] where F is a field, 
+    then every element of R/I is represented by exactly one
+  unrewritable polynomial.  Moreover, S solves the ideal membership problem:  
+    A polynomial p &isin; F[x<sub>1</sub>,...,x<sub>n</sub>]
+  satisfies p &isin; I (that is, p + I = 0 + I) if and only if p rewrites (using S) to 0.
+  <li> Examples, monomial orderings on MM(A), and the Buchberger algorithm
+    <ul>
+    <li> R = <b>R</b>[x], I = (x<sup>2</sup>+5)
+    <li> R = (<b>Z</b>/2<b>Z</b>)[x], I = (x<sup>2</sup>+1,x<sup>3</sup>)
+    <li> R = (<b>Z</b>/2<b>Z</b>)[x,y], I = (x<sup>2</sup>y+xy<sup>2</sup>,x<sup>2</sup>+x+1)
+    </ul>
+  <li> Thm 6.104: (<b>Hilbert basis theorem</b>):  If R is a commutative Noetherian
+    ring with 1 &ne; 0, then so is R[x<sub>1</sub>,...,x<sub>n</sub>] for any n &gt; 0.
+  <li> Cor 6.106: Let F be a field and R = F[x<sub>1</sub>,...,x<sub>n</sub>].
+    If I is an ideal of R, then I has a finite Groebner basis (and hence the
+    IMP for I in R has a solution).
+   </ul>
+ </ul>
+</ul>
+
+<p>
+
+
+<B>Chapter 7: Modules </B>
+
+<p>
+
+
+<ul>
+<li><i>Section A: Definitions and first examples </i> 
+
+ <ul>
+ <li> Motivation:  Nonrigid actions
+ <li> Def 7.1:  Let R be a ring with 1 &ne; 0.  A <b>left R-module</b>  is an abelian group M
+ (with operation +) together with an action R &times; M &rarr; M of R on M (written
+ (r,m) &rarr; rm) such that for all r,s &isin; R and m,n &isin; M,
+ (1) (r + s)m = rm + sm, (2) (rs)m = r(sm), (3) r(m + n) = rm + rn,
+ and (4) 1m = m.  
+ <li> Def 7.2:  For a ring R without 1, a  <b>left R-module</b>  is an abelian group M
+ (with operation +) together with an action of R on M satisfying (1-3) of Def 7.1.
+ <li> Def 7.3:  Let F be a field.  A <b>vector space over F</b> is an
+  F-module.
+ <li> Lemma 7.4:  Let R be a commutative ring with 1<sub>R</sub> &ne; 0
+   and let M be an R-module.  Then 0<sub>R</sub>m = 0<sub>M</sub> and
+     (-1<sub>R</sub>)m = -m for all m &isin; M.
+ <li> Def 7.5:  Let R be a commutative ring with 1<sub>R</sub> &ne; 0.  
+   An <b>R-algebra</b> is a ring A with 1<sub>A</sub> &ne; 0
+   together with a ring homomorphism f: R &rarr; A such that
+   f(1<sub>R</sub>) = 1<sub>A</sub> and f(R) is contained in the center of A.
+ <li> Examples:
+  <ul>
+  <li> For a ring R with ideal I:  R, 0, I, R/I
+  <li> Polynomials, matrices, group rings
+  <li> Def 7.5b:  Let R be a commutative ring with 1 &ne; 0,
+   let J be an ideal of R and let  N be an R-module.  
+  Then <b>JN</b> = {&sum;<sub>k=1</sub><sup>n</sup> j<sub>k</sub>n<sub>k</sub> | 
+  n &ge; 0, j &isin; J, n &isin; N}.
+   <li>  JN is a submodule of N.
+  </ul>
+  <li> Module constructions by change of rings:
+  <ul>
+  <li> Restricting the action of R to the action of a subring S.
+  <li> Changing the action of R to the action of R/I.
+  <li> Changing the action of S to the action of R using a homomorphism
+    : R &rarr; S.
+  <li> Extending the action of F to an action of F[x] on a vector space V
+   using a linear transformation : V &rarr; V.
+  </ul>
+
+ </ul>
+
+
+<li><i>Section B: Homomorphisms </i> 
+
+ <ul>
+
+ <li> Def 7.6:  Let R be a ring and let M and N be R-modules.  
+  An <b>R-module homomorphism</b>
+  from M to N is an additive group homomorphsim h: M &rarr; N 
+ such that for all r &isin; R and m &isin; M,
+ <!--h(m + m') = h(m) + h(m') and -->
+ h(rm) = rh(m).  An R-module homomorphism h is an
+ <b>R-module isomorphism</b> if h is also a bijection.  
+ <!--The <b>kernel</b> of an
+ R-module homomorphism h: M &rarr; N is the preimage h<sup>-1</sup>(0).-->
+ <li> Def 7.7:  Let F be a field and let M and N be vector spaces over F.
+  A <b>linear transformation</b> from M to N is an
+  F-module homomorphism : M &rarr; N.
+ <li> Lemma 7.8:  Let R be a ring and let M and N be R-modules.  A
+  function h: M &rarr; N is an R-module homomorphism if and only if
+  h(rm+m') = rh(m)+h(m') for all r &isin; R and m,m' &isin; M.
+ <li> Examples:
+  <ul>
+ <li> Lemma 7.10:  (1) Let M be a set with
+  a binary operation + : M &rarr; M.
+  Then M is an abelian group if and only if M is a <b>Z</b>-module.
+  (2) Let M,N be abelian groups, and h: M &rarr; N.
+  Then h is an abelian group homomorphism if and only if h is a
+  <b>Z</b>-module homomorphism.
+
+ <li> Def 7.11:  Let R be a ring and let M and N be R-modules. Then
+ <b>Hom<sub>R</sub>(M,N)</b> denotes the set of all R-module homomorphisms 
+  from M to N,
+  and End<sub>R</sub>(M) = End(M) denotes the set Hom<sub>R</sub>(M,M).
+   End(M) is called the <b>endomorphism ring</b> of M, and elements of
+   End(M) are called endomorphisms. 
+ <li> Prop 7.12:  Let R be a commutative ring with 1 &ne; 0
+  and let M and N be R-modules. 
+ (1) Hom<sub>R</sub>(M,N) is an R-module with addition and R-action 
+   defined by (f+g)(m) = f(m)+g(m) and (rf)(m) = r(f(m)) for all
+   f,g &isin; Hom<sub>R</sub>(M,N), m &isin; M, and r &isin; R.
+  (2) End<sub>R</sub>(M) is an R-algebra, with addition and R-action
+   defined as in (1), and multiplication defined by
+   (fg)(m) = f(g(m)) for all f,g &isin; Hom<sub>R</sub>(M,N) and m &isin; M.
+  </ul>
+  </ul>
+
+
+
+
+<li><i>Section C: Constructions:  Submodules, product modules, quotient modules </i> 
+
+ <ul>
+
+ <li> Submodules:
+ <ul>
+ <li> Def 7.15:  Let R be a ring and let M be an R-module.
+  An <b>R-submodule</b> of M is a subgroup N &le; M satisfying
+  rn &isin; N for all r &isin; R and n &isin; N.
+ <li> Lemma 7.16:  Let R be a ring with 1 &ne; 0 and let M be an R-module.
+  (1) A nonempty subset N of M is a submodule of M if and only if
+  rn+n' &isin; N for all r &isin; R and n,n' &isin; N. 
+ <!--<li> Lemma 7.xx:  Let R be a ring, an R-module  -->
+  (2) Let N be an R-submodule of M.  Then the inclusion map i:N &rarr; M is an
+  R-module homomorphism.
+  (3)  If h: M &rarr; M' is an R-module homomorphism, then
+  the kernel Ker(h) is an R-submodule of M and the image h(M) is
+  an R-submodule of M'.
+ <li> Examples
+  <ul>
+  <li>  Prop 7.17:  Let R be a ring and let M be a subset of R. 
+   Then M is an R-submodule of R if and only if M is a left ideal of R.
+  </ul>
+ </ul>
+ <li> Product modules:
+ <ul>
+ <li> Def 7.19:  Let R be a ring.  
+  <br> (a) let M<sub>1</sub>,...,M<sub>n</sub> be R-modules.  
+  Their <b>direct product module M<sub>1</sub> &times;
+  &middot;&middot;&middot; M<sub>n</sub></b> is the abelian group 
+  M<sub>1</sub> &times; &middot;&middot;&middot; M<sub>n</sub> 
+  with ring action given by r(m<sub>1</sub>,...,m<sub>n</sub>) =
+  (rm<sub>1</sub>,...,rm<sub>n</sub>)) for all r &isin; R and 
+  m<sub>i</sub> &isin; M<sub>i</sub>.
+  <br>(b)  Let M<sub>&alpha;</sub> be an R-module for all &alpha; in an
+  index set J.  The <b>direct product</b> of the R-modules
+   M<sub>&alpha;</sub> is
+  the Cartesian product <b>&Pi;<sub>[&alpha; &isin; J]</sub> M<sub>&alpha;</sub></b>
+  with addition defined by
+  (m<sub>&alpha;</sub>)<sub>&alpha; &isin; J</sub>+(n<sub>&alpha;</sub>)<sub>&alpha; &isin; J</sub>
+  = (m<sub>&alpha;</sub>+n<sub>&alpha;</sub>)<sub>&alpha; &isin; J</sub> and
+  R-action defined by
+  r(m<sub>&alpha;</sub>)<sub>&alpha; &isin; J</sub>
+  = (rm<sub>&alpha;</sub>)<sub>&alpha; &isin; J</sub>.
+  The <b>direct sum</b> of the R-modules
+   M<sub>&alpha;</sub> is the R-submodule
+   <b>&oplus;<sub>[&alpha; &isin; J]</sub> M<sub>&alpha;</sub></b>
+  of the direct product &Pi;<sub>[&alpha; &isin; J]</sub> M<sub>&alpha;</sub>
+  given by &oplus;<sub>[&alpha; &isin; J]</sub> M<sub>&alpha;</sub>
+  = {(m<sub>&alpha;</sub>)<sub>&alpha; &isin; J</sub> |
+  m<sub>&alpha;</sub> = 0<sub>&alpha;</sub> for all but
+  finitely many &alpha;}.
+  
+ <li> Lemma 7.20:  Projections from products
+  of R-module, inclusions into products of  R-modules, and
+ products of R-module homomorphisms are R-module homomorphisms.
+ <li> Examples
+
+
+ </ul>
+
+
+ <li> Quotient modules:
+ <ul>
+ <li> Def 7.22:  Let R be a ring, let M be an R-module, and let N be
+  a submodule of M.  The <b>quotient module M/N</b> is the quotient group M/N
+  with R action defined by r(m + N) = rm + N for all r &isin; R and m + N &isin;
+  M/N.  
+ <li> Lemma 7.23:  Let R be a ring, let M be an R-module, and let N be
+  a submodule of M.  The quotient module M/N is an R-module, and the quotient
+  map q: M &rarr; M/N is an R-module homomorphism with kernel Ker(q) = N.
+  <li> Thm 7.24:  (<b>Module Isomorphism Theorems</b>):
+  Let R be a ring, and let M be an R-module.
+  <br><b>(1ITM)</b>:  Let N be an R-module and let h: M &rarr; N be an
+  R-module homomorphism.  Then Ker(h) is a submodule of M and M/Ker(h)
+  &cong; h(M).
+  <br><b>(2ITM)</b>: Let A and B be submodules of M, and let 
+  A + B = {a+b | a &isin; A, b &isin; B}.  Then  A + B is a submodule
+   of M, A &cap; B is a submodule of A,  and (A + B)/B &cong; A/(A &cap; B).
+  <br><b>(3ITM)</b>:  Let A and B be submodules of M with A &sube; B.
+   Then (M/A)/(B/A) &cong; M/B.
+  <br><b>(LITM)</b>:  
+  Let R be a ring, let N be a R-submodule of an R-module M, 
+   and let q: M &rarr; M/N be the quotient map.
+    Then the function &Psi; : {R-submodules of M containing N} &rarr; {R-submodules
+   of M/N}
+    defined by &Psi;(K) = q(K) = K/N  is a bijection 
+    with inverse defined by &Psi;<sup>-1</sup>(T) = q<sup>-1</sup>(T)
+    for each R-submodule T of M/N.  Moreover, 
+     &Psi; and &Psi;<sup>-1</sup> preserve sums and intersections.  
+ <li> Examples
+ </ul>
+</ul>
+
+<li><i>Section D: Generating modules, free modules, and module homomorphism building theorems:</i> 
+
+ <ul>
+ <li> Generating modules
+  <ul>
+  <li> Def 7.28:  Let R be a ring with 1 &ne; 0 and let M be an R-module.
+  For a subset A of M, the <b>submodule of M generated by A</b> is
+  <b>RA</b> = {r<sub>1</sub>a<sub>1</sub> + &middot;&middot;&middot;
+   + r<sub>n</sub>a<sub>n</sub> | n &ge; 0 and each
+   r<sub>i</sub> &isin; R and a<sub>i</sub> &isin; A};  if
+   A = {a} has a single element, the set RA is denoted <b>Ra</b>.
+   A subset A of M <b>generates M as an R-module</b> 
+   if RA = M.  
+   A module M is <b>finitely generated</b> if there is
+   a finite subset A of M that generates M.  A module M is <b>cyclic</b>
+   if M = Rm for some m &isin; M.
+  <li> Def 7.29:  Let F be a field, let V be a vector space over F,
+   and let A be a subset of F.  The <b>span</b> of A is the submodule
+    FA of V generated by A.
+  <li> Lemma 7.30:  "Finitely generated" and "cyclic"
+  are R-module isomorphism invariants.
+  <li> Lemma 7.31:  Let M be an R-module and let A &sube; M.
+  Then RA = &cap;<sub>[A &sube; N and N is a submodule of M]</sub> N.
+  <li>Examples:
+  <ul>
+   <li>  Let R be a ring with 1 &ne; 0.  R = R1 is cyclic.  
+    R &times; R = R(1,0) + R(0,1) is generated by {(1,0),(0,1)}.
+    R[x] is generated by the set MM({x}) of monic monomials over x,
+    as an R-module.
+  <li> Let M = <b>Z</b>[x,y].  M is generated by {1,x,y} as a ring,
+  M is generated by MM({y}) as a <b>Z</b>[x]-module, and
+  M is generated by {kx<sup>i</sup>y<sup>j</sup> | k &isin; <b>Z</b>,
+  i,j &isin; <b>N</b><sub>0</sub>} as a group.
+  </ul>
+  <li> Lemma 7.32:  Let R be a ring with 1 &ne; 0,
+let M be an R-module, and let N be an R-submodule of M.
+ (1) If M is finitely generated as an R-module,
+then so is M/N.
+  (2) If N and M/N are finitely generated as R-modules,
+then so is M.
+
+
+  </ul>
+  <li> Free modules, bases, and the HBT
+  <ul>
+ <li> Def 7.33:  Let R be a ring and let A be a set.
+   The <b>free R-module generated by A</b>, denoted <b>F<sub>R</sub>(A) = F(A)</b>,
+  the set of formal sums F(A) = {r<sub>1</sub>a<sub>1</sub> + &middot;&middot;&middot;
+   + r<sub>n</sub>a<sub>n</sub> | n &ge; 0 and each
+   r<sub>i</sub> &isin; R and a<sub>i</sub> &isin; A} 
+   = { &sum;<sub>[a &isin; A]</sub> r<sub>a</sub>a | each r<sub>a</sub> &isin; R and
+   r<sub>a</sub> = 0 for all but finitely many a},
+   with addition defined by
+  (&sum;<sub>[a &isin; A]</sub> r<sub>a</sub>a) + 
+  (&sum;<sub>[a &isin; A]</sub> s<sub>a</sub>a) =
+   &sum;<sub>[a &isin; A]</sub> (r<sub>a</sub> + s<sub>a</sub>)a,
+   and R-action defined by
+  r(&sum;<sub>[a &isin; A]</sub> r<sub>a</sub>a) =
+  &sum;<sub>[a &isin; A]</sub> (rr<sub>a</sub>)a.
+  The set A is called a <b>(free) basis</b> for F(A).
+   The <b>free R-module of rank n</b>
+   is the free module over a set A with |A| = n.
+ The free F-module of rank n over a field F is also called
+  <b>affine n-space over F</b>.  The free <b>Z</b>-module over a set 
+  A is called a <b>free abelian group</b>, and the free <b>Z</b>-module
+   of rank n is called the <b>free abelian group of rank n</b>.
+  <li> Lemma 7.35:  Let R be a ring and let A be a set.  The
+   free module F<sub>R</sub>(A) is isomorphic (as R-modules) to
+  the direct sum module 
+  &oplus;<sub>a &isin; A</sub> R. 
+  <li> Notation 7.36: The free R-module of rank n is also written
+   <b>R<sup>n</sup></b> = R &times; &middot;&middot;&middot; &times;R
+  (with n factors). 
+ <li> Def 7.41:  Let M be an R-module.  A <b>linear combination</b> 
+  of finitely many elements m<sub>1</sub>,...,m<sub>n</sub> of M
+   is an element of M of the form
+  r<sub>1</sub>m<sub>1</sub> + &middot;&middot;&middot; + 
+  r<sub>n</sub>m<sub>n</sub> for some
+  r<sub>1</sub>,...,r<sub>n</sub> &isin; R.
+  <li> Def 7.44:  Let M be an R-module and let A
+   be a subset of M.  The set A is <b>linearly independent</b> if 
+   whenever r<sub>1</sub>,...,r<sub>n</sub> &isin; R
+  and a<sub>1</sub>,...,a<sub>n</sub> are distinct elements of A satisfying
+  r<sub>1</sub>a<sub>1</sub> + &middot;&middot;&middot; + 
+  r<sub>n</sub>a<sub>n</sub> = 0, then
+  r<sub>1</sub> =  &middot;&middot;&middot; = 
+  r<sub>n</sub> = 0.
+   Otherwise A is <b>linearly dependent</b>.
+ <li> Def 7.45: A subset A of an R-module M is a <b>basis</b>,
+  or a <b>free generating set</b>, of M, if the set A generates M
+  and is linearly independent. An R-module M is a <b>free</b> R-module
+  if M has a basis.
+ 
+  <li> Prop 7.46:  Let M be an R-module, and let A be a basis of M.
+  (1)  If  B is a set of the same cardinality as A, then M &cong; F<sub>R</sub>(B).
+  (2) If 
+   and r<sub>1</sub>,...,r<sub>m</sub>,r<sub>1</sub>',...,r<sub>n</sub>' &isin; R - {0} 
+  and a<sub>1</sub>,...,a<sub>m</sub>,a<sub>1</sub>',...,a<sub>n</sub>' &isin; A
+  satisfy a<sub>i</sub> &ne; a<sub>j</sub> 
+  and a<sub>i</sub>' &ne; a<sub>j</sub>' for all i &ne; j
+  and
+  r<sub>1</sub>a<sub>1</sub> + &middot;&middot;&middot; + 
+  r<sub>m</sub>a<sub>m</sub> =
+  r<sub>1</sub>'a<sub>1</sub>' + &middot;&middot;&middot; + 
+  r<sub>n</sub>'a<sub>n</sub>',
+  then m = n and there is a permutation &sigma; &isin; S<sub>n</sub> such that
+  r<sub>i</sub> = r<sub>&sigma;(i)</sub> and
+  a<sub>i</sub> = a<sub>&sigma;(i)</sub> for all i.
+ <li> Thm 7.48:  (<b>HBT for free R-modules</b>): Let R be a ring,
+   let M be a free R-module with basis B, let N be an R-module,
+   and let j: B &rarr; N be
+   any function.  Then there is a unique R-module homomorphism
+    h: M &rarr; N such that h(b) = j(b) for all b &isin; B.
+  <li> Examples - general
+  <ul>  
+  <li> Def 7.50:  For a ring R with 1 &ne; 0,
+   the basis {e<sub>1</sub>,...,e<sub>n</sub>} of R<sup>n</sup>,
+   where e<sub>i</sub> = (0,...,0,1,0,...,0) (with 1 in the i-th coordinate)
+   is the <b>standard basis</b> of R<sup>n</sup>.
+  <li> The empty set is linearly independent.
+ <!-- <li> Singleton sets:  Vector spaces versus modules  -->
+  <li> Def 7.52:  Let N be an R-module.
+   The <b>annihilator of N in R</b> is 
+  <b>ann<sub>R</sub>(N)</b> = {r &isin; R | rn = 0 for all n &isin; N}.
+   <!-- For an element m &isin; M,  the
+  <b>annihilator of m in R</b> is ann(Rm).-->
+  <li> Lemma 7.53:  Let M be an R-module.
+   (1)  ann<sub>R</sub>(M) is an ideal of R.
+   (2)  For any m &isin; M, the singleton set {m}
+   is linearly independent if and only if ann<sub>R</sub>(Rm) = 0.
+  <li> For a commutative ring R with 1 &ne; 0, R[x] is a free R-module
+    with basis MM({x}) = set of monic monomials over x.
+  <li> For a commutative ring R with 1 &ne; 0 and group G, the group
+   ring RG is a free R-module with basis G.
+   <li> Prop 7.55:  Let R be a commutative ring with 1 &ne; 0
+   and let I be an ideal of R.  If I is not principal, then I is not
+   a free R-module.
+  </ul>
+
+ <li> Example - vector spaces
+  <ul>
+ <li> Lemma 7.58: 
+     Let V be a vector space over a field F.  If S is
+    a linearly independent subset of V and v &isin; V is not in the span
+     of S, then S &cup; {v} is also linearly independent.
+  <li> Prop 7.59:  Let V be a vector space over a field F, and suppose 
+  S &sube; T &sube; V satisfy that S is linearly independent and
+  Span(T) = V. Then there is a basis B  of V satisfying 
+  S &sube; B &sube; T.
+  <li> Rmk:  Prop 7.59 says that every linearly independent set extends
+   to a basis, and every spanning set restricts to a basis.
+    <li> Thm 7.60:  Every vector space over a field F is a
+  free F-module.
+    <li> <b>R</b> is a free <b>Q</b>-module.
+    <li> Bases for <b>R</b><sup>2</sup> and <b>R</b><sup>3</sup>
+   </ul>
+   <li> Example - abelian groups
+   <ul>
+  <li> <b>Z</b>/2<b>Z</b> is a <b>Z</b>-module that is not free.
+   <li> Def 7.62:  A group G with is <b>torsion-free</b> if 
+   for each g &ne; e there is no n<sub>g</sub> &gt; 0 such that
+   g<sup>n<sub>g</sub></sup> = e.
+   <li> Thm 7.63:  Let G be a finitely generated abelian group.
+   Then G is a free abelian group if and only if G is torsion-free.
+   <li> Rmk/Example: The forward direction of Thm 7.63 holds when G is not
+    finitely generated, but G = <b>Q</b> shows that the converse
+    direction fails.
+    </ul>
+   
+  </ul>
+
+   </ul>
+ </ul>
+</ul>
+
+<p>
+
+
+<B>Chapter 8: Linear algebra, module classification theorems, and canonical forms </B>
+
+<p>
+
+
+<ul>
+<li><i>Section A: Classification of vector spaces, and dimension </i> 
+
+ <ul>
+  <li> Lemma 8.1: ("Replacement Property"):  Let B be a (finite) basis of a
+   a vector space V and let C = {c<sub>1</sub>,...,c<sub>n</sub>} be a 
+   linearly independent subset of V.  Then there exist distinct 
+   elements b<sub>1</sub>,...,b<sub>n</sub> &isin; B such that
+   (B - {b<sub>1</sub>,...,b<sub>n</sub>}) &cup; {c<sub>1</sub>,...,c<sub>n</sub>}
+   is also a basis of V.
+  <li> Prop 8.3:  Let V be a vector space over F and let B,B' be
+   bases of V.  Then B and B' have the same cardinality.
+  <li> Thm 8.5: (<b>Classification of finitely generated vector spaces</b>): 
+  Let F be a field.  (1) Every finitely generated vector space over F
+   is isomorphic to F<sup>m</sup> for some m &ge; 0.
+   (2) For any m,n &isin; <b>N</b><sub>0</sub>,
+   F<sup>m</sup> &cong; F<sup>n</sup> if and only if m = n.
+  <li> Cor 8.6:  Let R be a commutative ring with 1 &ne; 0 
+  and let m,n &isin; <b>N</b>.  Then
+   R<sup>m</sup> &cong; R<sup>n</sup> if and only if m = n.
+  <li> Rmk:  Cor 8.6 is a classification of finitely generated
+   free R-modules.
+  <li> Def 8.8:  Let V be a vector space over a field F.  The <b>dimension</b>
+   dim(V) of V is the cardinality of any basis of V.
+  <li> Cor 8.9:  Two vector spaces V,V' over a field F are isomorphic
+   if and only if dim(V) = dim(V').
+  <li> Rmk:  Cor 8.6 and 8.8 can also
+   can be recast as "Dimension of free modules is
+   a module isomorphism invariant".
+  <li> Thm 8.10:  Let W be a subspace of a vector space V.  Then
+   dim(V) = dim(W) + dim(V/W).
+  <li> Cor 8.12:  Let f: V &rarr; W be a linear transformation.
+    Then dim(Ker(f)) + dim(f(V)) = dim(V).
+  <li> Cor 8.13:  Let V and W be finite dimensional vector spaces
+    with dim(V) = dim(W), and let f: V &rarr; W be a linear transformation.
+    TFAE:  (1) f is an isomorphism.  (2) f is injective.  (2') Ker(f) = 0.
+      (3) f is surjective.  (3') f(V) = W.  (4) f maps a basis of V
+        to a basis of W.
+  <li> Def 8.15:  Let f: V &rarr; W be a linear transformation.
+    The <b>nullspace</b> of f is Ker(f).  The <b>rank</b> of f is dim(f(V)).
+    The map f is <b>nonsingular</b> if Ker(f) = 0.
+
+  <li> Prop 8.17:  Let R be a ring with 1 &ne; 0, let
+M and N be R-submodules of an R-module L
+  (1) The
+following are equivalent:
+(1a) M &cap; N = {0}.  
+(1b) The function f: M &oplus; N &rarr;  M + N defined by 
+  f(m,n) = m + n is an R-module isomorphism.
+(1c) For all p &isin; M + N there are
+unique m &isin; M and n &isin; N such that p = m + n.
+If (1a-c) hold, we say that M + N is the <b>internal direct product</b> of M and N
+and write M + N = M &oplus; N.
+<br> (2) Let V and W be finite dimensional vector subspaces
+of a vector space U over a field F.  The following are equivalent:
+(2a) V &cap; W = {0}.  (2b) dim(V &oplus; W) = dim(V) + dim(W).
+
+     
+</ul>
+
+<li><i>Section B: Matrices and linear algebra</i> 
+
+ <ul>
+ <li> Linear transformations, ordered bases, and matrices
+  <ul>
+ <li> Def 8.20:  Let F be a field, let V be an F-vector space of
+ dimension n with ordered basis B = {b<sub>1</sub>,...,b<sub>n</sub>}, 
+ let W be an F-vector space of dimension m with ordered basis 
+ C = {c<sub>1</sub>,...,c<sub>m</sub>},
+ and let f: V &rarr; W be a linear transformation.
+ Then <b>[f]<sub>B</sub><sup>C</sup></b> is the m &times; n matrix
+ with entry t<sub>ij</sub> &isin; F in row i column j determined by
+ the equation f(b<sub>j</sub>) = 
+ &sum;<sub>i=1</sub><sup>m</sup> t<sub>ij</sub>c<sub>i</sub>.
+ <li> Example
+ <li> Def 8.21:  Let R be a commutative ring with 1 &ne; 0 and let
+ f: R<sup>n</sup> &rarr; R<sup>m</sup> be an R-module homomorphism.
+ For each 1 &le; j &le; n let e<sub>j</sub> = (0,...,0,1,0,...,0) &isin; R<sup>n</sup>,
+   with the nonzero entry in the j-th coordinate, and for each
+   1 &le; i &le; m let e<sub>i</sub>' = (0,...,0,1,0,...,0) &isin; R<sup>m</sup>,
+   with the nonzero entry in the i-th coordinate.
+   Then <b>[f]=[f]<sub>{e<sub>j</sub>}</sub><sup>{e<sub>i</sub>'}</sup></b> 
+   is the m &times; n matrix
+ with entry t<sub>ij</sub> &isin; F in row i column j (uniquely) determined by
+ the equation f(b<sub>j</sub>) = 
+ &sum;<sub>i=1</sub><sup>m</sup> t<sub>ij</sub>c<sub>i</sub>.
+ <li> Def 8.23:  Let R be a commutative ring with 1 &ne; 0.  Let <b>M<sub>m,n</b>(R)</sub></b>
+   denote the set of matrices with m rows, n columns, and entries in R.  
+   Define addition of matrices by addition of corresponding entries, and
+   define left multiplication by r &isin; R on a matrix M by left
+   multiplication by r on each of the entries of M.  
+ <li> Prop 8.24:  Let F be a field, let V be an F-vector space of
+ dimension n with ordered basis B = {b<sub>1</sub>,...,b<sub>n</sub>}, 
+ let W be an F-vector space of dimension m with ordered basis 
+ C = {c<sub>1</sub>,...,c<sub>m</sub>},
+ and let f: V &rarr; W be a linear transformation.
+ Then the function
+ h=h<sub>B,C</sub>: Hom<sub>F</sub>(V,W) &rarr; Mat<sub>m,n</sub>(F)
+ defined by h(f) = [f]<sub>B</sub><sup>C</sup>
+ is an isomorphism of F-vector spaces.
+ <li> Examples
+ <li> Lemma 8.25:  If V,W,X are finite dimensional vector spaces with ordered
+   bases B,C,D and if f: V &rarr; W and g: W &rarr; X are linear transformations,
+  then [g &#8728; f]<sub>B</sub><sup>D</sup> = 
+  [g]<sub>C</sub><sup>D</sup>[f]<sub>B</sub><sup>C</sup> (where the latter product
+  is the usual matrix multiplication).
+ <li> Def 8.27: Let F be a field.  A matrix P &isin; M<sub>n,n</sub>(F) is
+   <b>invertible</b> if there is a matrix Q &isin; M<sub>n,n</sub>(F)
+   satisfying PQ = I<sub>n</sub> = QP.  The <b>general linear group</b>
+   GL<sub>n</sub>(F) is the group of invertible n &times; n matrices over F, and
+   for an F-vector space V, the <b>general linear group</b> 
+   <b>GL(V)</b> is the group of invertible
+   linear transformations : V &rarr; V.  
+ <li> Cor 8.28:  Let F be a field, let V be a vector space of dimension n,
+ and let B be an ordered basis of V.  
+ The function h=h<sub>B,B</sub> : Hom<sub>F</sub>(V,V) &rarr; Mat<sub>n,n</sub>(F),
+ defined by h(f) = [f]<sub>B</sub><sup>B</sup> for all f &isin; Hom<sub>F</sub>(V,V),
+ is an isomorphism of F-algebras. 
+ Hence the restriction of h to the units in the
+ domain and codomain is a group isomorphism h| : GL(V) &rarr; GL<sub>n</sub>(F).
+  </ul>
+ <li> Changing bases
+  <ul>
+ <li> Def 8.30:  Let R be a commutative ring with 1 &ne; 0, let M be a free R-module
+  of finite rank n, and let B = {b<sub>1</sub>,...,b</sub>n</sub>}  be a basis for M.
+ An <b>elementary basis change operation</b> on the basis B
+ is one of the following three types of operations:
+ (1)  Replacing b<sub>i</sub> by b<sub>i</sub> + rb<sub>j</sub> for some
+   i &ne; j and some r &isin; R.
+ (2)  Replacing b<sub>i</sub> by ub<sub>i</sub>  for some i and some unit u of R.
+   <!--an element of the set R<sup>x</sup> of multiplicatively
+   invertible elements of R.-->
+ (3)  Swapping the indices of b<sub>i</sub> and b<sub>j</sub> for some i &ne; j.
+ <li> Def 8.31:  Let R be a commutative ring with 1 &ne; 0.
+ An <b>elementary row operation</b> on a matrix A &isin; Mat<sub>m,n</sub>(R)
+ is one of the following three types of operations:
+ (1)  Adding (an element of R times a row of A) to a different row of A.
+ (2)  Multiplying a row of A by a unit of R.
+   <!--an element of the set R<sup>x</sup> of multiplicatively
+   invertible elements of R.-->
+ (3)  Interchanging two rows of A.
+ <li> Def 8.32:  Let R be a commutative ring with 1 &ne; 0.
+  An <b>elementary matrix</b> over R is an n &times; n matrix obtained from I<sub>n</sub>
+  by applying a single elementary row operation.  
+  <br>(1) For r &isin; R and 1 &le; i,j &le; n
+    with i &ne; j, let
+    <b>E<sub>ij</sub>(r)</b> be the
+   matrix with 1 in the (i,i) position for all i, r in the (i,j) position,
+   and 0 in the (k,l) position for all other (k,l).  
+   <br> (2) For u &isin; R<sup>x</sup> and
+   1 &le; i &le; n let <b>E<sub>i</sub>(u)</b> denote the matrix with (i,i) entry u,
+   (j,j) entry 1 for all j &ne; i, and (k,l) entry 0 for all k &ne; l.
+   <br> (3) For 1 &le; i,j &le; n
+    with i &ne; j, let <b>E<sub>(i j)</sub></b> denote the matrix with
+    1 in the (i,j) and (j,i) positions and in the (l,l) positions for all l &#8713; {i,j},
+    and 0 in all other entries.
+  <li> Prop 8.34:  Let R be a commutative ring with 1 &ne; 0, and let
+     E be an n &times; n elementary matrix.
+   If A &isin; Mat<sub>n,q</sub>(R), then the product matrix EA is the result of
+  performing the corresponding elementary row operation on A.
+  If B &isin; Mat<sub>m,n</sub>(R), then the product matrix BE is the result of
+  performing the corresponding elementary column operation on A.
+  <li> Thm 8.36: Let F be a field and let
+    A be an n &times; n matrix over F.  Then A is invertible if and only if
+    A is a product of elementary matrices.
+  <li> Cor 8.37:  Let F be a field and let V be a finite dimensional vector
+  space over F.  Let B and B' be linearly independent subsets
+  of V. <!-- and let B' be a subset of M. --> 
+  Then B and B' are bases for the same subspace of V if and only if
+   there is
+  a finite sequence of elementary basis change operations from B to B'.
+   <li> Def 8.39:  Let F be a field.
+    (1) Let V be an F-vector space.  Two linear transformations f,g: V &rarr; V
+   are <b>similar</b> if there is a linear transformation h: V &rarr; V
+   such that g = hfh<sup>-1</sup>.
+   (2) Two n &times; n matrices A and B with entries in R are <b>similar</b>
+   if there is an invertible n &times; n matrix P such that B = PAP<sup>-1</sup>.
+   <li> Cor 8.40:  Let V be a finite dimensional vector space over a field F,
+  and let B and B' be bases of V.  
+  (1) Let Id<sub>V</sub> be the identity map : V &rarr; V.  Then
+   [Id<sub>V</sub>]<sub>B</sub><sup>B'</sup> is an invertible matrix
+   (called a <b>change of basis matrix</b>).
+  (2)  Let W be a finite dimensional vector space with bases C and C',
+   and let f: V &rarr; W be a linear transformation.  Then
+   [f]<sub>B'</sub><sup>C'</sup> = [Id<sub>W</sub>]<sub>C</sub><sup>C'</sup> 
+   [f]<sub>B</sub><sup>C</sup> [Id<sub>V</sub>]<sub>B'</sub><sup>B</sup>.
+  (3) Let g : V &rarr; V be a linear transformation.  Then
+   [g]<sub>B</sub><sup>B</sup> and [g]<sub>B'</sub><sup>B'</sup> are similar.
+     <li>  Def 8.41:  Let F be a field.
+The <b>column rank</b> of a matrix M &isin; Mat<sub>m,n</sub>(F)
+is the maximum number of linearly independent columns of M (viewed as
+elements of F<sup>m</sup>).
+<li> Prop 8.42:  Let F be a field,
+let f: F<sup>n</sup> &rarr; F<sup>m</sup>, and let
+B = {b<sub>1</sub>,...,b</sub>n</sub>}
+ and C = {c<sub>1</sub>,...,c</sub>m</sub>} 
+be the standard ordered bases of F<sup>n</sup> and F<sup>m</sup>, respectively.
+Then rank(f) equals the column rank of the matrix 
+[f]<sub>B</sub><sup>C</sup>.
+
+<li> Def 8.43: Let F be a field and let A &isin; Mat<sub>m,n</sub>. The
+<b>row reduced echelon form rref</b> of A is a matrix A'
+ obtained from A (using
+"Gaussian elimination") by elementary row operations satisfying the properties that
+for each 1 &le; i &le; m
+the first nonzero entry a<sub>ij<sub>i</sub></sub> of the i-th row
+of A' is 1, all other entries in the j<sub>i</sub>-th column are 0, and 
+j<sub>1</sub> &lt; j<sub>2</sub> &lt; &middot;&middot;&middot; j<sub>r</sub>,
+where r is the number of nonzero rows of A'.  Then numbers j<sub>i</sub> are
+the <b>pivots</b> of A'.
+<li> Prop 8.44: Let F be a field,
+let f: F<sup>n</sup> &rarr; F<sup>m</sup>, and let
+B = {b<sub>1</sub>,...,b</sub>n</sub>}
+ and C = {c<sub>1</sub>,...,c</sub>m</sub>} 
+be the standard ordered bases of F<sup>n</sup> and F<sup>m</sup>, respectively.
+If A' is an rref of [f]<sub>B</sub><sup>C</sup> with pivots 
+j<sub>1</sub>,...,j<sub>r</sub>, then
+{f(b<sub>j<sub>1</sub></sub>),...,f(b<sub>j<sub>r</sub></sub>)}
+is a basis for  f(F<sup>n</sup>).
+      <li> Examples
+   </ul>
+ <li> Determinants
+  <ul>
+  <li> Def 8.45:  Let R be a commutative ring with 1 &ne; 0.  For any
+   v<sub>1</sub>,...,v<sub>n</sub> &isin; R<sup>n</sup>, 
+   <!--viewed as column vectors, -->
+   let <b>[v<sub>1</sub> | &middot;&middot;&middot; | v<sub>n</sub>]</b>
+   denote the n &times; n matrix with the v<sub>i</sub>'s as columns.
+  <li> Def 8.46:  Let R be a commutative ring with 1 &ne; 0.  
+  A <b>determinant function</b> is a function d : Mat<sub>n,n</sub>(R) &rarr; R
+   for some n &ge; 1 satisfying the following:  
+   (1) d is <b>multilinear</b> 
+   on columns; that is, whenever 1 &le; i &le; n,
+    v<sub>1</sub>,...,v<sub>n</sub>,v<sub>i</sub>' &isin; R<sup>n</sup>, 
+    and r &isin; R, then
+   d([v<sub>1</sub> | &middot;&middot;&middot; | v<sub>i-1</sub> | 
+   v<sub>i</sub>+v<sub>i</sub>' | v<sub>i+1</sub> |
+      &middot;&middot;&middot; | v<sub>n</sub>]) =
+  d([v<sub>1</sub> | &middot;&middot;&middot;  | v<sub>n</sub>]) +
+   d([v<sub>1</sub> | &middot;&middot;&middot; | v<sub>i-1</sub> | 
+   v<sub>i</sub>' | v<sub>i+1</sub> |
+      &middot;&middot;&middot; | v<sub>n</sub>])
+     and
+   d([v<sub>1</sub> | &middot;&middot;&middot; | v<sub>i-1</sub> | 
+   rv<sub>i</sub> | v<sub>i+1</sub> |
+      &middot;&middot;&middot; | v<sub>n</sub>]) =
+  rd([v<sub>1</sub> | &middot;&middot;&middot; | v<sub>n</sub>])
+  (2) d is <b>alternating</b>; that is, 
+   whenever v<sub>i</sub> = v<sub>j</sub> for some i &ne; j, then
+  d([v<sub>1</sub> | &middot;&middot;&middot; | v<sub>n</sub>]) = 0.
+  (3) d(I<sub>n</sub>) = 1.
+  <li> Prop 8.48:  Let  R be an integral domain and
+  let d : Mat<sub>n,n</sub>(R) &rarr; R be a determinant function, and 
+  let M &isin; Mat<sub>n,n</sub>(R).
+    <!--and write
+    M =  [v<sub>1</sub> | &middot;&middot;&middot; | v<sub>n</sub>]
+   with v<sub>1</sub>,...,v<sub>n</sub> &isin; R<sup>n</sup>.-->
+  <br>(1) For any r &isin; R and 1 &le; i,j &le; n with i &ne; j,
+   d(M E<sub>ij</sub>(r)) = d(M).
+  <br>(2) For any u &isin; R<sup>x</sup> and  1 &le; i &le; n, 
+  d(M E<sub>i</sub>(u))
+  = u d(M).
+  <br>(3) For any 1 &le; i,j &le; n with i &ne; j,
+  d(M E<sub>(i j)</sub>) = -d(M).
+  <br>(4) If v<sub>1</sub>,...,v<sub>n</sub> &isin; R<sup>n</sup>
+  are linearly dependent, then 
+  d([v<sub>1</sub> | &middot;&middot;&middot; | v<sub>n</sub>]) = 0.
+  <li> Thm 8.50:  For any commutative ring R with 1 &ne; 0 and integer n &ge; 1,
+  there is a unique determinant function; moreover, this function
+   <b>det</b> : Mat<sub>n,n</sub>(R) &rarr; R is given by
+   det([a<sub>ij</sub>]) = &sum;<sub>[&sigma; &isin; S<sub>n</sub>]</sub>
+   sign(&sigma;) &prod;<sub>i=1</sub><sup>n</sup> a<sub>i&sigma;(i)</sub>.
+  <li> Rmk:  The function 
+    det is a (homogeneous) polynomial in the a<sub>ij</sub>'s of degree n,
+    with n! terms.
+  <li> Prop 8.52:  Let  R be a commutative ring with 1 &ne; 0.  
+  If A,B &isin; Mat<sub>n,n</sub>(R)  then det(AB) = det(A) det(B).
+  <li> Thm 8.53:  (1) Let F be a field and let A &isin; Mat<sub>n,n</sub>(F).
+  Then A is invertible if and only if det(A) &ne; 0.
+  (2) Let  R be a commutative ring with 1 &ne; 0 and let A &isin; Mat<sub>n,n</sub>(R).
+  Then A is invertible if and only if det(A) &isin; R<sup>x</sup>.
+<li> Def 8.54: Let V be a finite dimensional vector space.  The
+<b>determinant det(f)</b> of a linear transformation f: V &rarr; V
+is defined to be det([f]<sub>B</sub><sup>B</sup>) for any basis B of V.
+
+<li> Lemma 8.55:  The determinant of a linear transformation is well-defined.
+
+
+
+  <li> Def 8.57: Let V be a vector space over a field F.
+Let t: V &rarr; V be a linear transformation.  A nonzero
+element v &isin; V satisfying t(v) = &lambda; v for some &lambda; &isin; F
+is an <b>eigenvector</b> of t with <b>eigenvalue</b> &lambda;.
+Let A &isin; Mat<sub>n,n</sub>(F).
+<!--, let E be the standard basis for 
+F<sup>n</sup>, and let <b>t<sub>A</sub></b>: F<sup>n</sup> &rarr;
+ F<sup>n</sup> be the linear transformation such that 
+A = [t<sub>A</sub>]<sub>E</sub><sup>E</sup>.-->
+    A nonzero
+element v &isin; F<sup>n</sup> satisfying Av = &lambda; v for some &lambda; &isin; F
+is an <b>eigenvector</b> of A with <b>eigenvalue</b> &lambda;.
+  <li> Prop 8.58:  Let V be a vector space over a field F and
+let t: V &rarr; V be a linear transformation.
+(1) If &lambda; is an eigenvalue of t then
+{eigenvectors of t with eigenvalue &lambda;} &cup; {0} 
+is a subspace of V (called the <b>eigenspace</b> of the eigenvalue &lambda;).
+(2) If &lambda;<sub>1</sub>,...,&lambda;<sub>k</sub>
+are distinct eigenvalues of t, and for each 1 &le; i &le; k,
+v<sub>i</sub> is an eigenvector of t with eigenvalue &lambda;<sub>i</sub>, then
+{v<sub>1</sub>,...,v<sub>k</sub>} is linearly independent.
+
+
+   </ul>
+  
+
+
+     
+</ul>
+
+<li><i>Section C: Classification of finitely generated modules over a PID</i> 
+
+ <ul>
+ <li>  Presenting modules
+  <ul>
+  <li> Def 8.60:  Let R be a commutative ring with 1 &ne; 0, 
+  let A &isin; Mat<sub>m,n</sub>(R), and let t<sub>A</sub>: R<sup>n</sup> &rarr;
+   R<sup>m</sup> be the R-module homomorphism represented by A
+   over the standard bases.  The R-module <b>presented by A</b>
+  is the R-module R<sup>m</sup>/t<sub>A</sub>(R<sup>n</sup>).
+  <li> Prop 8.62:  Let R be a Noetherian integral domain.  
+   If M is a finitely generated
+   module, then every submodule of M is also finitely generated.
+  <li> Prop 8.64:  Let be a Noetherian integral domain
+   <!--commutative ring with 1 &ne; 0-->
+   and let M be a finitely generated R-module.  Then there is a
+   matrix A that presents M.
+  <li> Def 8.65:  A sequence of functions 
+    f<sub>1</sub>: X<sub>1</sub> &rarr; X<sub>2</sub>, 
+    f<sub>2</sub> : X<sub>2</sub> &rarr; X<sub>3</sub>,...
+    is <b>exact</b> if for each index i, f<sub>i</sub>(X<sub>i</sub>) =
+      Ker(f<sub>i+1</sub>).  
+      <!--(That is, for each set X<sub>i</sub>, the
+      image of the map into that set equals the kernal of the map out of the set.)-->
+  </ul>
+  <li> The classification theorem and Smith Normal Form
+  <ul>
+   <li> Example
+   <li>  Prop 8.67:  Let R be a commutative ring with 1 &ne; 0 and 
+     let  A &isin; Mat<sub>m,n</sub>(R) and B &isin; Mat<sub>p,q</sub>(R)
+     for some m,n,p,q &ge; 1.   Then A and B present isomorphic R-modules if and only if 
+     B can be obtained from A by any finite sequence of operations
+     of the following form:  (1) An elementary row operation.  
+     (2) An elementary column operation.
+     (3)  Deletion of the j-th column and i-th row of A if
+     Ae<sub>j</sub> = e<sub>i</sub>
+     (where e<sub>i</sub> denote the i-th
+     standard basis vector in any R<sup>k</sup>).
+     (4) The reverse of operation (3) (insertion of a row and column satisfying the
+     restriction).
+     (5) Deletion of a column of all 0's.
+     (6) The reverse of (5) (insertion of a column of all 0's).
+    <!-- Then the R-modules presented by A and A' are isomorphic.
+   <li> Lemma 8.68: Let R be a commutative ring with 1 &ne; 0, and let 
+   A,B be matrices over R.  Then A and B present isomorphic R-modules if and only if
+   A can be transformed to B by a sequence of operations of type (1)-(6).-->
+
+   <li> Thm 8.70: (<b>Smith Normal Form (SNF)</b>):  Let R be a PID and let 
+    A &isin; Mat<sub>m,n</sub>(R).  Then there is a sequence of elementary
+    row and column operations that transform A into a matrix A' = [a<sub>ij</sub>'] such
+   that all non-diagonal entries of A' are 0, and the diagonal entries
+   of A' satisfy a<sub>11</sub>' | a<sub>22</sub>' | a<sub>33</sub>' | &middot;&middot;&middot;.
+   Moreover, the number j of nonzero entries of A' is uniquely determined by A,
+   and the nonzero diagonal entries  a<sub>11</sub>',...,a<sub>jj</sub>' are
+   unique up to associates.
+   <li> Lemma 8.72:  Let R be a commutative ring with 1 &ne; 0, let m &ge; n, 
+   let A = [a<sub>ij</sub>] &isin; Mat<sub>m,n</sub>(R)  be a matrix such
+   that all non-diagonal entries of A are 0, and let M be the R-module presented by A.
+   Then M &cong; R/(a<sub>11</sub>) &oplus; &middot;&middot;&middot; &oplus;
+   R/(a<sub>nn</sub>) &oplus; R<sup>m-n</sup>.
+
+   <li> Thm  8.75:  (<b>Classification of Finitely Generated Modules
+     over a PID (CFGMPID)</b>):  Let R be a PID and let M be a finitely
+     generated module.  Then there exist r &ge; 0, k &ge; 0, and
+     nonzero nonunit elements d<sub>1</sub>,...,d<sub>k</sub> of R
+     satisfying d<sub>i</sub> | d<sub>i+1</sub> for all i, such that
+     M &cong; R<sup>r</sup> &oplus; R/(d<sub>1</sub>) &oplus; &middot;&middot;&middot;
+     &oplus; R/(d<sub>k</sub>).  Moreover r and k are uniquely determined by M,
+     and the d<sub>i</sub> are unique up to associates.
+     
+  <li> Def 8.76:  Let R be a PID, let r &ge; 0, k &ge; 0, and
+     let d<sub>1</sub>,...,d<sub>k</sub> be nonzero nonunit elements of R
+     satisfying d<sub>i</sub> | d<sub>i+1</sub> for all i.
+     Let M be the R-module
+    M &cong; R<sup>r</sup> &oplus; R/(d<sub>1</sub>) &oplus; &middot;&middot;&middot;
+     &oplus; R/(d<sub>k</sub>). 
+    The <b>free rank</b> of M is the integer r.  The elements
+    d<sub>1</sub>,...,d<sub>k</sub> are the <b>invariant factors</b> of M.
+  <li> Cor 8.77:  (<b>Classification of Finitely Generated Modules
+     over a PID using Elementary Divisors (CFGMPIDED)</b>):  
+     Let R be a PID and let M be a finitely
+     generated module.  Then there exist r &ge; 0, s &ge; 0, and
+     prime elements p<sub>1</sub>,...,p<sub>s</sub> of R,
+     and e<sub>1</sub>,...,e<sub>s</sub> &ge; 1, such that
+     M &cong; R<sup>r</sup> &oplus; R/(p<sub>1</sub><sup>e<sub>1</sub></sup>) 
+     &oplus; &middot;&middot;&middot;
+     &oplus; R/(p<sub>s</sub><sup>e<sub>s</sub></sup>).  
+    Moreover r and k are uniquely determined by M,
+     and the list p<sub>1</sub><sup>e<sub>1</sub></sup>,...,
+     p<sub>s</sub><sup>e<sub>s</sub></sup> is unique up to associates and reordering.
+  <li> Def 8.78:  Let R be a PID, let r &ge; 0, s &ge; 0, 
+    let p<sub>1</sub>,...,p<sub>s</sub> be prime elements of R,
+     and let e<sub>1</sub>,...,e<sub>s</sub> &ge; 1.
+     Let M be the R-module
+    M &cong;  R<sup>r</sup> &oplus; R/(p<sub>1</sub><sup>e<sub>1</sub></sup>) 
+     &oplus; &middot;&middot;&middot;
+     &oplus; R/(p<sub>s</sub><sup>e<sub>s</sub></sup>).
+    The elements p<sub>1</sub><sup>e<sub>1</sub></sup>,...,
+    p<sub>s</sub><sup>e<sub>s</sub></sup> of R are the <b>elementary divisors</b> of M.
+  <li> Example - abelian groups
+  <ul>
+   <li> Rmk 8.80: The Classification of Finitely Generated Abelian Groups  
+      CFGAG, TOC Thm 4.88) and its elementary divisor version (TOC Thm 4.85)
+      are the CFGMPID and CFGMPIDED, respectively, applied to the ring R = <b>Z</b>.
+      <!--Let G be a finitely
+     generated abelian group.  Then there exist r &ge; 0, k &ge; 0, and
+      d<sub>1</sub>,...,d<sub>k</sub> &ge; 2
+     satisfying d<sub>i</sub> | d<sub>i+1</sub> for all i, such that
+     G &cong; <b>Z</b><sup>r</sup> &oplus; <b>Z</b>/d<sub>1</sub><b>Z</b> 
+     &oplus; &middot;&middot;&middot;
+     &oplus; <b>Z</b>/d<sub>k</sub><b>Z</b>.  Moreover r, k,
+     and the d<sub>i</sub> are all unique.-->
+  </ul>
+  </ul> 
+     
+ </ul>
+
+<li><i>Section D: Canonical forms for endomorphisms</i> 
+
+ <ul>
+  <li> Rational Canonical Form - Existence/uniqueness
+  <ul>
+  <li> Def 8.83:  Let F be a field, let V be a finite dimensional 
+  vector space over F, and let t: V &rarr; V be a linear transformation.
+  The F[x]-module <b>V<sub>t</sub></b> is defined to be
+  the vector space V with the
+  unique F[x]-action satisfying xv = t(v) for all v &isin; V.
+  [That is, (r<sub>n</sub>x<sup>n</sup> + &middot;&middot;&middot; + 
+  r<sub>0</sub>)v = r<sub>n</sub>t<sup>n</sup>(v) + &middot;&middot;&middot; + 
+  r<sub>0</sub>v for all
+  r<sub>n</sub>x<sup>n</sup> + &middot;&middot;&middot; + 
+  r<sub>0</sub> &isin; F[x].) 
+  <li> Prop 8.84:  Let F be a field, let V be a finite dimensional 
+  vector space over F, and let t: V &rarr; V be a linear transformation.
+  <!--Let V<sub>t</sub> be the F[x]-module with V<sub>t<sub> &cong; V as
+  abelian groups, and F[x]-action de a<sub>k</sub>x<sup>k</sup> + 
+   &middot;&middot;&middot;
+  + a<sub>1</sub>x + a<sub>0</sub> = -->
+  Then there are monic polynomials g<sub>1</sub>,...,g<sub>k</sub> &isin; F[x]
+  of positive degree such that g<sub>i</sub> | g<sub>i+1</sub>
+  for all i and there is an F[x]-module isomorphism
+  V<sub>t</sub> &cong; F[x]/(g<sub>1</sub>) &oplus; &middot;&middot;&middot;
+  &oplus; F[x]/(g<sub>k</sub>).  Moreover, k and the g<sub>i</sub> are
+  uniquely determined by V.
+  <li> Def 8.85:  The polynomials   g<sub>1</sub>,...,g<sub>k</sub>
+   in Prop 8.84 are the <b>invariant factors</b> of the linear transformation t.
+  <li> Def 8.87:  Let F be a field and let
+  p = x<sup>n</sup> + r<sub>n-1</sub>x<sup>n-1</sup> + &middot;&middot;&middot; + 
+  r<sub>0</sub> &isin; F[x] be a monic polynomial.  The <b>companion matrix</b> of p,
+  denoted <b>C(p)</b>, is the matrix [c<sub>ij</sub>] in M<sub>n,n</sub>(F) 
+  satisfying c<sub>i,i-1</sub> = 1 for all 2 &le; i &le; n,
+  c<sub>in</sub> = -r<sub>i-1</sub> for all 1 &le; i &le; n,
+  and c<sub>ij</sub> = 0 for all other i,j.
+  <li> Def 8.88:  Let F be a field and let A &isin; Mat<sub>m,m</sub>(F)
+   and B &isin; Mat<sub>n,n</sub>(F).  The matrix <b>A &oplus; B</sub></b>
+   is the matrix [c<sub>ij</sub>] in M<sub>m+n,m+n</sub>(F) defined by
+   c<sub>ij</sub> = a<sub>ij</sub> for all 1 &le; i,j &le; m,
+   c<sub>ij</sub> = b<sub>i-m,j-m</sub> for all m+1 &le; i,j &le; m+n,
+   and c<sub>ij</sub> = 0 otherwise.
+  <li> Thm 8.90:  (<b>Rational Canonical Form Theorem</b>):  Let F be a field, let V be a finite dimensional vector space, and let
+  t: V &rarr; V be a linear transformation.  Then there is an ordered
+  basis B for V such that 
+  [t]<sub>B</sub><sup>B</sup> = C(g<sub>1</sub>) &oplus; &middot;&middot;&middot;
+   &oplus; C(g<sub>k</sub>) for some
+   monic polynomials g<sub>1</sub>,...,g<sub>k</sub> &isin; F[x]
+  of positive degree satisfying g<sub>i</sub> | g<sub>i+1</sub>
+  for all i.  Moreover, the g<sub>i</sub> are the invariant factors for t.
+  <li> Def 8.91:  Let F be a field.  
+  (1) Let V be a finite dimensional vector space, and let
+  t: V &rarr; V be a linear transformation with invariant factors
+   g<sub>1</sub>,...,g<sub>k</sub> (with g<sub>i</sub> | g<sub>i+1</sub>
+   for all i). 
+   The matrix C(g<sub>1</sub>) &oplus; &middot;&middot;&middot;
+   &oplus; C(g<sub>k</sub>) is the <b>rational canonical form (RCF) of t</b>.
+  (2)  Let A &isin; Mat<sub>n,n</sub>(F), and let t: F<sup>n</sup> &rarr; F<sup>n</sup>
+   be the linear transformation such that A = [t]<sub>E</sub><sup>E</sup>,
+  where E is the standard basis of F<sup>n</sup>.  The 
+  <b>rational canonical form (RCF) of A</b> is the rational canonical form of t<sub>A</sub>.
+<!--  <li> Thm 8.94:  Let F be a field and let A,A' &isin; Mat<sub>n,n</sub>(F).
+   Then A and A' are similar matrices if and only if A and A' have the same
+   rational canonical form.  -->
+
+  </ul>
+  <li> Rational canonical form - computation
+  <ul>
+  <li> Thm 8.96:  Let F be a field, let V be an F-vector space of dimension n, let 
+  t: V &rarr; V be a linear transformation,
+  let B be an ordered basis for V, and let A = [t]<sub>B</sub><sup>B</sup>.
+  Then the matrix xI<sub>n</sub> - A &isin; Mat<sub>n,n</sub>(F[x])
+  presents the F[x]-module V<sub>t</sub>.
+  <li> Cor 8.97:  Let F be a field, let V be an F-vector space of dimension n, let
+  t: V &rarr; V be a linear transformation, let B be an ordered basis of V,
+  and let A = [t]<sub>B</sub><sup>B</sup>.  The invariant factors of t
+   are the nonzero nonunit entries in the Smith normal form of the matrix 
+   xI<sub>n</sub> - A.
+  <li> Def 8.99:  Let F be a field. (1) Let A &isin; Mat<sub>n,n</sub>(F). 
+The <b>characteristic polynomial of A</b>,
+denoted <b>c<sub>A</sub></b>, is the polynomial
+c<sub>A</sub> = det(xI<sub>n</sub> - A).
+  (2)  Let V be an F-vector space of dimension n, 
+  and let
+  t: V &rarr; V be a linear transformation.  The
+  <b>characteristic polynomial of t</b>, denoted <b>c<sub>t</sub></b>,
+  is the polynomial c<sub>A</sub> for a matrix
+  A = [t]<sub>B</sub><sup>B</sup> with respect to some ordered basis B of V.
+   <li> Lemma 8.100:  Let F be a field.  (1) Let V be an F-vector space of dimension n, 
+  and let
+  t: V &rarr; V be a linear transformation.  The characteristic
+  polynomial c<sub>t</sub> of t is well-defined.
+  (2) For any A &isin; Mat<sub>m,m</sub>(F)
+   and B &isin; Mat<sub>n,n</sub>(F),
+   c<sub>A &oplus; B</sub> = c<sub>A</sub>c<sub>B</sub>.
+  <li> Def 8.102:  Let F be a field. (1) Let A &isin; Mat<sub>n,n</sub>(F). 
+A <b>minimal polynomial of A</b>,
+denoted <b>m<sub>A</sub></b>, is a monic polynomial of least degree such that
+m<sub>A</sub>(A) = 0.
+  (2)  Let V be an F-vector space of dimension n, 
+  and let
+  t: V &rarr; V be a linear transformation.  The
+  <b>minimal polynomial of t</b>, denoted <b>m<sub>t</sub></b>,
+  is the monic polynomial generating the annihilator ideal
+  ann<sub>F[x]</sub>(V<sub>t</sub>) in the PID F[x].  
+  <li> Lemma 8.103: Let F be a field.  (1) Let V be an F-vector space of dimension n, 
+  and let
+  t: V &rarr; V be a linear transformation.  The minimal 
+  polynomial m<sub>A</sub> of A = [t]<sub>B</sub><sup>B</sup>
+   satisfies m<sub>A</sub> = m<sub>t</sub>, and hence
+  is independent of the choice of ordered basis B of V.
+  (2)  For any polynomial p &isin; F[x], m<sub>C(p)</sub> = c<sub>C(p)</sub> = p.
+  <li> Thm 8.105:  Let F be a field, let V be a 
+   finite dimensional F-vector space, 
+  and let
+  t: V &rarr; V be a linear transformation  with invariant factors
+   g<sub>1</sub>,...,g<sub>k</sub> (with g<sub>i</sub> | g<sub>i+1</sub>
+   for all i). 
+  <br>(1)  c<sub>t</sub> = g<sub>1</sub> &middot;&middot;&middot; g<sub>k</sub>.
+  <br>(2)  m<sub>t</sub> = g<sub>k</sub>.
+  <br>(3)  (<b>Cayley-Hamilton Thm</b>):  m<sub>t</sub> | c<sub>t</sub>, and hence
+  c<sub>t</sub>(t) = 0.
+  <br>(4)  c<sub>t</sub> | m<sub>t</sub><sup>k</sup>.
+  <br>(5)  Let f &isin; F.  The following are equivalent:
+  (5a) f is an eigenvalue of t. (5b) f is
+  a root of m<sub>t</sub>.  (5c) f is a root of c<sub>t</sub>.
+  <li> Thm 8.107: Let F be a field and let 
+  A,A' &isin; Mat<sub>n,n</sub>(F).  The following are equivalent.
+  (a)  A and A' are similar matrices.
+  (b)  A and A' have the same
+   rational canonical form.
+  (c)  A and A' have the same invariant factors.
+  (d)  xI<sub>n</sub> - A and xI<sub>n</sub> - A' have the same
+   Smith normal form.
+  (e)  For every field K such that F is a subfield of K,
+   A and A' are similar matrices
+  in  Mat<sub>n,n</sub>(K).
+
+  </ul>
+  
+  <li> Jordan Canonical Form
+  <ul>
+  <li> Def 8.110:  Let F be a field, let n &gt; 0, and let r &isin; F.
+   The <b>Jordan block J<sub>n</sub>(r)</b> is the n &times; n matrix
+   over F with entries a<sub>ij</sub> (in row i column j) satisfying
+   a<sub>ii</sub> = r  for all 1 &le; i &le; n,
+   a<sub>i,i+1</sub> = 1 for all 1 &le; i &le; n-1, and 
+   a<sub>ij</sub> = 0 for all other i,j.
+  <li> Thm 8.112: (<b>Jordan Canonical Form Theorem</b>): Let F be a field, let V be a finite dimensional vector space, and let
+  t: V &rarr; V be a linear transformation satisfying the property that
+  the characteristic polynomial c<sub>t</sub> of t factors completely into linear terms.
+   Then there is an ordered
+  basis B for V such that 
+  [t]<sub>B</sub><sup>B</sup> = J<sub>e<sub>1</sub></sub>(r<sub>1</sub>)
+   &oplus; &middot;&middot;&middot;
+   &oplus;J<sub>e<sub>s</sub></sub>(r<sub>s</sub>)
+   such that each r<sub>i</sub> &isin; F is a root of c<sub>t</sub>
+    and each e<sub>i</sub> &ge; 1.
+   Moreover, the polynomials 
+  (x - r<sub>1</sub>)<sup>e<sub>1</sub></sup>,...,(x - r<sub>s</sub>)<sup>e<sub>s</sub></sup>
+   are the elementary divisors of the F[x]-module V<sub>t</sub>,
+   and this expression for [t]<sub>B</sub><sup>B</sup>
+   is unique up to ordering of the Jordan blocks.
+  <li> Def 8.114:  Let F be a field.  
+  (1) Let V be a finite dimensional vector space, and let
+  t: V &rarr; V be a linear transformation with elementary divisors
+  (x - r<sub>1</sub>)<sup>e<sub>1</sub></sup>,...,(x - r<sub>s</sub>)<sup>e<sub>s</sub></sup>.
+   The matrix J<sub>e<sub>1</sub></sub>(r<sub>1</sub>)
+   &oplus; &middot;&middot;&middot;
+   &oplus;J<sub>e<sub>s</sub></sub>(r<sub>s</sub>) is a <b>Jordan canonical form (JCF) of t</b>.
+  (2)  Let A &isin; Mat<sub>n,n</sub>(F), and let t: F<sup>n</sup> &rarr; F<sup>n</sup>
+   be the linear transformation such that A = [t]<sub>E</sub><sup>E</sup>,
+  where E is the standard basis of F<sup>n</sup>.  A 
+  <b>Jordan canonical form (JCF) of A</b> is a Jordan canonical form of t<sub>A</sub>.
+  <li> Def 8.116:  Let F be a field.  
+  (1) Let V be a finite dimensional 
+  vector space, and let
+  t: V &rarr; V be a linear transformation.  Then t is <b>diagonalizable</b>
+   if there is a basis B for V such that the matrix
+   [t]<sub>B</sub><sup>B</sup> is a diagonal matrix.
+  (2)  Let   A &isin; Mat<sub>n,n</sub>(F).  Then A is <b>diagonalizable</b>
+  if A is similar to a diagonal matrix.
+  <li>  Thm 8.117:  Let F be a field, let V be a finite
+   dimensional vector space, and let t: V &rarr; V be a linear transformation.
+    The following are equivalent:
+   (a) t is diagonalizable.
+   (b) t has a Jordan canonical form A and A is a diagonal matrix.
+   (c) t has a Jordan canonical form and the elementary divisors are
+   all of the form (x - r)<sup>1</sup> (with r &isin; F).
+   (d) Each invariant factor of t is a product of linear polynomials with
+    no repeated linear factors.
+   (e)  The minimum polynomial of t is a product of linear polynomials with
+    no repeated linear factors.
+   </ul>
+ </ul>
+</ul>
+
+<p>
+
+
+<B>Chapter 9: Field theory </B>
+
+<p>
+
+
+<ul>
+<li><i>Section A: Field extensions </i> 
+
+ <ul>
+ <li> Definitions and first examples
+ <ul>
+  <li> Motivation:  Categories, functors, and connections between fields and groups
+  <li> Def 9.1:  An <b>extension field</b> of a field F is a field K containing F.
+  <li> Def 9.2:  An extension field K of a field F is denoted K/F. 
+  <li> Prop 9.4:  Let F be a field.  (1) The characteristic char(F) is either 0 or 
+   a prime number p.  (2) Exactly one of the fields <b>Q</b> or <b>Z</b>/p<b>Z</b>
+   for some prime number p embeds in F.
+  <li> Def 9.5:  Let F be a field.  The <b>prime field</b> of F is the subfield
+    of F generated by 1<sub>F</sub>.
+  <li> Examples
+  <li> Def 9.7:  The <b>(relative) degree</b> of a field extension K/F,
+    denoted <b>[K:F]</b>, is the dimension dim<sub>F</sub>(K) of K as a vector
+    space over F.
+    An extension K/F is <b>finite</b> if [K:F] is finite, and is <b>infinite</b>
+     otherwise.
+  <li> Thm 9.8:  (<b>Degree Formula</b>):  Let F &sube; K &sube; L be field extensions.
+  Then [L:F] = [K:F][L:K].  Hence the composite of two finite extensions is a finite
+  extension.
+  <li> Examples
+  <li> Def 9.10:  Let F &sube; K be a field extension and let A &sube; K.
+  Let S<sub>F,A</sub> := {E &sube; K | E is a field, F &sube; E, and A &sube; E}.
+  Then
+    <b>F(A)</b> := &cap;<sub>E &isin; S<sub>F,A</sub></sub> E is the
+    <b>subfield of K generated by A over F</b>.  In the case that 
+    A = {a<sub>1</sub>,...,a<sub>m</sub>} is finite, we denote
+    <b>F(a<sub>1</sub>,...,a<sub>m</sub>)</b> := F(A).
+  <li> Def 9.11:  A field extension K/F is <b>simple</b> if K = F(a)
+  for some a &isin; K. In this case a is a <b>primitive element</b>
+  for the extension K/F.
+  <li> Lemma 9.12:  Let K/F be a field extension and let a &isin; K.
+  Then F(a) = {p(a)(q(a))<sup>-1</sup> | p,q &isin; F[x], q &ne; 0}.
+  <li> Examples
+    </ul> 
+ <li> Algebraic and transcendental extensions
+   <ul>
+   <li>  Cor 9.15:  Let F be a field and let p &isin; F[x] be an irreducible 
+    polynomial of degree n, let K := F[x]/(p), and let &alpha; := x + (p).
+    Then K is an extension field of F of degree
+    n = degree(p) in which p has a root.  Moreover, 
+    K = {f<sub>0</sub> + f<sub>1</sub>&alpha; + &middot;&middot;&middot; +
+    f<sub>n-1</sub>&alpha;<sup>n-1</sup> | f<sub>0</sub>,...,f<sub>n-1</sub>
+     &isin; F} is the set of all polynomials in &alpha; over F of degree &lt; n,
+    with addition given by polynomial addition, and multiplication
+    defined by q(&alpha;)q'(&alpha;) = r(&alpha;) where r is the remainder
+    obtained after dividing the polynomial q(x)q'(x) by p(x) in F[x].   
+   
+   <li> Def 9.18:  For a field extension K/F, an element a &isin; K is
+   <b>algebraic over F</b> if q(a) = 0 for some polynomial q &isin; F[x] of
+   positive degree; otherwise a is <b>transcendental over F</b>.
+   <li> Def 9.19: Let F be a field.  The field of fractions of F[x] is denoted
+   <b>F(x)</b>.
+   <li> Thm 9.20: Let K/F be a field extension and let a &isin; K.
+   Let I := {p &isin; F[x] | p(a) = 0}. Then 
+   (1) I is an ideal of F[x].
+   (2) I = 0 if and only if a is transcendental.
+   (3) If a is algebraic over F then the unique monic generator of the
+   ideal I,
+   denoted <b>m<sub>a,F</sub></b> and called the <b>minimum polynomial
+   of a over F</b>,  is irreducible.
+   (4) If a is algebraic over F then [F(a):F] = degree(m<sub>a,F</sub>) and   
+   there is an isomorphism
+   h: F[x]/(m<sub>a,F</sub>) &rarr; F(a) 
+   (isomorphic as fields) such that h(f +(m<sub>a,F</sub>)) = f for all f &isin; F
+   and h(x + (m<sub>a,F</sub>)) = a.
+   (5)  If a is transcendental over F then there is an isomorphism
+     h: F(x) &rarr; F(a) such that h(f) = f for all f &isin; F and
+     h(x) = a.
+   (6) The element a is algebraic over F if and only if
+    [F(a):F] &lt; &infin;.
+  <li> Cor 9.21:  If K/F is a finite field extension, then K is generated over F
+  by a finite set of algebraic elements over F.
+  <li> Cor 9.22:  If K/F is a field extension and a &isin; K is algebraic over F,
+    then F(a) = F[a].
+  <li> Def 9.24:  An extension K/F of fields is <b>algebraic</b> if every
+  element of K is algebraic over F.  
+  <li> Prop 9.25:  Let L/K and K/F be field extensions. Then
+    L/F is an algebraic field extension if and only if both L/K and K/F are algebraic
+    field extensions.
+  <li> Prop 9.27:  Let L/F be a field extension.  Then the set
+    K = {a &isin; L | a is algebraic over F} is a subfield of L that 
+    contains F.  Moreover, K is the largest subfield of L that is algebraic
+    over F.
+    <li> Examples
+     <ul> 
+     <li> Def 9.28:  <b>Q</b>' := {a &isin; <b>C</b> | a is algebraic over <b>Q</b>}
+     is the <b>field of algebraic numbers</b>.
+     <li> <b>Q</b>' is an algebraic extension of <b>Q</b>,
+        and [<b>Q</b>' : <b>Q</b>] = &infin;.
+     <li> Roots of unity
+     </ul>
+    </ul>
+
+  <li> Splitting fields
+   <ul>
+   <li> Def 9.30:  For a field F and a nonconstant polynomial p &isin; F[x],
+   a <b>splitting field of p over F</b> is an extension field K &supe; F
+   such that p splits completely into linear factors in K[x], and p does
+   not split completely into linear factors over any proper subfield of K
+   that contains F.
+  <li> Examples
+  <li> Thm 9.33: (<b>Existence of Splitting Fields</b>):  If F is a field and p &isin; F[x] is a nonconstant polynomial,
+    then there exists a splitting field for p over F.
+  <li> Prop 9.35:  Let j: F &rarr; F' be an isomorphism of fields and let
+  p &isin; F[x] be a polynomial of positive degree.  Let k: F[x] &rarr; F'[x] be
+  the induced ring homomorphism such that k(f) = j(f) for all f &isin; F 
+  and k(x) = x, and let
+  p' := k(p) &isin; F'[x].  Let b be any root of p in an extension field L of F,
+  and let b' be any root of p' in an extension field L' of F'. 
+  <br> (1) If p is an irreducible polynomial in F[x], then there is a
+  field isomorphism h: F(b) &rarr; F'(b') such that h(f) = j(f) for all f &isin; F
+  and h(b) = b'.
+  <br> (2) If K is a splitting field of p over F and K' is a splitting field
+  of p' over F', then there is a field isomorphism
+   h: K &rarr; K' such that h(f) = j(f) for all f &isin; F.
+  <li> Cor 9.37: Let F be a field, let p &isin; F[x].
+  <br> (1) If p is an irreducible polynomial in F[x] and b,c are any two
+  roots of p in an extension field L of F, then there is a field isomorphism
+  h: F(b) &rarr; F(c) such that h|<sub>F</sub> = Id<sub>F</sub> and h(b) = c.
+  <br>(2) (<b>Uniqueness of Splitting Fields</b>):  If K,K' are any two splitting fields of p over F, then 
+    there is a field isomorphism
+  h: K &rarr; K' such that h|<sub>F</sub> = Id<sub>F</sub>.
+  <li> Prop 9.40:  Let F be a field, let p &isin; F be a polynomial
+  of positive degree n, and let K be a splitting field of p over F.
+  Then [K : F] &le; n!.
+  <li> Examples
+  </ul>
+ 
+ <li> Algebraic closure
+  <ul>
+  <li> Def 9.43:  A field L is <b>algebraically closed</b> if  every nonconstant
+  polynomial p &isin; L[x] has a root in L[x].
+  <li> Rmk 9.44:  L is algebraically closed if and only if every nonconstant 
+  polynomial p &isin; L factors completely into linear factors.
+  <li> Examples
+  <li> Def 9.46:  Let F be a field.  An <b>algebraic closure</b> of F
+  is an algebraic extension field F' of F such that F' is algebraically closed.
+  <li> Thm 9.48: (<b>Existence and Uniqueness of Algebraic Closure</b>):  
+  Let F be a field.  Then there exists an algebraic closure of F.
+  Moreover, if L and L' are any two algebraic closures of F, then there is a
+  field isomorphism h: L &rarr; L' such that h|<sub>F</sub> = Id<sub>F</sub>.
+  <li> Prop 9.50:  If L/F is an algebraic field extension and every nonconstant
+  polynomial p &isin; F[x] factors completely into linear factors in L[x],
+  then L is algebraically closed (and hence L is an algebraic closure of F).
+  <li> Example:
+   <ul>
+   <li> Def 9.51:  Let n &ge; 2 and let &zeta;<sub>n</sub> := 
+   e<sup>2&pi;i/n</sup>.  The <b>n-th cyclotomic extension</b>
+   is the extension <b>Q</b>(&zeta;<sub>n</sub>)/<b>Q</b>.
+   The <b>primitive n-th roots of 1</b> are the powers
+   &zeta;<sub>n</sub><sup>k</sup> for all 1 &le; k &le; n-1 such that
+   gcd(k,n)=1. The <b>n-th cyclotomic polynomial &Phi;<sub>n</sub></b> is
+   &prod;<sub>[1 &le; k &le; n-1 and gcd(k,n)=1]</sub> (x - &zeta;<sub>n</sub><sup>k</sup>).
+   The <b>Euler totient function</b> is the function &phi;: <b>N</b> &rarr; <b>N</b>
+   defined by &phi;(n) := |{k | 1 &le; k &le; n-1 and gcd(k,n)=1}|.
+   <li> Prop 9.52: (1) For all n &ge; 2, 
+   &Phi;<sub>n</sub> = m<sub>&zeta;<sub>n</sub>,<b>Q</b></sub> &isin; <b>Q</b>[x] and
+   (hence) [<b>Q</b>(&zeta;<sub>n</sub>) : <b>Q</b>] = &phi;(n).
+   (2) If <b>Q</b>' is the field of algebraic numbers, then <b>Q</b>' is
+   the algebraic closure of <b>Q</b>, <b>Q</b>' is algebraically closed,
+   and [<b>Q</b>' : <b>Q</b>] = &infin;.
+   </ul>
+  </ul>
+ 
+ <li> Separability
+  <ul>
+  <li> Def 9.55:  Let F be a field, let q &isin; F[x], and let
+  b be a root of the polynomial q in a splitting field K of q over F.  
+  The <b>multiplicity</b> of the root b
+  is the number of times (x-b) appears in a factorization of
+  q into linear factors in K[x].  If every root of q has multiplicity 1,
+  then the polynomial q is <b>separable</b>.
+  <li> Def 9.56:  A field extension K/F is <b>separable</b>
+  if K/F is algebraic
+   and for all k &isin; K, the minimum polynomial m<sub>k,F</sub> is separable.
+  <li> Example:  <b>Q</b>(i) / <b>Q</b>
+  <li> Def 9.58:  Let F be a field and let q = a<sub>n</sub>x<sup>n</sup> +
+  &middot;&middot;&middot; + a<sub>1</sub>x + a<sub>0</sub> &isin; F[x], with
+  each a<sub>i</sub> &isin; F.  The <b>derivative</b> of q is the polynomial
+  <b>q'</b> := na<sub>n</sub>x<sup>n-1</sup> +
+  &middot;&middot;&middot; + a<sub>1</sub>.
+  <li> Lemma 9.59:  Let F be a field and let p,q &isin; F[x] and r &isin; F.
+  (a) (rp)'=r(p').  (b) (p + q)' = p' + q'.  (c) (pq)' = (p')q + p(q').
+  <li> Prop 9.60:  Let F be a field and let q &isin; F[x].  (1) A root b of q has
+   multiplicity &ge; 2 if and only if b is a root of q'.
+  (2) The polynomial q is separable if and only if 1 is a gcd of q and q'.
+  (3) If q is irreducible in F[x], then q is separable if and only if q' &ne; 0.
+  <li> Examples: q = x<sup>3</sup> - 1 in <b>Z</b>/3<b>Z</b>[x] and in <b>R</b>[x]
+  <li> Cor 9.62:  Let F be a field with characteristic char(F) = 0.
+  (1) Every <!--product of distinct irreducible polynomials-->
+  irreducible polynomial in F[x] is separable.
+  (2) Every algebraic extension K/F is separable.
+  <li> Prop 9.63:  Let  F be a field with
+   characteristic char(F) = p for some prime number p, and let K/F be an
+   algebraic extension.  
+   (1)  If b is an element of F that is not a p-th power of an element of F,
+   and K/F is an algebraic extension of F that contains a root of x<sup>p</sup> - b,
+   then K/F is not separable.
+   (2)  If every element of
+   F is the p-th power of another element of F, then every algebraic
+   extension K/F is separable.
+  <li> Lemma 9.65: (<b>Freshman's Dream</b>): 
+  Let R be a commutative ring with 1 &ne; 0  of characteristic char(R) = p
+  for some prime number p.  Then the function h: R &rarr; R defined by
+  h(a) := a<sup>p</sup> for all a &isin; R is a  ring homomorphism.
+  <li> Cor 9.67:  Every algebraic field extension of a finite field is separable.
+  </ul>
+ </ul>
+
+
+<li><i>Section B: Galois Theory</i> 
+
+ <ul>
+ <li>  Group actions on field extensions
+  <ul>
+  <li> Def 9.70:  (a) Let K be a field.  The <b>automorphism group
+  of K</b>, denoted <b>Aut(K)</b>, is the collection of field automorphisms
+  of K, with the binary operation of
+  composition.  
+  (b) Let K/F be a field extension.  The <b>automorphism group
+  of K/F</b>, denoted <b>Aut(K/F)</b>, is the collection of field automorphisms
+  of K that restrict to the identity on F, with the binary operation of
+  composition.  
+  <li> Lemma 9.71:  Let K/F be a field extension. Then Aut(K) is a group
+  and Aut(K/F) is a subgroup of Aut(K).
+  <li> Examples
+   <ul>
+   <li> Aut(<b>C</b>/<b>R</b>)
+   <li> Aut(<b>Q</b>(&radic;2)/<b>Q</b>) 
+   </ul>
+  <li> Lemma 9.73:  Let K be a field, and let F be the prime field
+  of K.  Then Aut(K/F) = Aut(K).
+  <li> Def 9.75:  Let K be a field and let &sigma; &isin; Aut(K).  Then
+  for each q = a<sub>n</sub>x<sup>n</sup> + &middot;&middot;&middot; + a<sub>0</sub>
+   &isin; K[x] (with each a<sub>i</sub> &isin; K), let <b>q<sup>&sigma;</sup></b> 
+  denote the polynomial q<sup>&sigma;</sup> := 
+  &sigma;(<sub>n</sub>)x<sup>n</sup> + &middot;&middot;&middot; + &sigma;(a<sub>0</sub>).
+  <li> Lemma 9.77:  Let K/F be a field extension,
+  let &sigma; &isin; Aut(K/F), and let q &isin; F[x].  
+  (1) For all k &isin; K,  q(&sigma;(k)) = &sigma;(q(k)).
+  (2) If b &isin; K is a root of q, then &sigma;(b) also is a root of q.
+  <li> Thm 9.78:  Let K/F be the splitting field of a polynomial q &isin; F[x].
+  Let Y be the set of distinct roots of q in K, and let n := |Y|.
+  (1) Aut(K/F) acts faithfully on Y, via &sigma; &middot; b := &sigma;(b)
+   for all &sigma; &isin; Aut(K/F) and b &isin; Y, and hence 
+  Aut(K/F) is isomorphic to a subgroup of S<sub>n</sub>.
+  (2) The orbits of the action of Aut(K/F) on Y are the subsets of Y
+  that are the roots of the same irreducible factor of q.
+  (3) If q is an irreducible polynomial in F[x], then
+  Aut(K/F) acts transitively on Y.
+  <li> Examples 
+   <ul>
+   <li>The splitting field of x<sup>3</sup> - 2 over <b>Q</b>
+   </ul>
+  </ul>
+ <li> Interactions between group orders and field extension degrees
+  <ul>
+  <li> Thm 9.80:  Let K/F be a finite field extension.  Then:
+  (1) |Aut(K/F)| &le; [K : F].   
+  (2) If K is the splitting field of a separable polynomial in F[x],
+  then |Aut(K/F)| = [K : F].
+  <li> Def 9.82:  <!--Let F be a field.    (1) -->
+  Let K/F be a finite field extension. If |Aut(K/F)| = [K : F]
+  then the extension
+  K/F is called a <b>Galois extension</b>, and
+  the <b>Galois group of K/F</b> is  <b>Gal(K/F)</b> := Aut(K/F).
+    <li> Examples
+    <ul> 
+    <li> Cyclotomic extensions
+    </ul>
+    
+ </ul>
+ <li> Constructing Galois extensions, and the statement of Artin's Theorem
+  <ul>
+  <li> Construction 1: Splitting fields of separable polynomials
+   <ul>
+   <li> Def 9.84:  Let F be a field and let q &isin; F[x] be a separable polynomial.
+   The <b>Galois group of q over F</b> is Gal(L/F), where
+  L is the splitting field of q over F.
+   </ul>
+  <li> Construction 2: Fixed sets of subgroups of Aut(K)
+  <ul>
+  <li> Def 9.86:  Let K be a field and let G &lt; Aut(K).  The 
+  <b>subfield of K fixed by G</b> 
+  <!--, denoted<b>Fix<sub>G</sub>(K)</b> or <b>K<sup>G</sup></b>,-->
+  is <b>K<sup>G</sup></b> := {k &isin; K | g(k) = k for all g &isin; G}.
+  <li> Lemma 9.87:  Let K be a field and let G &lt; Aut(K).  Then
+  K<sup>G</sup> is a subfield of K.
+  <li> Thm 9.90:  (<b>Artin's Theorem</b>):  Let K be a field and let
+  G be a finite subgroup of Aut(K). Then K/K<sup>G</sup> is a finite
+  Galois extension, and Gal(K/K<sup>G</sup>) = G.
+  </ul>
+  <li> Equivalence of the two constructions
+   <ul>
+   <li> Cor 9.92:  Let K/F be a finite Galois field extension.  Then F = K<sup>Gal(K/F)</sup>.
+   <li> Cor 9.94:  Let K/F be a finite Galois field extension.  For all k &isin; K,
+   the minimal polynomial m<sub>k,F</sub> is separable and all of its roots are in K.
+   <li> Cor 9.95:  Let K/F be a finite field extension.  Then K/F is Galois
+   if and only if K is the splitting field of some separable polynomial in F[x].
+   </ul>
+  <li> Examples
+  </ul>
+ <li> Interactions between subgroups and "sub-(field extensions)"
+  <ul>
+  <li> Def 9.97:  Let L/F be a field extension.  An <b>intermediate field of L/F</b>
+  is a subfield K of L that contains F; that is, F &sube; K &sube; L.
+  <li> Cor 9.98:  Let L/F be a finite Galois field extension and let K be 
+  an intermediate field of L/F.  Then L/K is a finite Galois field extension.
+  <li> Thm 9.100:  (<b>Fundamental Theorem of Galois Theory (FTGT)</b>):  Let L/F
+   be a finite Galois field extension.  Then the function
+   &Psi;: {fields K | F &sube; K &sube; L} &rarr; {subgroups H of Gal(L/F)}
+   defined by &Psi;(K) := Gal(L/K) is a bijection, with inverse defined by
+   &Psi;<sup>-1</sup>(H) := L<sup>H</sup>.  Moreover:
+   <br>(1) &Psi; and &Psi;<sup>-1</sup> each
+   reverse the order of inclusion.
+   <br>(2) &Psi; and &Psi;<sup>-1</sup> preserve index/degree; that is:
+     (2a) For all intermediate fields K of L/F,
+     [K : F] = |Gal(L/F) : Gal(L/K)|. (2b) For all subgroups H of Gal(L/F),
+     |Gal(L/F) : H| = [L<sup>H</sup> : F].
+   <br>(3) Galois extensions correspond to normal subgroups; that is:
+   (3a) If K is an intermediate field of L/F and K/F is Galois, then
+   Gal(L/K) &#8884; Gal(L/F).
+   (3b)  If N &#8884; Gal(L/F), then L<sup>N</sup>/F is Galois.
+   <br>(4) If N &#8884; Gal(L/F), then 
+   Gal(L<sup>N</sup>/F) &cong; Gal(L/F)/N.
+   </ul>
+ <li> Examples and applications
+  <ul>
+  <li> Cyclotomic extensions revisited
+   <ul>
+   <li>  Def 9.105:  Let F be a field and let n be
+a positive integer such that char(F) does not divide n.
+A <b>primitive n-th root of 1</b> over F is an element &zeta; in
+the splitting field K of x<sup>n</sup> - 1 over F such that
+&zeta; generates the (multiplicative) subgroup 
+H := {roots of x<sup>n</sup> - 1 in K} &le; K<sup>x</sup>.
+  <li> Prop 9.107:  Let F be a field, let n be
+a positive integer such that char(F) does not divide n,
+and let F' be the algebraic closure of F.
+If &zeta; &isin; F' is a primitive n-th root of 1 over F, then F(&zeta;)/F
+is a finite Galois extension, and Gal(F(&zeta;)/F) is an
+abelian group that is isomorphic to a subgroup of 
+<b>Z</b>/n<b>Z</b><sup>x</sup>.
+  <li> Rmk:  If F is a field of prime characteristic p
+  and n is an integer that is divisible by p, 
+  then x<sup>n</sup> - 1  is not separable.
+    </ul>
+
+  <li> Splitting fields of polynomials of the form x<sup>n</sup> - b
+   <ul>
+   <li> Example:  Computing the intermediate fields <b>Q</b> &sube; K
+   &sube; L for the splitting field L of x<sup>4</sup> - 2 over <b>Q</b>.
+   <li> Prop 9.110:  Let F be a field and let n be
+a positive integer such that char(F) does not divide n.
+Let b &isin; F and let L be the splitting field of 
+x<sup>n</sup> - b over F.
+If F contains a primitive n-th root of 1, 
+then L/F is a finite Galois extension and 
+Gal(L/F) is isomorphic to a subgroup of <b>Z</b>/n<b>Z</b>
+and hence is cyclic.
+   </ul>
+
+  <li> Finite fields
+   <ul>
+   <li>  Thm 9.115:  Let p be a prime number and let n be a 
+   positive integer.  Then the splitting field L of x<sup>p<sup>n</sup></sup> - x
+   over <b>Z</b>/p<b>Z</b> is a field of order p<sup>n</sup>.
+   Moreover, if L' is another field of order p<sup>n</sup>, then
+   L' &cong; L.
+   <li> Notation 9.117:  Let p be a prime number and let n be a 
+   positive integer.  The unique (up to isomorphism) field of
+   order p<sup>n</sup> is denoted <b>F</b><sub>p<sup>n</sup></sub>.
+   <!--(or GF(p<sup>n</sup>)).-->
+   <li> Thm 9.119:  Let p be a prime number and let n be a 
+   positive integer.   Then the extension
+  <b>F</b><sub>p<sup>n</sup></sub>/<b>F</b><sub>p</sub>
+   is Galois, and
+   Gal(<b>F</b><sub>p<sup>n</sup></sub>/<b>F</b><sub>p</sub>)
+   is a cyclic group of order n generated by the
+   element h &isin; Gal(<b>F</b><sub>p<sup>n</sup></sub>/<b>F</b><sub>p</sub>)
+   defined by h(k) := k<sup>p</sup> for all 
+    k &isin; <b>F</b><sub>p<sup>n</sup></sub>.  
+   </ul>
+  </ul>
+
+ <li> Proofs of Artin's Theorem and the Fundamental Theorem of Galois Theory
+  <ul>
+    <li> Proof of Artin's Theorem
+  <li> Proof of FTGT
+  </ul>
+
+
+
+
+ </ul>
+ 
+</ul>
+
+<p><br>
+
+<font size=-1><i>S. Hermiller
+</i></font>
+<p>
+</BODY>
+</HTML>
+
+
+

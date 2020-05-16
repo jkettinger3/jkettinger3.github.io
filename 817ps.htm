@@ -1,0 +1,890 @@
+﻿<html>
+<head><title>Math 817 - Section 1 - Fall 2017 - Problem Sets</title>
+</head>
+
+<body bgcolor="#dfbfaf" link="#0f0fff" alink="#8f0f0f" vlink="#8f0f0f">
+
+<div align="center"><font size="+1"><b>
+Math 817 - Section 001 - Fall 2017 - Problem Sets
+</font></b></div>
+<p><br>
+
+
+
+<b> Reminder:  
+The <a href= "http://www.math.unl.edu/~smh/818/hwwriting.html">"How to" guide for
+proof writing</a>, including proper referencing of prior results,  
+should be followed when writing up  your solutions.
+</b>
+  
+<p>
+
+
+<ul> 
+<li> Problem Set 1:  
+
+<ul>
+<li> <b>E0.1</b>:  Let f:G &rarr; H be a function and let 
+  C,D be subsets of G and let E,F be subsets of H.  Prove the following parts of
+  TOC Thms 0.7-0.9:
+  <br>
+  <b>(a)</b> f(C &cup; D) = f(C) &cup; f(D).
+  <br>
+  <b>(b)</b> f <sup>-1</sup>(E &cup; F) = f <sup>-1</sup>(E) &cup; 
+   f <sup>-1</sup>(F).
+  <br>
+  <b>(c)</b> f(f <sup>-1</sup>(E)) &sube; E.  
+  <br>
+  <b>(d)</b> Find an example of sets G and H, a function
+  f:G &rarr; H, and a subset E of H, for which 
+   f(f <sup>-1</sup>(E)) &ne; E.
+<li> <b>E0.2</b>:  For each of the following examples of a set X and
+  an equivalence relation ~ on X, find and prove a bijection between
+  the set X/~ of equivalence classes and a subset of X using TOC Thm 0.17.
+  <br>
+<b>(a)</b> X = <b>R</b><sup>2</sup>.  Define
+    (x<sub>0</sub>,y<sub>0</sub>) ~ 
+        (x<sub>1</sub>,y<sub>1</sub>) if and only if
+            x<sub>0</sub> - x<sub>1</sub> and 
+        y<sub>0</sub> - y<sub>1</sub> are both even integers.
+  <br>
+  <b>(b)</b> X is the square ([-1,1] &times; {-1,1}) &cup; ({-1,1} &times; [-1,1]).
+    Define (x<sub>0</sub>,y<sub>0</sub>) ~ 
+        (x<sub>1</sub>,y<sub>1</sub>) if and only if
+        either (there is an &epsilon; in {1,-1} such that
+          x<sub>1</sub> = &epsilon; x<sub>0</sub> and 
+          y<sub>1</sub> = &epsilon; y<sub>0</sub>) 
+        or (there is an &epsilon; in {1,-1} such that
+          x<sub>1</sub> = &epsilon; y<sub>0</sub> and
+          y<sub>1</sub> = - &epsilon; x<sub>0</sub>).
+<li> <b>E1.1</b>:  Text exercise 1.1.6.          
+<li> <b>E1.2</b>:  Let M be the set of all "words" that
+can be written in the letters a,b,f,g.  (That is, the
+words a,b,afg,abgfafffab are elements of M, as is the
+word with no letters (called the <i>empty word</i>
+and written as &lambda;).)  
+Let T be the intersection of all of the equivalence relations on M
+that satisfy the properties
+that (i) ab ~ ba ~ &lambda; ~ fg ~ gf, and (ii) whenever
+u,v,w,x &isin; M and v ~ w then uvx ~ uwx.
+<br>(a) 
+Show that T is the smallest
+equivalence relation on M satisfying (i-ii). 
+(That is, show that the subset T of M &times; M is an equivalence relation on M
+satisfying (i-ii), and show that if T' is
+another equivalence relation satisfying (i-ii),
+then T &sube; T'.  Notation:  Use ~<sub>T</sub> to denote the relation from T,
+and ~<sub>T'</sub> to denote the relation from T', etc.)  
+<br>(b) Define a binary operation on
+the set M/~<sub>T</sub> of equivalence classes by
+[u][v]=[uv].  Show that M/~<sub>T</sub> is a group. 
+<li> <b>E1.3</b>: Let U(n) (or (<b>Z</b>/n<b>Z</b>)<sup>x</sup>) be the set of all
+positive integers less than n that are relatively prime to n, with
+the binary operation of multiplication modulo n; this is a group (you don't
+need to prove that).  List the elements of U(18), find the identity of U(18),
+and find the inverse of each element of U(18).
+<li> <b>E1.4</b>:  
+A <b>symmetry</b> of a subset X of the Euclidean plane <b>R</b><sup>2</sup>
+is a bijection f: X &rarr; X that preserves (Euclidean) distance d.  (That is,
+d(p,q)=d(f(p),f(q)) for all p,q &isin; <b>R</b><sup>2</sup>.)
+For each of 
+ the following subsets X of the plane <b>R</b><sup>2</sup>,
+  describe all of the elements 
+  of the group of symmetries.  (Briefly explain how you got
+  your answer; full proof not needed.)
+<br>(a)  An infinitely long strip of equally spaced R's:
+... R R R R R R R R ...
+<br>(b)  An infinitely long strip of equally spaced S's:
+... S S S S S S S S ...
+<br>(c)  An infinitely long strip of equally spaced B's:
+... B B B B B B B B ...
+<br>(d)  An infinitely long strip of equally spaced H's:
+... H H H H H H H H ...
+ 
+
+</ul>
+
+<b> Due 9/1/17 for grading:  E0.1(c-d), E1.2, E1.4(a-b)   </b>
+
+<p>
+
+
+ 
+<li> Problem Set 2:  
+
+<ul>
+<li> <b>E1.5</b>: Let G be a group with elements a and b.
+Show that the following are equivalent:  (i) ab = ba.
+(ii) aba<sup>-1</sup>b<sup>-1</sup> = e.  (iii) For all
+integers j and k, a<sup>j</sup>b<sup>k</sup> = b<sup>k</sup>a<sup>j</sup>.
+(iv) For all integers n, (ab)<sup>n</sup> = a<sup>n</sup>b<sup>n</sup>.
+
+<li> <b>E1.6</b>: 
+Let g be an element of a group G.
+<br>(a) Prove that |g|=|g<sup>-1</sup>|.  
+<br>(b-i) Prove that if |g| = n for a natural number n, then
+e,g,...,g<sup>n-1</sup> are all distinct elements of G.
+<br>(b-ii) Prove that if |g| =  &infin;, then for all integers i,j
+with i &ne; j, g<sup>i</sup> &ne; g<sup>j</sup>.
+<br>(b-iii) Prove (using (b-i-ii)) that |g| &le; |G|.
+<!--Let G be a group with elements g and h.
+<br>(*) Show that |hgh<sup>-1</sup>| = |g|.
+<br>(*) Show that |gh| = |hg|.-->
+<br>(c) Prove that if f:G &rarr; H is an isomorphism, then
+|g| = |f(g)|.
+<br>(d) Give an example of a group G and elements g and h
+satisfying |g| is finite, |h| is finite, and |gh| is infinite.
+
+<li> <b>E1.7</b>:  Show that if G and H are groups,
+&phi;,&sigma;: G &rarr; H are homomorphisms, S &sube; G is a generating set for G
+(that is, G = &lang; S &rang;),
+and &phi;(t) = &sigma;(t) for all t &isin; S,
+then &phi; = &sigma; (that is,
+&phi;(g) = &sigma;(g) for all g &isin; G).
+
+<!--<li> <b>E1.8</b>:  Finish the proof of TOC Prop 1.16:  
+"Isomorphic" is an equivalence
+relation on the set of all groups.-->
+
+<li> <b>E1.8</b>: In each part,
+determine (and prove) whether or not the group G
+is isomorphic to the group H.
+ <br>(a) G = U(20) and H = U(24).  
+ <br>(b) G = Aut(<b>Z</b>/4<b>Z</b>) and H = <b>Z</b>/3<b>Z</b>.
+ <br>(c) G = GL<sub>2</sub>(<b>Z</b>/2<b>Z</b>) and H = D<sub>6</sub>.
+ <br>(d) G = Q<sub>8</sub> and H = S<sub>4</sub>.
+ <br>(e) G = <b>Z</b> and H = <b>Q</b>.
+
+
+<li> <b>E1.9</b>: Let n be a natural number and let &sigma; be an
+element of the symmetric group S<sub>n</sub>.
+<br>(a) Show that if &sigma; is an m-cycle 
+(a<sub>1</sub> a<sub>2</sub> ... a<sub>m</sub>), then |&sigma;| = m.
+<br>(b) Show that if &sigma; is a product of disjoint cycles
+of orders m<sub>1</sub>,...,m<sub>k</sub>, then
+|&sigma;| is the least common multiple of the m<sub>i</sub>'s
+(that is, |&sigma;| = lcm(m<sub>1</sub>,...,m<sub>k</sub>)).
+(<i>Note: You may use the results in E1.5 in this problem.</i>)
+
+<li> <b>E1.10</b>:  Show that if G and H are groups
+and G &cong; H, then Aut(G) &cong; Aut(H). 
+
+
+
+</ul>
+
+<b> Due 9/8/17 for grading: E1.6(c,d), E1.8(a,b), E1.9(a), E1.10   </b>
+
+
+
+<p>
+
+
+ 
+<li> Problem Set 3:   
+
+<ul>
+<li> <b>E1.11</b>:  (a) Prove TOC Lemma 1.49.  (b) Prove TOC Lemma 1.51.
+<li> <b>E1.12</b>:  For each of the following groups G and
+generating sets A, draw the Cayley graph &Gamma;(G,A).
+<br>(a) G = D<sub>6</sub>, A = {s,r}
+<br>(b) G = D<sub>6</sub>, A = {s,rs}
+<br>(c) G = S<sub>3</sub>, A = {(12),(13)}
+
+
+<li> <b>E2.1</b>:  (a) Prove TOC Thm 2.3.  (b) Prove TOC Thm 2.15.
+<li> <b>E2.2</b>: Let G be a group, and let 
+G &times; G &rarr; G be the conjugation action of G on itself 
+(that is, (g,h) &rarr; ghg<sup>-1</sup>).  Let H be a subset of G.
+The point-wise stabilizer PtStab<sub>G</sub>(H) of H is called the
+<b>centralizer</b> of H in G, denoted C<sub>G</sub>(H), and
+the set-wise stabilizer SetStab<sub>G</sub>(H) of H is called the
+<b>normalizer</b> of H in G, denoted N<sub>G</sub>(H).
+(As usual, if H = {p} for some element p of G, the centralizer
+is written C<sub>G</sub>(p) and the normalizer is
+written N<sub>G</sub>(p).)
+<br>(a) 
+For the following groups G and subsets H, 
+determine the elements of the sets C<sub>G</sub>(H) and N<sub>G</sub>(H)
+(and prove your answer).
+<br>(a-i) G = D<sub>2n</sub>, H={e,s}  where s
+is reflection of the regular n-gon around a line through
+a vertex and the center point of the n-gon.
+<br>(a-ii)  G = SL<sub>2</sub>(<b>Z</b>/3<b>Z</b>), 
+  H = {p<sub>n</sub> | n &isin; <b>Z</b>/3<b>Z</b>}
+  where p<sub>n</sub> is the matrix with top row [1 n] and
+  bottom row [0 1].
+<br>(a-iii) G = F({a,b}), H = {a}
+<br>(a-iv) G = Q (quaternions), H = {1,-1,i,-i}
+<br>(b-i) Show that if a &isin; G, then
+C<sub>G</sub>({a^i | i &isin; <b>Z</b>}) = C<sub>G</sub>(a).  Must
+N<sub>G</sub>({a^i | i &isin; <b>Z</b>}) = N<sub>G</sub>(a) also hold?
+<br>(b-ii) Show that if A &sube; G, then
+C<sub>G</sub>(&lang; A &rang;) = C<sub>G</sub>(A).
+Must
+N<sub>G</sub>(&lang; A &rang;) = N<sub>G</sub>(A) also hold?
+<br>(c) Prove that C<sub>G</sub>(H) is a subgroup of
+ N<sub>G</sub>(H), and N<sub>G</sub>(H) is a subgroup of G.
+
+
+
+<li> <b>E2.3</b>: Prove the Homomorphism Building Theorem
+for Cyclic Groups:  Suppose that G = &lang; a &rang; and H 
+are groups.  (a) If |a| = &infin;, then for every y in H
+there is a unique group homomorphism f: G &rarr; H
+such that f(a) = y.  (b)  If |a| = n &lt; &infin;, then
+for every y in H satisfying y<sup>n</sup> = e, there is
+a unique group homomorphism f: G &rarr; H
+such that f(a) = y.
+
+
+
+</ul>
+
+<b> Due 9/15/17 for grading: E1.11(a)(2), E1.12(b), E2.1(a)(2),
+E2.2(a-iv),(b-i)   </b>
+
+
+<p>
+
+
+ 
+<li> Problem Set 4:  
+
+<ul>
+<li> <b>E2.4</b>: (a) Prove that for any group G, Z(G) = C<sub>G</sub>(G) 
+and G = C<sub>G</sub>(1).
+<br> (b) Let H be the subgroup of SL<sub>3</sub>(<b>Z</b>) 
+  of all matrices with top row [1 a b], middle row [0 1 c],
+ and bottom row [0 0 1] (where a,b,c &isin; <b>Z</b>)
+ (with group operation given by matrix multiplication); this is called
+ the <b>Heisenberg group</b>.  Determine the elements of Z(H).
+ <br> (c) Show that the order of the center of a group is an isomorphism invariant.
+
+
+<li> <b>E2.5</b>: For each natural number n, let 
+V<sub>n</sub> be the subset of the symmetric group S<sub>n</sub> 
+defined by 
+<br>V<sub>n</sub> = {(i j)(k m) | i,j,k,m &isin; {1,...,n}, i &ne; j, and
+k &ne; m};
+<br>
+that is, V<sub>n</sub> is the set of all products of two
+2-cycles.  Let A<sub>n</sub> be the subgroup of S<sub>n</sub>
+generated by V<sub>n</sub>; the group A<sub>n</sub> is called
+the <b>alternating group of degree n</b>.
+For n = 3, n = 4, and n = 5 determine
+whether or not A<sub>n</sub> = V<sub>n</sub>, and
+whether or not A<sub>n</sub> = S<sub>n</sub>.
+
+<li> <b>E2.6</b>: Let G, H, and K be groups.
+<br>(a)  For each g &isin; G, let &sigma;<sub>g,G</sub>:G &rarr; G
+be the automorphism of G defined by &sigma;<sub>g,G</sub>(x) = gxg<sup>-1</sup> 
+for all x &isin; G.   (If there is only one group in the discussion, 
+this automorphism is also written &sigma;<sub>g</sub>.)
+Show that the subset <b>Inn(G)</b> = {&sigma;<sub>g,G</sub> | g &isin; G}
+of Aut(G), with the same group operation, is a subgroup of Aut(G); this subgroup is
+called the <b>inner automorphism
+group</b> of G.  
+<br>(b) Find (and prove) an example of a subgroup K in a group G for which
+the map Inn(K) &rarr; Inn(G) given by &sigma;<sub>k,K</sub> &rarr; &sigma;<sub>k,G</sub>
+for all k &isin; K is <i>not</i> a well-defined function.
+<br>(c)  Show that Aut(G) &times; Aut(H) embeds in Aut(G &times; H).
+<br>(d) Find (and prove) an example of groups G and H for which
+Aut(G) &times; Aut(H) is not isomorphic to Aut(G &times; H).
+
+<li> <b>E2.7</b>:  Show that if f<sub>i</sub>:G<sub>i</sub> &rarr; H<sub>i</sub>
+is a group homomorphism for i=1,2, then the function
+f':G<sub>1</sub> &times; G<sub>2</sub> &rarr; 
+H<sub>1</sub> &times; H<sub>2</sub> defined by
+f'(g<sub>1</sub>,g<sub>2</sub>) = 
+(f<sub>1</sub>(g<sub>1</sub>),f<sub>2</sub>(g<sub>2</sub>)) can
+be constructed from the functions f<sub>i</sub> and projections using
+products and compositions of functions.  Use your construction and various TOC theorems
+to show that f' is a homomorphism.
+
+<li> <b>E2.8</b>:  (a) Prove TOC Thm 2.59.  (b) Prove TOC Thm 2.66.
+
+
+<li> <b>E2.9</b>:  In each part, determine whether the
+group G is isomorphic to the group H (and prove your answer).
+<br>  (a) G = C<sub>8</sub> &times; C<sub>2</sub> and
+  H = C<sub>4</sub> &oplus; C<sub>4</sub>.
+<br> (b) G = S<sub>3</sub> &times; U(3) and
+   H = D<sub>12</sub>.
+<br> (c) G is the subgroup of SL<sub>3</sub>(<b>Z</b>/3<b>Z</b>) 
+  of all matrices with top row [1 a b], middle row [0 1 0],
+ and bottom row [0 0 1] (where a,b &isin; <b>Z</b>/3<b>Z</b>)
+ (with group operation given by matrix multiplication),
+ and H = C<sub>3</sub> &times; C<sub>3</sub>.
+<br> (d) G = <b>Z</b> and H = <b>Z</b> &times; <b>Z</b>.
+<br> (e) G = <b>Z</b><sup>3</sup> = <b>Z</b> &times; <b>Z</b> &times; <b>Z</b>,
+  and H is the Heisenberg  group in E2.4(b).
+
+
+</ul>
+
+
+<b> Due 9/22/17 for grading: E2.4(b,c), E2.6(b,c,d), E2.9(e)</b>
+
+
+<p>
+
+
+ 
+<li> Problem Set 5: 
+
+<ul>
+<li> <b>E3.1</b>: Let G be a group, let N be a normal subgroup of G,
+and let G/N be the quotient group.  Prove the following.  
+<br>(a) If G is finite, then G/N is finite and |G/N| divides |G|.
+<br>(b) If g is an element of G and N &#8884; G,
+    then |g| &ge; |gN|.  Moreover, if g has finite order in G, then
+    gN has finite order in G/N and
+    |gN| divides |g|.
+<br>(c) If G is abelian then G/N is abelian.
+<br>(d) If G is cyclic then G/N is cyclic.
+<br>(e) If G is finitely generated then G/N is finitely generated.
+<br>(<i>Note</i>:  These are TOC Theorems 3.50, 3.52, 3.55, 3.60, and 3.63.)
+
+<li> <b>E3.2</b>:  Let G be a group.
+<br>(a) Let H be a group.  Show that {1<sub>G</sub>} &times; H
+&#8884; G &times; H, and (G &times; H)/({1<sub>G</sub>} &times; H)
+&cong; G.
+<br>(b) Let M and N be normal subgroups of G
+satisfying G = MN.  Prove that M &cap; N &#8884; G, and that
+G/(M &cap; N) &cong; (G/M) &times; (G/N).
+
+<li> <b>E3.3</b>:  
+Let G be a group. For each g,h &isin; G let [g,h] denote the element
+[g,h] =  ghg<sup>-1</sup>h<sup>-1</sup> of G.  ([g,h] is the <b>commutator
+of g with h</b>.)
+Let G' = &lang; {[g,h] | g,h &isin; G} &rang;,
+the commutator subgroup of G.
+<br>(a) Prove that G' &#8884; G.
+<br>(b) Let N &#8884; G.  Prove that G/N is abelian if and only if 
+  G' &sube; N.
+<br>(<i>Note</i>: This problem is asking you to prove TOC Prop 3.58.) 
+
+
+<!--<li> <b>E3.4</b>:  
+In each part, determine whether the
+group G is isomorphic to the group H (and prove your answer).
+<br> (a) G = S<sub>4</sub>/A<sub>4</sub> (see E2.5)
+and H = C<sub>4</sub>.
+<br> (b) G is any group, and  H = G/N.  (That is, is there
+an example of a group G and a normal subgroup N such that G &cong; G/N?)-->
+<li> <b>E3.4</b>:  
+Give an example of a group G and a normal subgroup N &ne; {1}
+such that G &cong; G/N.
+
+<li> <b>E3.5</b>:
+Let G be a group, let H &le; G, and let N &#8884; G
+such that NH = G and N &cap; H = {1}.
+<br>(a) Let N &times; H be the Cartesian product <i>set</i>,
+and let f:N &times; H &rarr; G be the <i>function</i> defined by
+f(n,h) = nh for all n &isin; N and h &isin; H.  Show that f is a bijection.
+<br>(b) Find a group operation on the set N &times; H that makes
+f an isomorphism.  (<i>Note</i>:  The group operation
+will not be the operation for the direct product, in general.
+Given (n,h),(n',h') &isin; N &times; H, you need to
+express the product (n,h)(n',h') in the form (n'',h''); that is,
+you need to write n'' and h'' in terms of n,n',h,h'.)
+<br>(c) Show that the group operation you found in (b) is
+the same as the direct product multiplication if and only if
+H &#8884; G.
+
+<li> <b>E3.6</b>:  Let G = &lang; A | R &rang;.
+<br>(a) Suppose that s is an element of the normal subgroup
+&lang; R &rang;<sup>N</sup> of F(A).  Show that
+G &cong; J where J = &lang; A | R &cup; {s} &rang;.
+<br>(b) Suppose that b is a letter not in A, and w is an element of F(A).
+Show that G &cong; K where K = &lang; A &cup; {b} | R &cup; {b=w} &rang;.
+<br>(c) The infinite dihedral group D<sub>&infin;</sub> is presented by
+D<sub>&infin;</sub> = &lang; r,s | s<sup>2</sup> = 1, sr = r<sup>-1</sup>s &rang;.
+Use the operations for changing presentations for
+isomorphic groups in parts (a) and (b) (these are called
+<i>Tietze transformations</i>) along with TOC Thm 1.16 to show that 
+D<sub>&infin;</sub> &cong; L where L  =
+&lang; a,b | a<sup>2</sup> = 1, b<sup>2</sup> = 1 &rang;.
+<!--<br>(d) Let H = &lang; B | S &rang;.  Show that
+G &times; H &cong; P where P = &lang; A &cup; B | R &cup; S &cup; {aba<sup>-1</sup>b<sup>-1</sup> |
+a &isin; A, b &isin; B} &rang;.-->
+<br>(<i>Hint/note</i>:  In parts (a) and (b), use the HBT for presentations, 
+TOC Thm 3.45.)
+
+
+
+
+</ul>
+
+
+<b> Due 9/29/17 for grading: 3.1(b,d), 3.3, 3.5(b), 3.6(a) </b>
+
+
+
+<p>
+
+
+ 
+<li> Problem Set 6:  
+
+<ul>
+<li> <b>E3.7</b>: Let G be the group with presentation
+<br>
+G = &lang; a,b,c | a<sup>2</sup>=1, b<sup>2</sup>=1, c<sup>2</sup>=1, 
+(ab)<sup>3</sup>=1, (ac)<sup>2</sup>=1, (bc)<sup>3</sup>=1 &rang;.
+<br>(a) Prove that G &cong; S<sub>4</sub>.
+<br>(b) Show that there is a surjective homomophism f:G &rarr; <b>Z</b>/2<b>Z</b>
+such that f(a)=f(b)=f(c)=1.
+<br>(c) Let h:S<sub>4</sub> &rarr; <b>Z</b>/2<b>Z</b> be the composition
+f &#8728; j where j is the isomorphism from S<sub>4</sub> to G from part (a).
+What group is the kernel of h?  (Only the name of the group is required;
+proof not needed.)
+<br>[(d) Challenge:  Show that for all n &ge; 3,
+<br> S<sub>n</sub> &cong; 
+&lang; a<sub>1</sub>,...,a<sub>n-1</sub> | 
+a<sub>i</sub><sup>2</sup> = 1 for all 1 &le; i &le; n-1,
+(a<sub>i</sub>a<sub>i+1</sub>)<sup>3</sup> = 1 for all 1 &le; i &le; n-2, 
+(a<sub>i</sub>a<sub>j</sub>)<sup>2</sup> = 1 for all 1 &le; i &lt; 
+i+2 &le; j &le;  n-1 &rang;.
+Use this to show that there is a surjective homomophism 
+f:S<sub>n</sub> &rarr; <b>Z</b>/2<b>Z</b>
+such that f(a<sub>i</sub>)=1 for all 1 &le; i &le; n-1.  
+Determine the kernel of f.]  
+
+<li> <b>E3.8</b>:  Let G be a group, and let H be a subgroup of G of 
+finite index |G:H| = n.
+<br>(a) Show that if n = 2, then H is normal in G.
+<br>(b) Show that if n = p is a prime number, H is a normal subgroup 
+of G, and K is another subgroup of G, then either K &le; H or G = KH. 
+<br>(c) Show that if K &le; H &le; G and the index |H:K| = m of K in H
+is finite, then the index of K in G is finite and 
+|G:K| = mn.  (Note:  You may not assume that G is a finite group.)
+<!--<br>(d) Show that if g &isin; G, then gHg<sup>-1</sup> is a
+subgroup of G.-->
+<br>(d) Show that there exists a normal subgroup N of G
+such that N &le; H and |G:N| &le; n!.  (Tip: Define the
+function f:G &rarr; Perm(G/H) (where G/H is the set of left cosets
+of H in G) by (f(g))(g'H) = (gg')H for all g &isin; G and
+g'H &isin; G/H.  Show that f is a group 
+homomorphism, and consider the kernel and image of f.)
+
+<li> <b>E3.9</b>:  Show that if A  &#8884; G and B &#8884; H, then
+A &times; B &#8884; G &times; H and
+(G &times H)/(A &times; B) &cong; (G/A) &times; (H/B).
+
+<!--<li> <b>E3.10</b>:  Prove the Butterfly Lemma:  If G is a group,
+A &le; G, C &le; G, B &#8884; A, and D &#8884; C, then
+(A &cap; D)B &#8884; (A &cap; C)B &le; G
+(B &cap; C)D &#8884; (A &cap; C)D &le; G, and there
+is an isomorphism
+(A &cap; C)B/(A &cap; D)B &cong; (A &cap; C)D/(B &cap; C)D.
+(Also draw a picture illustrating why this is called the Butterfly Lemma.) -->
+
+<li> <b>E3.10</b>:  Let P be an isomorphism invariant property.
+A group G has the property <b>poly-P</b> if there is a 
+sequence of groups 
+<br>
+{e}=N<sub>0</sub> &#8884; N<sub>1</sub> &#8884; ...  
+   &#8884; N<sub>k</sub> = G 
+<br> for some k &ge; 0 such that for all 
+   i &isin; {0,...,k-1} we have N<sub>i</sub> &#8884; N<sub>i+1</sub> &le; G
+   and the quotient group N<sub>i+1</sub>/N<sub>i</sub> has the property P.
+ <!-- (This sequence is called a "P subnormal series".) -->
+<br>(a)  Show that every group with the property P also has the property 
+poly-P.
+<br>(b)  For the following properties P, decide whether every
+poly-P group also has the property P (and prove your answer):
+<br>(b-i) Finite.
+<br>(b-ii) Abelian.
+<br>(b-iii) Cyclic.
+<br>(c) Show that every subgroup H of a poly-abelian group G is poly-abelian.
+(Tip:  Intersect the groups N<sub>i</sub> in the sequence for G with the group H.)
+
+<li> <b>E3.11</b>:  A group G is <b>simple</b> if |G| &gt; 1 and
+the only normal subgroups
+of G are {e} and G.  Show that if G is abelian and simple, then
+G &cong; <b>Z</b>/p<b>Z</b> for some prime number p.
+
+</ul>
+
+<b> Due 10/6/17 for grading:  E3.7(a,b,c), E3.8(b,d), E3.10(c)   </b>
+
+
+<p>
+
+<li> Exam 1 Monday October 9 6:00-8:00pm
+
+<p>
+ 
+<li> Problem Set 7: 
+<ul>
+<li> <b>E4.1</b>: Let G be a group and let g be an element of G.
+<br>(a) Suppose that G acts on a set A, and a &isin; A.  Show that
+g Stab<sub>G</sub>(a) g<sup>-1</sup> = Stab<sub>G</sub>(g &middot; a).
+<br>(b) Show that if S is a subset of G, then
+g C<sub>G</sub>(S) g<sup>-1</sup> = C<sub>G</sub>(g S g<sup>-1</sup>).
+<li> <b>E4.2</b>: Suppose that &pi; : G &rarr; Perm(G) is the permutation
+representation induced by the conjugation action of G on G.
+<br>(a) Show that &pi; is faithful if and only if Z(G) is trivial.
+<br>(b) If &pi; is transitive, what can you conlude about the group G?
+<li> <b>E4.3</b>: 
+(a) Number the elements 
+e,(1~2),(1~3),(2~3),(1~2~3),(1~3~2) of G = S<sub>3</sub> by 
+1,2,3,4,5,6, respectively.  Let 
+&pi; : G &rarr; Perm(G) = S<sub>6</sub> be the permutation
+representation induced by the left multiplication action of G on G.
+Write out the disjoint cycle notation for
+the image under &pi; of each of the elements of S<sub>3</sub>.
+   <!--1,r,r<sup>2</sup>,s,rs,r<sup>2</sup>s
+   of G = D<sub>6</sub> by 1,2,3,4,5,6, respectively.  Let 
+   &pi; : G &rarr; Perm(G) = S<sub>6</sub> be the permutation
+   representation induced by the left multiplication action of G on G.
+   Write out the disjoint cycle notation for
+   the image under &pi; of each of the elements of D<sub>6</sub>.-->
+<br>(b) Let g &isin; A<sub>n</sub>, let [g]<sub>A<sub>n</sub></sub>
+denote the conjugacy class of g in A<sub>n</sub>, and let
+[g]<sub>S<sub>n</sub></sub> denote the conjugacy class of g in S<sub>n</sub>.
+Show that either [g]<sub>S<sub>n</sub></sub> = [g]<sub>A<sub>n</sub></sub>
+or  [g]<sub>S<sub>n</sub></sub> is the union of two conjugacy classes
+in A<sub>n</sub> of the same size.
+   <!--<br>(c) List the sizes of all of the conjugacy classes of A<sub>6</sub>,
+   and prove that A<sub>6</sub> is simple.-->
+   <!--<li> <b>E4.4</b>:  Suppose that G is a finite group acting transitively
+   on a finite set A.  
+   -->
+<li> <b>E4.4</b>:  Let G be a group.
+<br>(a) Show that if G/Z(G) is cyclic, then G is abelian.
+<br>(b) Show that if |G| is a prime number, then G is cyclic.
+<br>(c) Suppose that |G|=15 and G is not abelian.  Show that Z(G) = 1
+and that G has exactly 3 conjugacy classes of size 3.
+<br>(Note:  You may not use TOC Cor 4.54 in this problem (since this problem
+is part of its proof in the special case that p = 3 and q = 5).)
+<li> <b>E4.5</b>:  A be a set and let G = Perm(A); that is, G acts on A by permutations.
+The  <b>fixed set</b> of a subset S &sube; G is <b>Fix(S)</b> = {a &isin; A | t(a) = a
+for all t &isin; S}.  
+Show that if H &le; G and g &isin; N<sub>G</sub>(H), then g &isin; SetStab(Fix(H)).
+<li> <b>E4.6</b>:  Let g<sub>1</sub>,...,g<sub>k</sub> be (unique) representatives
+of (all of) the conjugacy classes of a finite group G, and suppose that these
+elements commute pairwise.  
+<br>(a) Show that for all i &isin; {1,...,k}, |G:C<sub>G</sub>(g<sub>i</sub>)| &le; |G|/k.
+   <!--<br>(b) Show that for all h &isin; G, |C<sub>G</sub>(h)| &ge; r.-->
+<br>(b) Show that G is abelian.
+(<i>Hint</i>:  Use part (a) and the class equation.)
+
+
+
+
+</ul>
+
+<b> Due 10/20/17 for grading:  4.2(b), 4.5, 4.6   </b>
+
+
+
+<p>
+
+
+ 
+<li> Problem Set 8:  
+
+<ul>
+<li> <b>E4.7</b>:   For the groups G = <b>Z</b>/5<b>Z</b> and
+H =  S<sub>3</sub>,
+compute the groups Aut(G &times; H), Inn(G &times; H), and Out(G &times; H).
+<!--<br>(b) Suppose that G and H are groups satisfying gcd(|G|,|H|) = 1.
+Must Aut(G &times; H) &cong; Aut(G) &times; Aut(H)?  Must Inn(G &times; H) &cong; 
+Inn(G) &times; Inn(H)?-->
+<!--<li> <b>E4.8</b>:  Let N &#8906;<sub>&phi;</sub> K be a semidirect product
+of groups N and K with presentations 
+N = &lang; A | R &rang; and K = &lang; B | S &rang;.
+Show that N &#8906;<sub>&phi;</sub> K cong;
+<A &cup; B | R &cup; S &cup; {bab<sup>-1</sup> = &phi;(b)(a) | a &isin; A, b &isin; B}&rang;.
+-->
+<li> <b>E4.8</b>:  Let K be a finite cyclic group and let N be arbitrary group. 
+Suppose  that &phi;: K &rarr; Aut(N) and &theta;: K &rarr; Aut(N) are homomorphisms
+satisfying the property that there is a &sigma; &isin; Aut(N) such that
+&sigma; &phi;(K) &sigma;<sup>-1</sup> = &theta;(K); that is, the images of
+&phi; and &theta; are conjugate subgroups of Aut(N).  Show that 
+N &#8906;<sub>&phi;</sub> K &cong;  N &#8906;<sub>&theta;</sub> K.
+<br>(Hint:  Show that there is an integer m such that
+&sigma; &phi;(x) &sigma;<sup>-1</sup> = &theta;(x)<sup>m</sup> for all x &isin; K,
+and that the map &psi;: N &#8906;<sub>&phi;</sub> K &rarr;  N &#8906;<sub>&theta;</sub> K
+defined by &psi;(n,x) = (&sigma;(n),x<sup>m</sup>) is a homomorphism.)
+<li> <b>E4.9</b>:  Let N = &lang; x | x<sup>m</sup> = 1 &rang; and
+K = &lang; y | y<sup>n</sup> = 1 &rang; be cyclic groups of orders m and n, respectively.
+Let j be a natural number satisfying gcd(j,m) = 1 and j<sup>n</sup> = 1 (mod m).
+<br>(a) Show that there is a unique homomorphism 
+&phi;: K &rarr; Aut(N) satisfying &phi;(y)(x) = x<sup>j</sup>.
+<br>(b) If &phi; is the homomorphism from part (a), show that
+N &#8906;<sub>&phi;</sub> K &cong; &lang; r,s | r<sup>m</sup> = 1,
+s<sup>n</sup> = 1, srs<sup>-1</sup> = r<sup>j</sup> &rang;.
+<br>(Note:  You may not use TOC Cor 4.45 or TOC Thm 4.48  in this problem
+(since this problem is a proof of Cor 4.45 and of a special case of Thm 4.48).)
+<li> <b>E4.10</b>:  Let M be a normal subgroup of a group G, and let
+q: G &rarr; G/M be the quotient map; then G is an extension of M by G/M. 
+The group G is called a <b>split extension</b> of M by G/M
+if there is a homomorphism s: G/M &rarr; G
+satisfying q &#8728; s = Id<sub>G/M</sub>.  
+<br>(a) Show that if N and K are groups and &phi;: K &rarr; Aut(N)
+is a homomorphism, then the
+semidirect product G = N &#8906;<sub>&phi;</sub> K 
+is a split extension of N' = {(n,1) | n &isin; N} by G/N'.
+<br>(b) Show that if N &#8884; G and G is a split extension of N by G/N, then
+G &cong; N &#8906;<sub>&phi;</sub> G/N for
+some homomorphism &phi;.
+<br>(c) Give an example of a group G and a normal subgroup N of G
+such that G is not a split extension of N by G/N.
+<br>(Hint:  Part (b) of this problem is quite similar to E3.5.)
+<br>(Note:  You may not use TOC Thms 4.41, 4.47, 4.49 in this problem since
+this problem is part of their proof.)
+<!--<li> <b>E4.11</b>:  Determine which of TOC Thms 2.70, 2.73, 2.77, 2.80, 2.83
+are true if "direct product" is replaced by "semidirect product".-->
+
+</ul>
+
+<b> Due 10/30/17 at 9:30am for grading:  E4.9, E4.10(a)  </b>
+
+
+
+<p>
+
+
+ 
+<li> Problem Set 9: 
+
+<ul>
+<li> <b>E4.11</b>: (a) Prove TOC Lemma 4.52.
+(b) Prove TOC Cor 4.56.
+<li> <b>E4.12</b>:  Prove TOC Cor 4.54(2) and (4).  
+You may use (without proof) the following fact:  If q is a prime number, then (<b>Z</b>/q<b>Z</b>)<sup>x</sup> is a cyclic group.
+[We'll prove this in Math 818; it's proved in the text in Prop 18 page 314 for those
+of you who want to check it out now.]
+<li> <b>E4.13</b>:  Prove that the quaternions are not isomorphic to a
+semidirect product of two nontrivial groups.
+<!--<li> <b>E4.14</b>:  (a) Explain how the matrix with top row [0 -1]
+and bottom row [1 4] represents an element of 
+Aut(<b>Z</b>/19<b>Z</b> &times; <b>Z</b>/19<b>Z</b>).
+Use this matrix to construct a nonabelian group G of order 1805=(5)(19)<sup>2</sup>,
+and give a presentation of G.
+<br>(b)  Show that there are exactly 3 groups of order 1805 up to isomorphism.-->
+<li> <b>E4.14</b>: Compute the Sylow subgroups of the following groups.
+(a) D<sub>12</sub>.  (b) S<sub>3</sub> &times; <b>Z</b>/3<b>Z</b>.
+(c) S<sub>4</sub>.
+<li> <b>E4.15</b>:  Let G be a finite group, let N &#8884; G,
+let p be a prime number, and let Q be a Sylow p-subgroup of G.
+<br>(a) Show that Q &cap; N &isin; Syl<sub>p</sub>(N).
+<br>(b) Show that QN/N &isin; Syl<sub>p</sub>(G/N).
+<br>(c) Show that |Syl<sub>p</sub>(G/N)| &le; |Syl<sub>p</sub>(G)|.
+<li> <b>E4.16</b>:  Let G be a finite group of order pqr with p &le; q &le; r 
+prime numbers (that are not necessarily distinct). 
+<br>(a) If p &lt; q &lt; r, prove that G has a normal Sylow subgroup (for at least
+one of p,q,r).  
+<br>(b) If p = q &lt; r, show that G is not simple. 
+<br>(c) If p &lt; q = r, show that G is not simple. 
+<br>(d) Prove that G is solvable.
+<br> (Hint for (a) and (b):  Use step (3) in the flow chart in TOC Rmk 4.75.)
+<li> <b>E4.17</b> (a) For each N &isin; {C<sub>7</sub> = &lang; a &rang;, 
+C<sub>4</sub> = &lang; b &rang;,
+C<sub>2</sub> &times; C<sub>2</sub> = &lang; c &rang; &times; &lang; d &rang;}, list
+the elements of Aut(N), and
+determine the order of each element of Aut(N).
+<br>(b) List all of the group homomorphisms 
+C<sub>7</sub> &rarr; Aut(C<sub>4</sub>), 
+C<sub>7</sub> &rarr; Aut(C<sub>2</sub> &times; C<sub>2</sub>), 
+C<sub>4</sub> &rarr; Aut(C<sub>7</sub>), and
+C<sub>2</sub> &times; C<sub>2</sub> &rarr; Aut(C<sub>7</sub>).
+<br>(c) Classify all of the groups of order 28, up to isomorphism. (Hint:  Use the flow
+chart in TOC Rmk 4.75.)
+
+</ul>
+
+<b> Due 11/8/17 at 11:30am for grading:  E4.11(b), E4.15(a), 
+E4.17(c, plus any parts of a and b
+that are relevant to part c)  </b>
+<!--E4.11(a)(4),-->
+
+
+
+<p>
+
+
+ 
+<li> Problem Set 10: 
+
+<ul>
+<li> <b>E4.18</b>: Let K and N be groups and let &phi;,&theta;: K &rarr; Aut(N)
+be homomorphisms.  Show that if there is an automorphism &beta; &isin; Aut(K)
+such that &theta; = &phi; &#8728; &beta;, then
+N &#8906;<sub>&phi;</sub> K &cong;  N &#8906;<sub>&theta;</sub> K.
+<li> <b>E4.19</b>:  Let G be a group.
+<br>(a) Show that if |G| &le; 40, then G is solvable.
+<br>(b) Show that if 41 &le; |G| &le; 59
+or 61 &le; |G| &le; 89, then G is not
+simple.
+<br>(c) What can you determine about the solvability or simplicity
+of G if |G| = 60?  
+<br>(d) Challenge problem:  Show that if |G| = 90 then G is solvable.
+<!--Show that if G is simple and |G| &lt; 90, 
+then |G| = 60.-->  
+<br>(<i>Hint</i>:  You may use E4.16 in all parts of this problem.)
+<li> <b>E4.20</b>:  
+<!--(a)-->
+Let G be the finite abelian group presented by
+G = &lang; x,y | x<sup>12</sup> = 1, y<sup>18</sup> = 1, xy = yx, 
+x<sup>2</sup> = y<sup>3</sup> &rang;.
+(That is, G is a quotient of the group 
+H = &lang; x | x<sup>12</sup> = 1 &rang;
+ &times; &lang; y | y<sup>18</sup> = 1 &rang;,
+over the subgroup N = &lang; x<sup>2</sup>y<sup>-3</sup> &rang;.)
+Find the invariant factor decomposition of G.
+<!--<br>(b) Let m,n &isin; <b>N</b>, let d = gcd(m,n),
+and let G be the finite abelian group presented by
+G = &lang; x,y | x<sup>m</sup> = 1, y<sup>n</sup> = 1, xy = yx, 
+x<sup>m/d</sup> = y<sup>n/d</sup> &rang;.
+(That is, G is a quotient of C<sub>m</m> &times; C<sub>n</sub>.)
+Describe the invariant factor decomposition of G. --> 
+<li> <b>E4.21</b>:  Prove that if G is an abelian group of 
+order 2<sup>n</sup>
+with n &ge; 1, then the number of
+elements of G of order 2 is an odd number.
+<li> <b>E4.22</b>: An abelian group G, with group operation written
+as addition, is called <b>divisible</b> if for each g &isin; G
+and n &isin; <b>N</b>, there is a g' &isin; G such that 
+g = ng'.  (For example, the group <b>Q</b> of rational numbers
+is divisible.)  Prove that if G is a nontrivial divisible
+abelian group, then G is not finitely generated.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+
+
+</ul>
+
+<b> Due 11/17/17 for grading:  E4.19(a), E4.20, E4.21</b>
+
+
+
+<p>
+
+
+ 
+<li> Problem Set 11:  
+
+<ul>
+<li> <b>E5.1</b>: Prove the following results from the TOC:
+(a) TOC Thm 5.37.  (b) TOC Thm 5.50.  (c) TOC Prop 5.58.
+(d) TOC Thm 5.64.  (e) TOC Thm 5.67.
+<li> <b>E5.2</b>: An element r of a ring R is called
+  <b>nilpotent</b> if r<sup>m</sup> = 0 for some integer m &ge; 1.
+  <br>(a) Let X be a set and let R = Fun(X,<b>R</b>) be the ring of
+  functions from X to <b>R</b>.  Prove that R contains no nonzero
+  nilpotent elements.
+  <br>(b) Prove that if R is a ring with 1 and 
+  b is a nilpotent element of R, then 1-b is a unit in R.
+  <br>(c) Let n be a natural number.  Show that <b>Z</b>/n<b>Z</b>
+  has no nonzero nilpotent elements if and only if n is squarefree.
+  (An integer is <b>squarefree</b> if its prime factorization has no repeated primes.)
+<li> <b>E5.3</b>:  The <b>center</b> of a ring R is the set
+ {z &isin; R | zr = rz for all r &isin; R}.  
+ <br>(a) Prove that the center of a ring with 1 is a subring that contains (the same) 1.
+ <br>(b) Determine the center of the real quaternion ring H.
+ <!--Let H be the real quaternion ring.
+ <br>(b-i) Determine the center of H.
+ <br>(b-ii) Prove that S = {a + bi | a,b &isin; <b>R</b>} is a subring of H
+ that is a field, and that S is not contained in the center of H.-->
+<li> <b>E5.4</b>:  Let R be a ring with 1, and let 
+p(x) =  a<sub>0</sub> + a<sub>1</sub>x + ...  + a<sub>n</sub>x<sup>n</sup>
+be an element of R[x].  Prove that p(x) is a zero divisor in R[x] if
+and only if there is a nonzero b &isin; R with bp(x) = 0.
+<br>(<i>Hint</i>:  The text outlines a proof in problem 7.2.2 p. 238.)
+<li> <b>E5.5</b>:  (a) Let R be the group ring <b>Z</b>S<sub>3</sub> and
+let a = e + (1 2), b = e - (1 2), c = 2e + 3(2 3) - (1 2), and d = 5(123).
+Compute the elements: (a-i) a<sup>3</sup>.
+(a-ii) ab.  (a-iii) 3a - bcd.  
+<br> (b) Let R' be the group ring <b>Z</b>/3<b>Z</b>S<sub>3</sub>.  Viewing
+a,b,c,d from part (a) as elements of R', compute the three elements of R'
+listed in (a-i-iii).
+<br> (c) Let G be a finite group and let
+R'' be the group ring <b>Z</b>G.
+<br> (c-i) Prove that the element r = &sum;<sub>g &isin; G</sub> g is 
+in the center of R''.
+<br> (c-ii) Prove that if |G| is even, then R'' is not an integral domain.
+<!--= &lang; a | a<sup>3</sup> = 1 &rang; be the cyclic group
+of order 3, and let R'' be the group ring <b>Z</b>G.  Is R'' an
+integral domain?-->
+<li> <b>E5.6</b>:  An element p of an integral domain R is called
+<b>irreducible</b> if p is not a unit and whenever p = xy for 
+some x,y &isin; R, then either x or y is a unit.  Two irreducible elements p and q
+are called <b>associates</b> if p = uq for some unit u of R.  ("Associate" is
+an equivalence relation on the set of irreducible elements of R.)
+<br>(a) Find the set of irreducible elements of <b>Z</b>, and
+determine which are associates of each other.
+<br>(b) Let R be the integral domain <b>Z</b>[i] = {a + bi | a,b &isin; <b>Z</b>}
+(a subring of the complex numbers).
+<!--<br>(b-i) Show that if a<sup>2</sup> + b<sup>2</sup> is prime,
+then a + bi is irreducible.
+<br>-->
+Show that 13 = 13 + 0i is not an irreducible element of R.
+(<i>Hint</i>: 13 is the sum of two squares.)
+
+
+
+
+</ul>
+
+<b> Due 12/1/17 for grading:  E5.1(c), E5.2(b), E5.3(b), E5.5(c), E5.6
+</b>
+
+
+
+<p>
+
+
+ 
+<li> Problem Set 12:  
+
+<ul>
+<li> <b>E5.7</b>:   Prove the following results from the TOC:
+(a) TOC Lemma 5.94.  (b) TOC Thm 5.97.  (c)  TOC Thm 5.105 (LITR).
+(d) TOC Prop 5.114.  <!-- TOC Cor 5.110.-->
+<li> <b>E5.8</b>:  Let I and J be ideals of a ring R with 1 &ne; 0.
+<br>(a) Show that if R is commutative and I + J = R, then
+IJ = I &cap; J.
+<br>(b) Show that if I = (a<sub>1</sub>,...,a<sub>m</sub>)
+and J = (b<sub>1</sub>,...,b<sub>n</sub>), then
+IJ = ({a<sub>i</sub>b<sub>j</sub> | 1 &le; i &le; m, 
+1 &le; j &le; n}).
+<li> <b>E5.9</b>: In each part,
+determine (and prove) whether or not the ring R
+is (ring) isomorphic to the ring S.
+ <br>(a) R = <b>Z</b> and S = <b>Z</b>[x].
+ <br>(b) R = <b>Z</b>[x]/((x<sup>2</sup>+1)<b>Z</b>[x])
+  and S = <b>Z</b>[i].
+ <br>(c) R = <b>Z</b>/3<b>Z</b>
+  and S is the subring {t &isin; <b>Z</b>/6<b>Z</b> | 3t = 0}
+  of  <b>Z</b>/6<b>Z</b>. 
+  (The set S is actually an
+  ideal of <b>Z</b>/6<b>Z</b>, called
+  the <i>annihilator</i> of the element 3 of <b>Z</b>/6<b>Z</b>.)
+ <br>(d) R = <b>Z</b>/3<b>Z</b> &times; <b>Z</b>/3<b>Z</b> and
+  S = (<b>Z</b>/3<b>Z</b>)[x]/I, where
+  I = (x<sup>2</sup> + 1).
+ <br>(e) R = <b>R</b>G where G = <b>Z</b>/2<b>Z</b> &times;
+  <b>Z</b>/2<b>Z</b>,
+  and S = M<sub>4</sub>(<b>R</b>).
+
+
+</ul>
+
+<p>
+
+<li> Exam 2 due Sunday December 10 6:00pm
+
+
+</p><p>
+
+</p><p>
+<font size="-1"><i>S. Hermiller.
+</i></font>
+</p><p></p><p>
+</p></body></html>
+
+
+

@@ -1,0 +1,2397 @@
+﻿
+<title> Math 817 - Table of Contents
+</title>
+ 
+<body bgcolor="dfbfaf" link="0F0FFF"
+alink="FF0000" vlink="FF0000">
+
+<DIV ALIGN="CENTER"><FONT SIZE="+1"><b>
+Math 817 - Table of contents
+</b></FONT></DIV> 
+
+<P>
+
+
+
+<B>Chapter 0: Preliminaries </B>
+
+<p>
+
+<ul>
+<li><i>Section A: Overview of the course </i> 
+
+<p>
+
+ <ul>
+ <li> Symmetries of objects
+ <li> Finding roots of polynomials
+ <li> Uniform models to avoid repetition
+ </ul>
+
+<p>
+
+
+<li><i>Section B: Useful tools on sets and functions </i> 
+
+ 
+<p>
+
+ <ul>
+ <li>Properties of sets
+  <ul>
+  <li> Thm 0.1:  Distributive laws:  
+    A &cap; (&cup;<sub>&alpha;</sub> B<sub>&alpha;</sub>) = 
+     &cup;<sub>&alpha;</sub>(A &cap; B<sub>&alpha;</sub>) and
+   A &cup; (&cap;<sub>&alpha;</sub> B<sub>&alpha;</sub>) = 
+     &cap;<sub>&alpha;</sub>(A &cup; B<sub>&alpha;</sub>) 
+  <li> Thm 0.2:  De Morgan's laws:
+    A - (&cup;<sub>&alpha;</sub> B<sub>&alpha;</sub>) = 
+       &cap;<sub>&alpha;</sub>(A - B<sub>&alpha;</sub>)  and
+   A - (&cap;<sub>&alpha;</sub> B<sub>&alpha;</sub>) = 
+       &cup;<sub>&alpha;</sub>(A - B<sub>&alpha;</sub>) 
+  <li> Template to prove two sets are equal
+  <li> Def 0.3:  The <b>Cartesian product</b> A &times; B :=
+  {(a,b) | a &isin; A, b &isin; B} and
+  &prod;<sub>&alpha; &isin; J</sub> A<sub>&alpha;</sub> :=
+  {(a<sub>&alpha;</sub>)<sub>&alpha; &isin; J</sub> | 
+  a<sub>&alpha;</sub>  &isin; A<sub>&alpha;</sub>}
+  <li> Lemma 0.4:  If A &sube; G and B &sube; H, then
+  A &times; B &sube; G &times; H.
+  <li> Axiom of Choice:  If A<sub>&alpha;</sub> &ne;
+  &emptyset; for all &alpha; &isin; J, then
+  &prod;<sub>&alpha; &isin; J</sub> A<sub>&alpha;</sub> &ne;
+  &emptyset;.
+  <li> Def 0.5:  The <b>power set</b> <i>P</i>(S) of a set S is
+   the set of all subsets of S.
+  <li> Discussion of notation 
+  </ul>
+
+
+
+ <li>Properties of functions
+  <ul>
+  <li> Def 0.6:  For a function f: G &rarr; H, the set G is
+   the <b>domain</b>, the set H is the <b>codomain</b>.  
+ <br> 
+  The <b>image of a subset A</b> of G is f(A) := {f(a) | a &isin; A}.
+ <br>
+   The <b>preimage</b> of a subset B of H is
+   f <sup>-1</sup>(B) := {g | g &isin; G and f(g) &isin; B}.
+ <br> The <b>image of f</b> is f(G).
+
+  <!--<li> Thm 0.7:  
+    Let  f: G &rarr; H be a function.
+    <br>
+    (1)  If A &sube; A' &sube; G, then f(A) &sube; f(A').
+    <br>
+    (2)  If B &sube; B' &sube; H, then
+    f <sup>-1</sup>(B) &sube; f <sup>-1</sup>(B').-->
+
+
+ <li> Thm 0.7: (<b>PAN</b> = ``Preimages are nice''):
+    If f: X &rarr; Y, E &sube; E' &sube; Y,
+  and  E<sub>&alpha;</sub> &sube; Y for all &alpha;, then
+    (a) f <sup>-1</sup>(E) &sube; f <sup>-1</sup>(E'),
+    (b) f <sup>-1</sup>(&cup;<sub>&alpha;</sub> E<sub>&alpha;</sub>) = 
+           &cup;<sub>&alpha;</sub>f <sup>-1</sup>(E<sub>&alpha;</sub>), and
+    (c) f <sup>-1</sup>(&cap;<sub>&alpha;</sub> E<sub>&alpha;</sub>) = 
+      &cap;<sub>&alpha;</sub>f <sup>-1</sup>(E<sub>&alpha;</sub>).    
+  <li> Thm 0.8: (``Images are sometimes nice''):
+    If f: X &rarr; Y, C &sube; C' &sube; X, 
+    and C<sub>&alpha;</sub> &sube; X for all <sub>&alpha;</sub>, then
+    (a) f(C) &sube; f(C'), 
+    (b) f(&cup;<sub>&alpha;</sub> C<sub>&alpha;</sub>) = 
+            &cup;<sub>&alpha;</sub> f(C<sub>&alpha;</sub>), and
+    (c) f(&cap;<sub>&alpha;</sub> C<sub>&alpha;</sub>) &sube; 
+      &cap;<sub>&alpha;</sub> f(C<sub>&alpha;</sub>). 
+  <li> Thm 0.9:  (a) A &sube; f <sup>-1</sup>(f(A)), with = 
+   if f is injective.  
+   (b) f(f <sup>-1</sup>(B)) &sube; B, with = 
+   if f is surjective.   
+  <li> Template to prove two functions are equal
+  <li> Examples
+       <!--
+       <li> Def 0.__:  The <b>graph</b> of a function
+       f: G &rarr; H is the subset {(g,f(g)) | g &isin; G}
+       of G &times; H.
+       -->
+   <li> Def 0.10:  
+   A function f: G &rarr; H is <b>well-defined</b> if
+   whenever g,g' &in; G and g = g', then f(g) = f(g').
+      <!--
+      A subset R of G &times; H defines a <b>function</b> if
+      for every g &in; G there is a unique element h<sub>g</sub> in H
+      with (g,h<sub>g</sub>) in R; in this case we write the subset as
+      f: G &rarr; H with f(g) = h<sub>g</sub>.  That is, 
+      -->
+  <li> Rmk:  All functions are well-defined.
+  <li> Def 0.11:
+     Let  f: X &rarr; Y be a function.
+     <br>
+     The function f is <b>one-to-one</b>
+    (also called an <b>injection</b>) if whenever x,x' &in; X and 
+     f(x) = f(x') then x = x'.
+    <br>
+    The function f is <b>onto</b> (also called a <b>surjection</b>)
+    if for every y in Y, there is an x in X with f(x) = y.  
+    <br>
+    The function f is a <b>bijection</b> if f is both one-to-one and onto.
+    <br>
+    The function f is <b>invertible</b> if there is a function
+    g:Y &rarr; X such that f &#8728; g = 1<sub>Y</sub> and
+    g &#8728; f = 1<sub>X</sub>.
+  <li> Thm 0.12:  Let a: G &rarr; H, b: H &rarr; K,
+  and c: K &rarr; L be functions.  Then:
+  <br>
+  (1) If a and b are one-to-one then ba is one-to-one.
+  <br>
+  (1a) If ba is one-to-one then a is one-to-one.
+  <br>
+  (2) If a and b are onto then ba is onto.
+  <br>
+  (2a) If ba is onto then b is onto.
+  <br>
+  (3)  a is a bijection if and only if a is invertible.
+  <li> Examples
+  </ul>
+
+
+ <li>Equivalence relations
+  <ul>
+  <li> Def 0.13:  An <b>equivalence relation</b> &sim; on a set G
+   is a subset R of G &times; G (where (a,b) &isin; R is
+   written a &sim; b) that satisfies the following for
+   all a,b,c in G: 
+ <br>
+  (1) a &sim; a (<b>reflexive</b>),
+ <br>
+   (2) a &sim; b implies b &sim; a (<b>symmetric</b>), and
+ <br>
+   (3) a &sim; b and b &sim; c implies a &sim; c (<b>transitive</b>).
+  <br>
+  The <b>equivalence class</b> of an element a of G is 
+  [a] := {b | b &sim; a}.  The notation G/&sim; denotes
+  the <b>set of equivalence classes</b>.
+ <li> Def 0.14:  A <b>partition</b> of a set G is a collection of
+  nonempty disjoint subsets of G whose union is G.
+ <li> Examples
+ <li> Prop 0.15:  Let G be a set.
+ <br>
+ (1)  If &sim; is an equivalence relation on G, then  
+  G/&sim; is a partition of G.
+ <br>
+ (2)  If S is a partition of G, and 
+  T = {(g,h) &isin; G &times; G | g,h are in the same element of S},
+  then T is an equivalence relation on G.
+ <li> Cor 0.16:  Let f: G &rarr; H be a function, and
+  let R = {(g,g') &isin; G &times; G | f(g) = f(g')}.
+  Then R is an equivalence relation on G.
+ <li> Thm 0.17: (<b>Function Building Theorem (FBT) for sets</b>):
+  Let  &sim; be an equivalence relation on a set X,
+  and let f: X &rarr; Y be a function satisfying
+  the property that whenever x,x' &isin; X and x &sim; x' then
+  f(x) = f(x').  Then:
+  <br>
+  (1)  There is a well-defined function g:X/&sim; &rarr; Y
+  defined by g([x]) = f(x) for all [x] in X/&sim;.
+  <br>
+  (2)  If f is onto, then g is onto.
+  <br>
+  (3)  If f also satisfies the property that
+  whenever x,x' &isin; X and f(x) = f(x') then x &sim; x',
+  then g is one-to-one.
+ <li> Examples
+  <li> Template for proving a well-defined function
+   with domain X/&sim;.
+  </ul>
+ <li>Cardinality
+  <ul>
+  <li> Def 0.18:  A set G is <b>finite</b> if there is a bijection
+  G &rarr; {1,...,n} for some natural number n, or G is empty.
+  In this case the number n is called the <b>cardinality</b> of G.
+  <br>  A set G is <b>infinite</b> if G is not finite.
+  <li> Thm 0.19:  Let G be a set.  
+  <br>
+  (1)  The following are equivalent:
+  (1a) G is finite.  (1b) There is an onto function {1,...,n} &Rarr; G
+  for some n &isin; <b>N</b>.  (1c)  There is a one-to-one 
+   function G &rarrhk; {1,...,n} 
+  for some n &isin; <b>N</b>.
+  <br>
+  (2) The following are equivalent:
+  (2a) G is infinite.  (2b) There is an onto function G &Rarr; <b>N</b>.
+  (2c)  There is a one-to-one 
+   function <b>N</b> &rarrhk; G. 
+  <li> Thm 0.20:  Let G and H be finite sets and let G' be a subset of G.
+   Then G', G &cap; H, G &cup; H, and G &times; H are finite sets.
+  <li>  Examples  
+  </ul>
+ </ul>
+  </ul>
+
+
+
+</ul>
+</ul>
+<p>
+
+
+
+<B>Chapter 1: Introduction to groups </B>
+
+<p>
+
+
+<ul>
+<li><i>Section A: Definitions and first examples</i> 
+ <ul>
+ <li> Motivation: Studying symmetries of objects
+ <li> Def 1.1: A <b>binary operation</b> on a set G
+  is a function G &times; G &rarr; G.
+ <li>  Def 1.2:  A <b>group</b> is a set G with a binary
+  operation (called <b>group multiplication</b>;
+  the operation maps an ordered pair (a,b) to 
+  an element of G denoted ab) satisfying the following:
+  <br>
+  (1)  For all a,b,c in G,
+   (ab)c = a(bc). (<b>associative</b>)
+  <br>
+  (2)  There is an element e such that
+  ae = a = ea for all a in G.
+  <br>
+  (3)  For each element a in G, there is 
+  an element b in G such that ab = e = ba.
+  <li>  Examples:
+    <ul>
+      <li> <b>Z,Q,R,C</b> with + and <b>Z</b>/n<b>Z</b> with + modulo n
+      <li> <b>Z</b><sup>x</sup>={1,-1}, <b>Q</b><sup>x</sup>=<b>Q</b>-{0},
+      <b>R</b><sup>x</sup>=<b>R</b>-{0}, <b>C</b><sup>x</sup>=<b>C</b>-{0}
+      with &sdot; and U(n)=(<b>Z</b>/n<b>Z</b>)<sup>x</sup>=
+      {k &isin; {1,...,n-1} | gcd(k,n)=1} with &sdot; modulo n
+   <li> Def 1.4: Let X be a set.  <b>Perm(X)</b> = {f:X &rarr; X | f is a bijection} with &#8728;
+      (composition) is the <b>permutation group of X</b>.
+  <ul> <li> Def 1.5: For a subset X of Euclidean space <b>R</b><sup>n</sup>,
+    a <b>symmetry</b> X is a bijection f: X &rarr; X that preserves Euclidean distance d
+    (that is, d(p,q)=d(f(p),f(q)) for all p,q &isin; <b>R</b><sup>2</sup>), and
+    the <b>group of symmetries of X</b> is the set {f:X &rarr; X | f is a
+    bijection and f preserves Euclidean distance} with group operation of
+    function composition.</ul>
+  <li> Def 1.6:  The <b>dihedral group of order 2n, D<sub>2n</sub></b>,
+  is the group of symmetries of the regular n-gon in <b>R</b><sup>2</sup>.
+  <li> Def 1.7: For R &isin; {<b>Z,Q,R,C</b>,<b>Z</b>/n<b>Z</b>}, the
+  <b>general linear group</b> GL<sub>n</sub>(R) is the set of n &times; n 
+  matrices with entries in R and determinant in R<sup>x</sup>, with
+  group operation of matrix multiplication.
+  The <b>special linear group</b> SL<sub>n</sub>(R) is the set of n &times; n 
+  matrices with entries in R and determinant 1, with
+  group operation of matrix multiplication.
+  <li> Def 1.8: Let A be a set.  <!--The <b>free group</b> on A, written
+  F(A), is defined by: -->  Let A<sup>-1</sup>={a<sup>-1</sup> | a &isin; a} and let
+  B = A &cup; A<sup>-1</sup>.  Let B<sup>*</sup> be the set of all words over B,
+  including the empty word &lambda;, and let ~ be the smallest equivalence relation on B
+  satisfying (i) aa<sup>-1</sup> ~ &lambda; ~ a<sup>-1</sup>a for all a &isin; A
+  and (ii) whenever p ~ q and x,y &isin; B<sup>*</sup> then xpy ~ xqy.
+  The <b>free group on </b> A is the set F(A) = B/~ of equivalence classes, with group operation
+  [x][y]=[xy] for all x,y &isin; B.
+    </ul>
+  <li> Lemma 1.10:  If G is a group, then:  
+  <br>
+  (1) There is only one
+  element e &isin; G satisfying ae = a = ea for all a &isin; G
+  (called the <b>identity</b> of G).
+  <br>
+  (2) For each a &isin; G, there is only one element b &isin; G
+   satisfying ab = e = ba (called the <b>inverse of</b> a and
+   written a<sup>-1</sup>).
+  <li> Discussion of notation:  a<sup>n</sup>
+  <li>  Lemma 1.11:  If G is a group and a,b,c, a<sub>1</sub>,...,a<sub>n</sub> &isin; G, then:
+  <br> (1) If ba = ca then b = c.
+  <br> (2) If ab = ac then b = c.
+  <br> (3) (a<sup>-1</sup>)<sup>-1</sup> = a.
+  <br> (4) (a<sub>1</sub> ... a<sub>n</sub>)<sup>-1</sup> = 
+  a<sub>n</sub><sup>-1</sup> ... a<sub>1</sub><sup>-1</sup>.  
+  <br> (5) (a<sup>-1</sup>ba)<sup>n</sup> = a<sup>-1</sup>b<sup>n</sup>a.
+ </ul>
+  <!--  <li> Def 1.5:  The <b>Cayley table</b> (also called
+    the <b>group table</b> or <b>group multiplication table</b>)
+    for a group G is a matrix with rows and columns
+    for each group element, such that the entry in the
+    row labeled by a &isin; G and column labeled by
+    b &isin; G is ab.
+-->
+
+<p>
+
+
+<li><i>Section B: Homomorphisms and isomorphisms </i> 
+
+ 
+<p>
+
+ <ul>  
+  <li> Def 1.14: A <b>homomorphism</b> from a group G to a group H
+  is a function f:G &rarr; H satisfying f(gg') = f(g)f(g') for all
+  g,g' &isin; G.  An <b>isomorphism</b> from G to H is a homomorphism
+  from G to H that is a bijection.  Two groups G and H are <b>isomorphic</b>,
+  written G &cong; H, if there is an isomorphism from G to H.
+  <li> Prop 1.15:  Suppose that   &phi;: G &rarr; H is a
+  homomorphism from a group G onto a group H. 
+  <br>(1) &phi;(e<sub>G</sub>) = e<sub>H</sub>, where
+  e<sub>G</sub> and e<sub>H</sub> are the identity elements
+  of the groups G and H, respectively.
+  <br>(2) For every n &isin; <b>Z</b>, and a &isin; G,
+  &phi;(a<sup>n</sup>) = (&phi;(a))<sup>n</sup>.
+  <br>(3) For each a,b &isin; G, if ab = ba then
+  &phi;(a)&phi;(b) =  &phi;(b)&phi;(a).
+  
+  <li> Thm 1.16:  "Isomorphic" is an equivalence relation on the
+   set of all groups. 
+  Moreover, if &phi;:G &rarr; H and &theta;:H &rarr; K are isomorphisms,
+   then &phi;<sup>-1</sup>:H &rarr; G and &theta; &#8728; &phi;:G &rarr; K
+  are also isomorphisms. 
+   
+  <li> Def 1.17: An <b>Isomorphism Problem</b> algorithm determines,
+  upon input of two groups G and H, whether or not G &cong; H.
+  A <b>Classification Problem</b> algorithm enumerates (lists) all of 
+  the groups up to isomorphism.
+  <li> Rmk:  There cannot be an IP or CP algorithm for <i>all</i> groups,
+  but there are IP and CP algorithms for classes of "nice" groups.
+  <li> Def 1.18:  An <b>isomorphism invariant</b> is a property P of
+   groups such that whenever G &cong; H and G has P then H has P.
+  <li> Lemma 1.19: If P is an isomorphism invariant, G is a group that
+  has P, and H is a group that does not have P, then G is not
+  isomorphic to H.
+  <li> Def 1.23:  A group G is <b>abelian</b>
+    (also called <b>commutative</b>) if for every
+    a,b &isin; G, ab = ba.
+  <li> Def 1.24:  A group G is a <b>finite</b> group
+     if the set G is finite.  
+  <li> Def 1.25:  The <b>order of a group</b> G (denoted |G|)
+   is the number
+  of elements in the set G.  The <b>order of an element</b>
+   g of G  (denoted |g|) is the smallest positive integer n 
+  such that g<sup>n</sup> = e; if there is no such integer, 
+  then the order of g is infinite.
+  <li> Examples
+  <li> Def 1.26:  A subset A of G is a <b>generating set</b> for G
+  if every element of G is a (finite) product of elements of A
+  and their inverses.  (This is written G = &lang; A &rang;.)
+  <li> Def 1.27:  A group G is <b>finitely generated</b> if
+   there is a finite subset A of G that generates G.  
+  <li> Def 1.28:  A group G is <b>cyclic</b> if there is
+  an element a of G satisfying G = &lang; {a} &rang;.
+  <li> Thm 1.29:  The following are isomorphism invariants.
+   <ul> 
+   <li> The order of the group.
+   <li> The set of orders of elements in the group.
+   <li> "abelian".
+   <li> "cyclic".
+   <li> "finitely generated".
+   </ul>
+  <li>  More examples:
+  <ul>
+  <li> Def 1.31:  The <b>quaternion group</b> is the set
+  Q<sub>8</sub> = {1,-1,i,-i,j,-j,k,-k} with group operation defined by
+  1a = a = a1 for all a in Q<sub>8</sub>, (-1)a = -a = a(-1) and
+  (-1)(-a) = a = (-a)(-1) for all a in {1,i,j,k},
+  ii = jj = kk = -1, ij = k, jk = i, ki = j, ji = -k, kj = -i, 
+  and ik = -j.
+  <li> Def 1.32:  A <b>permutation of a set</b> X is a bijection
+    from X to X.  The <b>symmetric group on a set</b> X,
+   denoted S<sub>X</sub> or Perm(X), is the
+   group of all bijections from X to X (that is, the set of all 
+   permutations of X) with function composition.  
+  The <b>symmetric group of degree n</b>,
+  denoted S<sub>n</sub>, is Perm({1,2,...,n}).
+  </ul>
+  <li> Lemma 1.33: |S<sub>n</sub>| = n!. 
+  <li> Examples
+  <li> Def 1.36:  An <b>endomorphism</b> of a group G is a homomorphism
+  : G &rarr; G.  An <b>automorphism</b> of a group G is an isomorphism
+  : G &rarr; G.  
+  <li> Def 1.37:  The <b>automorphism group</b> of a group G is the
+  set Aut(G) of all automorphisms of G, with group operation of composition.
+  <li> Prop 1.38: If G is a group, then Aut(G) is a group.
+  <li> Examples
+ 
+   
+ </ul>
+
+<p>
+
+
+<li><i>Section C: Group actions:  Definition and first examples </i> 
+
+ 
+<p>
+
+ <ul>  
+  <li> Def 1.40: A <b>group action</b> of a group G on a set X is a
+   function G &times; X &rarr; X (written (g,x) &rarr; gx) satisfying:
+   <br>
+   (1) g(g'x) = (gg')x for all g,g' &isin; G and x &isin; X, and
+   <br>
+   (2) 1x = x for all x &isin; X.
+  <li> Examples
+  <ul> 
+    <li> The <b>left action</b> of G on G is defined by g &sdot; x = gx
+     for all g,x &isin; G.
+    <li> The <b>conjugation action</b> of G on G is defined by
+     g &sdot; x = gxg<sup>-1</sup> for all g,x &isin; G.
+  </ul>
+  <li> Def 1.45:  For a group G with a subset A of G that generates G,
+   the <b>Cayley graph</b> &Gamma; = &Gamma;(G,A) has vertex set G
+   and for each g &isin; G and a &isin; A, a directed edge from 
+    g to ga labeled a.
+  <li> Prop 1.46:  Let G be a group with a subset A that generates G.
+   Then G acts on the Cayley graph &Gamma; = &Gamma;(G,A) by
+   g(g') = (gg') for each element g &isin; G and vertex (g') of &Gamma;,
+  and g(g' ->- g'a) = (gg' ->- gg'a) for each element g &isin; G and
+   edge (g' ->- g'a) of &Gamma;.  
+  <li> Cor 1.47:  Every group G is the group of symmetries
+  of a metric space.
+
+  <li> Lemma 1.49: Let G be a group and let X be a set.
+  <br>
+  (1) If G acts on the set X (with action denoted by &sdot;), 
+   then the function f:G &rarr; Perm(X)
+  defined by (f(g))(x) := g &sdot; x (for all g in G and x in X)
+  is a well-defined group homomorphism.
+  <br>(2) If f:G &rarr; Perm(X) is a homomorphism, then the
+  function :G &times; X &rarr; X defined by
+  g &sdot; x := (f(g))(x) (for all g in G and x in X)
+  is a group action.
+  <li> Def 1.50: Let G be a group acting on a set X.  The <b>equivalence
+  relation on X induced by the action of G</b>, written ~<sub>G</sub>, is defined by
+  p ~<sub>G</sub> q if and only if there is a g &isin; G such that p = gq.  
+  The set of equivalence classes X/~<sub>G</sub> is written X/G.
+  <li> Lemma 1.51:  Let G be a group acting on a set X.  Then
+  ~<sub>G</sub> is an equivalence relation.
+  <li> Def 1.52:  Let G be a group acting on a set X, let p &isin; X,
+  and let Y &sube; X.
+  The <b>orbit</b> of p is the equivalence class of p; that is,
+  <b>Orbit<sub>G</sub>(p)</b> = [p] = {gp | g &isin; G}.  The <b>stabilizer
+  of p</b>  is <b>Stab<sub>G</sub>(p)</b> = {g &isin; G | gp = p},
+   the <b>pointwise stabilizer of Y</b> is 
+  <b>PtStab<sub>G</sub>(Y)</b> = {g &isin; G | gy = y for all y &isin; Y},
+  and the <b>setwise stabilizer of Y</b> is
+  <b>SetStab<sub>G</sub>(Y)</b> = {g &isin; G | gy &isin; Y for all y &isin; Y}.
+  <li> Thm 1.53: (<b>Orbit-Stabilizer Theorem</b>):  Let G be a finite group
+  acting on a set X.  If p &isin; X then 
+  |G| = |Orbit<sub>G</sub>(p)| &sdot; |Stab<sub>G</sub>(p)|.
+  <li> Examples
+
+
+ </ul>
+ </ul>
+  </ul>
+
+
+
+</ul>
+</ul>
+<p>
+
+
+
+<B>Chapter 2: Group and homomorphism constructions: Subgroups and direct product groups </B>
+
+<p>
+
+
+<ul>
+<li><i>Section A: Subgroups: Definition and examples</i> 
+ <ul>
+ <li> Def 2.1:  A <b>subgroup</b> of a group G is a subset H of G
+that is a group under the operation of G.  This is denoted H &le; G;
+   if H &ne; G this is also written H &lt; G.
+ <li> Lemma 2.2:  A subset H of a group G is a subgroup of G if and
+  only if H is nonempty and closed under multiplication and inversion.
+ <li> Thm 2.3: (1) If H is a subgroup of G and K is a subgroup of H, then
+  K is a subgroup of G.  (2) If H<sub>&alpha;</sub> is a subgroup of 
+    G for all &alpha; in an index set J, then
+    &cap;<sub>[&alpha; &isin; J]</sub>H<sub>&alpha;</sub> is a
+    subgroup of G.
+ <li> Examples:
+    <ul>
+      <li> <b>Z</b> &lt; <b>Q</b> &lt; <b>R</b> &lt; <b>C</b> 
+      <li> <b>Z</b><sup>x</sup> &lt; <b>Q</b><sup>x</sup> &lt; 
+           <b>R</b><sup>x</sup> &lt; <b>C</b><sup>x</sup>
+      <li> Lemma 2.6:  Let Y &sube; X and let G be a subgroup of Perm(X).
+        Then PtStab<sub>G</sub>(Y) &le; G and SetStab<sub>G</sub>(Y) &le; G.
+       <li> Def 2.7: Let G be a group, and let 
+ G &times; G &rarr; G be the conjugation action of G on itself 
+ (that is, (g,h) &rarr; ghg<sup>-1</sup>).  Let H be a subset of G.
+ The point-wise stabilizer PtStab<sub>G</sub>(H) of H is called the
+ <b>centralizer</b> of H in G, denoted C<sub>G</sub>(H), and
+ the set-wise stabilizer SetStab<sub>G</sub>(H) of H is called the
+ <b>normalizer</b> of H in G, denoted N<sub>G</sub>(H).
+ (As usual, if H = {p} for some element p of G, the centralizer
+ is written C<sub>G</sub>(p) and the normalizer is
+ written N<sub>G</sub>(p).)
+     <li> Cor 2.8:  For any subset H of a group G,
+      C<sub>G</sub>(H) &le; G and N<sub>G</sub>(H) &le; G.
+     <li> Lemma 2.9: If R &isin; {<b>Z,Q,R,C</b>,<b>Z</b>/m<b>Z</b>}, then
+       SL<sub>n</sub>(R) &le; GL<sub>n</sub>(R).
+     <li> Def 2.10:  Let G be a group.  
+       For each g &isin; G, the <b>inner automorphism</b> induced by g is the
+       function &sigma;<sub>g,G</sub>=&sigma;<sub>g</sub>:G &rarr; G
+       defined by &sigma;<sub>g,G</sub>(x) = gxg<sup>-1</sup>
+       for all x &isin; G.   The <b>inner automorphism group</b> of G
+        is the subgroup <b>Inn(G)</b> = {&sigma;<sub>g,G</sub> | g &isin; G}
+      of Aut(G).
+    </ul>
+ <li>Def 2.11:  Let G be a group and let A be a subset of G.  The
+   <b>subgroup of G generated by A</b>, denoted <b>&lang; A &rang;</b>,
+   is the set of all products of elements of A and inverses of elements
+  of A.   A subgroup H of G is <b>cyclic</b> if H = &lang; A &rang;
+  for a set A = {a} for some a &isin; G; this is denoted H = <b>&lang; a &rang;</b>.
+ <li> Prop 2.12:  Let G be a group and let A be a subset of G.
+  Then &lang; A &rang; is a subgroup of G.  Moreover,
+  &lang; A &rang; = &cap;<sub>[A &sube; H and H &le; G]</sub> H;
+  that is, &lang; A &rang; is the intersection of all of the subgroups 
+   of G that contain A.
+   
+    
+   
+ </ul>
+
+<p>
+
+
+<li><i>Section B: Subgroups:  Interactions with homomorphisms and group actions </i> 
+
+ 
+<p>
+
+ <ul>  
+
+  <li> Thm 2.15:  Restrictions and extensions of homomorphisms are homomorphisms.
+   That is:
+   Let G and H be groups, let A be a subgroup of G,
+   and let B be a subgroup of H.
+    <br>(1) The <b>inclusion</b> map i: A &rarr; G (defined by i(a) = a for all a &isin; A)
+      is an injective homomorphism.
+    <br>(2) If f: G &rarr; H is a group homomorphism,
+    then the restriction f|<sub>A</sub>: A &rarr; H
+      (defined by f|<sub>A</sub>(a) = f(a) for all a &isin; A)
+      is a homomorphism.
+    <br>(3)  If f: G &rarr; H is a group homomorphism and f(G) &sube; B, then 
+       the restriction f|<sup>B</sup>: G &rarr; B 
+       (defined by f|<sup>B</sup>(g) = f(g) for all g &isin; G)
+       is a homomorphism. 
+    <br>(4) If f: G &rarr; B is a group homomorphism,
+    then the extension f|<sup>H</sup>: G &rarr; H 
+    (defined by f|<sup>H</sup>(g) = f(g) for all g &isin; G)
+    is a homomorphism.
+  <li> Thm 2.16:  Homomorphic images and preimages of subgroups are subgroups.  That is:
+   Let G and H be groups and let f: G &rarr; H be a homomorphism.  
+  <br>(1) If A is a subgroup of G then f(A) is a subgroup of H. 
+  <br>(2) If B is a subgroup of H then f<sup>-1</sup>(B) is a subgroup of G.
+  <li> Def 2.17:  Let f: G &rarr; H be a group homomorphism.  The <b>kernel</b> of f
+    is the subgroup <b>Ker(f)</b> = f<sup>-1</sup>({1<sub>H</sub>}) = 
+      {g &isin; G | f(g) = 1<sub>H</sub>} of G.
+    The <b>image</b> of f is the subgroup <b>Im(f)</b> = f(G) of H.
+  <li> Def 2.18: An <b>embedding</b> of a group G in a group H
+   is an injective homomorphism :G &rarr; H.
+  <li> Prop 2.19:  If f: G &rarr; H is an embedding, then 
+  G &cong; f(G) &le; H.
+  <li> Thm 2.20: (Cayley's Thm):  Each group G embeds in Perm(G), and 
+    hence each finite group G embeds in S<sub>|G|</sub>.
+
+ <li> More examples:
+     <ul>   
+     <li> Lemma 2.22: Let B &sube; A.  Then
+      F(B) embeds in F(A) and Perm(B) embeds in Perm(A).
+     <li> Lemma 2.23: If m &le; n then S<sub>m</sub> embeds in S<sub>n</sub>.
+     </ul>
+    <li> Thm 2.26:  If G is a group acting on a set X and H is a subgroup of G,
+    then the restriction to H of the action of G is an action of H on X.  Moreover,
+    each G-orbit [x]<sub>G</sub> is a union
+    [x]<sub>G</sub> = &cup;<sub>p &isin; [x]<sub>G</sub></sub> [p]<sub>H</sub> 
+    of H-orbits.
+   
+ </ul>
+
+<p>
+
+
+<li><i>Section C: Subgroups:  Interactions with isomorphism invariants </i> 
+
+ 
+<p>
+
+ <ul> 
+ <li> <i>Order of the group:</i>
+  <ul>
+  <li> Thm 2.27:  Every subgroup of a finite group is finite.
+    (There exist infinite groups with finite subgroups.)
+  <li> Thm 2.28: (<b>Lagrange's Theorem</b>):  If H is a subgroup of a finite group G,
+   then |H| divides |G|.
+ </ul>
+ <li> <i>Orders of elements:</i>
+  <ul>
+  <!--<li> Prop 2.29:  If h &isin; H &le; G, then the order of h in H equals
+    the order of h in G.  -->
+  <li> Thm 2.30:  If H &le; G, then the set of orders of elements
+  of H is a subset of the set of orders of elements of G.
+  </ul>
+ <li> <i>Abelian:</i>
+  <ul>
+  <li> Thm 2.32:  Every subgroup of an abelian group is abelian.  
+   (There exist nonabelian groups with abelian subgroups.)
+  <li> Def 2.33:  The <b>center</b> of a group G is
+   <b>Z(G)</b> = {g &isin; G | gh = hg for all h &isin; G}.  
+  <li> Thm 2.34:
+   (1)  If G is a group, then Z(G) is an abelian subgroup of G.
+   (2)  The order of the center of a group is an isomorphism invariant.
+  </ul>
+ <li> <i>Cyclic:</i>
+  <ul>
+  <li> Thm 2.36: Every subgroup of a cyclic group is cyclic.
+  (There exist noncyclic groups with cyclic subgroups.)
+  <li> Prop 2.37:  Let G be a cyclic group generated by an 
+  element g of finite order n.
+  <br>(a) |&lang; g &rang;| = |g|.
+  <br>(b) If k is an integer, then
+  |g<sup>k</sup>| = n/gcd(k,n).
+  <br>(c)  There is a bijection &psi; : {divisors of |G|}
+  &rarr; {subgroups of G} given by
+  &psi;(d) = &lang; g<sup>|G|/d</sup> &rang; for each divisor d of |G|;  moreover,
+  for each subgroup H of G, &psi;<sup>-1</sup>(H) = |H|.
+  <!--and |&lang; g<sup>|G|/d</sup> &rang;| = d.-->
+
+  <li> Thm 2.39: (<b>Homomorphism Building Theorem (HBT)
+  for Cyclic Groups</b>):  Suppose that G = &lang; a &rang; and H 
+  are groups.  (a) If |a| = &infin;, then for every y in H
+  there is a unique group homomorphism f: G &rarr; H
+  such that f(a) = y.  (b)  If |a| = n &lt; &infin;, then
+  for every y in H satisfying y<sup>n</sup> = e<sub>H</sub>, there is
+  a unique group homomorphism f: G &rarr; H
+  such that f(a) = y.
+  <li> Def 2.40:  The <b>infinite cyclic group</b> is the 
+   group <b>C<sub>&infin;</sub></b> = {a<sup>i</sup> | i &isin; <b>Z</b>}
+    with multiplication a<sup>i</sup>a<sup>j</sup> = a<sup>i+j</sup>.
+    For any natural number n, the <b>cyclic group of order n</b> is the 
+   group <b>C<sub>n</sub></b> = {a<sup>i</sup> | i &isin; {0,...,n-1}}
+    with multiplication a<sup>i</sup>a<sup>j</sup> = a<sup>i+j(mod n)</sup>.
+  <li> Thm 2.41: (<b>Classification Theorem for Cyclic Groups</b>):
+  The list of isomorphism classes of cyclic groups is
+  [C<sub>&infin;</sub>] together with 
+  [C<sub>n</sub>] for all n &isin; <b>N</b>.
+  </ul>
+ <li> <i>Finitely generated:</i>
+  <ul>
+  <li> Thm 2.44:  There exist a finitely generated group G
+  and a subgroup H of G such that H is not finitely generated.
+  (There exist a non-finitely-generated group G and a subgroup
+  H of G with H finitely generated.)
+  </ul>    
+     
+     
+ </ul>
+
+<p>
+
+
+<li><i>Section D: Direct product groups:  Definitions and examples </i> 
+
+ 
+<p>
+
+ <ul>  
+  <li> Def 2.50:  (a) Let G<sub>i</sub> be a group for all 1 &le; i &le; n.
+  The <b>direct product</b> of the groups G<sub>i</sub> is
+  the Cartesian product G<sub>1</sub> &times; G<sub>2</sub> &times;
+  ... &times; G<sub>n</sub> with multiplication defined by
+  (g<sub>1</sub>,...,g<sub>n</sub>)(h<sub>1</sub>,...,h<sub>n</sub>) =
+  (g<sub>1</sub>h<sub>1</sub>,...,g<sub>n</sub>h<sub>n</sub>).
+  <br>(b)  Let G<sub>&alpha;</sub> be a group for all &alpha; in an
+  index set J.  The <b>direct product</b> of the groups 
+   G<sub>&alpha;</sub> is
+  the Cartesian product &Pi;<sub>[&alpha; &isin; J]</sub> G<sub>&alpha;</sub>
+  with multiplication defined by
+  (g<sub>&alpha;</sub>)<sub>&alpha; &isin; J</sub>(h<sub>&alpha;</sub>)<sub>&alpha; &isin; J</sub>
+  = (g<sub>&alpha;</sub>h<sub>&alpha;</sub>)<sub>&alpha; &isin; J</sub>.
+  The <b>direct sum</b> of the groups 
+   G<sub>&alpha;</sub> is the subset
+   &oplus;<sub>[&alpha; &isin; J]</sub> G<sub>&alpha;</sub>
+  of the direct product &Pi;<sub>[&alpha; &isin; J]</sub> G<sub>&alpha;</sub>
+  given by &oplus;<sub>[&alpha; &isin; J]</sub> G<sub>&alpha;</sub>
+  = {(g<sub>&alpha;</sub>)<sub>&alpha; &isin; J</sub> |
+  g<sub>&alpha;</sub> = 1<sub>G<sub>&alpha;</sub></sub> for all but
+  finitely many &alpha;}, with the same multiplication as the direct product.
+
+  <li>Thm 2.51:  The direct product of a collection
+   of groups is a group, and the direct sum of the collection is
+  a subgroup of the direct product.
+  <li> Examples  
+   <!--<ul> 
+   <li> <b>Z</b><sup>n</sup>, <b>Q</b><sup>n</sup>, <b>R</b><sup>n</sup>, <b>C</b><sup>n</sup>
+   </ul> --> 
+
+ </ul>
+
+ 
+
+<p>
+
+
+<li><i>Section E: Direct product groups:  Interactions with homomorphisms and group actions</i> 
+
+ 
+<p>
+
+ <ul>  
+  <li> Thm 2.54:  Let &Pi;<sub>[&alpha; &isin; J]</sub> G<sub>&alpha;</sub>
+  be a direct product of groups.  For each &beta; in J, the <b>projection</b>
+  p<sub>&beta;</sub>: &Pi;<sub>[&alpha; &isin; J]</sub> G<sub>&alpha;</sub>
+  &rarr; G<sub>&beta;</sub> is a homomorphism.
+  <li> Thm 2.55:  For each index &beta; &isin; J,
+  the <b>inclusion</b> function i<sub>&beta;</sub>:G<sub>&beta;</sub> &rarr; 
+    &Pi;<sub>[&alpha; &isin; J]</sub> G<sub>&alpha;</sub>,
+    defined by i(g) = (g<sub>&alpha;</sub>)<sub>&alpha; &isin; J</sub>
+      where g<sub>&beta;</sub> = g and g<sub>&alpha;</sub> = 1<sub>G<sub>&alpha;</sub></sub>
+    for all &alpha; &ne; &beta;, is an embedding.
+  <li> Thm 2.57: Let H be a group and let
+  f<sub>&beta;</sub>:H &rarr; G<sub>&beta;</sub> be a function
+  for all &beta; &isin; J.  Then the <b>product function</b> 
+  f:H &rarr; &Pi;<sub>[&alpha; &isin; J]</sub> G<sub>&alpha;</sub>
+  defined by f(h) = (f<sub>&alpha;</sub>(h))<sub>&alpha; &isin; J</sub>
+  for all h &isin; H (that is, f<sub>&beta;</sub> = p<sub>&beta;</sub> &#8728; f
+  for all &beta; &isin; J)
+  is a group homomorphism if and only if
+  f<sub>&beta;</sub> is a group
+  homomorphism for all &beta; &isin; J.
+  <li> Prop 2.59:  (1) If G<sub>&alpha;</sub> &cong; H<sub>&alpha;</sub>
+  for all &alpha; &isin; J, then
+  &Pi;<sub>[&alpha; &isin; J]</sub> G<sub>&alpha;</sub> &cong;
+  &Pi;<sub>[&alpha; &isin; J]</sub> H<sub>&alpha;</sub>.
+  (2) G &times; H &cong; H &times; G.
+  <!--<br>(3) If &alpha; is an element of S<sub>n</sub>, then
+ G<sub>1</sub> &oplus; G<sub>2</sub> &oplus; ... &oplus; G<sub>n</sub>
+ &cong;
+ G<sub>&alpha;(1)</sub> &oplus; G<sub>&alpha;(2)</sub> &oplus; ... &oplus; G<sub>&alpha;(n)</sub>
+ -->
+  <li> Thm 2.61:  If G acts on a set X and H acts on a set Y, then
+   G &times; H acts on the set X &times; Y by
+   (g,h) &sdot; (x,y) = (g &sdot; x,h &sdot; y) for all g &isin; G,
+   h &isin; H, x &isin; X, and y &isin; Y.
+   
+   
+   
+   
+   
+  
+ </ul>
+
+   
+
+<p>
+
+
+<li><i>Section F: Direct product groups:  Interactions with group constructions </i> 
+
+ 
+<p>
+
+ <ul>  
+  <!--<li> Thm 2.65:  For each index &beta; &isin; J,
+  the group G<sub>&beta;</sub> embeds in
+  &Pi;<sub>[&alpha; &isin; J]</sub> G<sub>&alpha;</sub>. -->
+ <li> Thm 2.66:  If H<sub>&alpha;</sub> is a subgroup of G<sub>&alpha;</sub>
+  for all &alpha; &isin; J, then
+&Pi;<sub>[&alpha; &isin; J]</sub> H<sub>&alpha;</sub>
+is a subgroup of
+&Pi;<sub>[&alpha; &isin; J]</sub> G<sub>&alpha;</sub>.
+  <li> Examples
+
+
+   
+ </ul>
+
+  
+
+<p>
+
+
+<li><i>Section G: Direct product groups:  Interactions with isomorphism invariants </i> 
+
+ 
+<p>
+
+ <ul>  
+  <li> <i>Order of the group:</i>
+    <ul>
+    <li> Thm 2.70:  A direct product of finitely many finite groups is finite.
+    A direct product of infinite groups is infinite.
+    </ul>
+  <li> <i>Orders of elements:</i>
+    <ul>
+    <li> Thm 2.73:  The set of orders of elements of a direct product
+    &Pi;<sub>[&alpha; &isin; J]</sub> G<sub>&alpha;</sub> contains the
+    union of the sets of orders of elements of the factor groups G<sub>&alpha;</sub>.
+    <li> Thm 2.74:  (1) Let  g = (g<sub>&alpha;</sub>)<sub>&alpha; &isin; J</sub>
+    be an element of a direct product group 
+    &Pi;<sub>[&alpha; &isin; J]</sub> G<sub>&alpha;</sub>.  If there is an
+    index &beta; &isin; J such that |g<sub>&beta;</sub>| = &infin;, then
+    |g| = &infin;.
+    <br>(2) Let g = (g<sub>1</sub>,...,g<sub>n</sub>) be an element of
+    a direct product &Pi;<sub>i=1</sub><sup>n</sup> G<sub>i</sub>.
+    If |g<sub>i</sub>| &lt; &infin; for all i, then
+    |g| = lcm{|g<sub>1</sub>|,...,|g<sub>n</sub>|}.
+    
+    </ul>
+
+  <li> <i>Abelian:</i>
+    <ul>
+    <li> Thm 2.77: Every direct product of abelian groups is abelian.
+    </ul>
+
+  <li> <i>Cyclic:</i>
+    <ul>
+    <li> Thm 2.80:  Every direct product of noncyclic groups is noncyclic.
+    There exists a direct product of cyclic groups that is not cyclic.
+    </ul>
+
+  <li> <i>Finitely generated:</i>
+    <ul>
+    <li> Thm 2.83:  Every direct product of finitely many finitely generated
+    groups is finitely generated.  A direct product of infinitely many nontrivial
+    groups is not finitely generated.
+    </ul>
+
+
+   
+ </ul>
+
+ 
+
+
+</ul>
+</ul>
+<p>
+
+
+
+<B>Chapter 3: Group and homomorphism constructions: Quotient groups </B>
+
+<p>
+
+
+<ul>
+<li><i>Section A: Definitions and examples </i> 
+ 
+<p>
+
+ <ul>  
+ <li> Def 3.1:  An equivalence relation ~ on a group G is <b>compatible
+ with multiplication</b> if whenever g,h,k &isin; G and g ~ h then gk ~ hk
+ and kg ~ kh.
+ <li> Def 3.2:  Let G be a group and let ~ be an equivalence relation on G
+ that is compatible with multiplication.  The <b>quotient group</b> is the
+ set G/~ of equivalence classes, with group multiplication [g][h] = [gh].
+ <li> Lemma 3.3: Let G be a group, let ~ be an equivalence relation on G,
+ let G/~ be the set of equivalence classes, and define [g][h] = [gh].  
+ Then G/~ with this operation is a (well-defined) group if and only if
+ ~ is compatible with multiplication.
+ 
+ <li> Lemma 3.6: Let N be a subgroup of a group G.  The <b>equivalence relation ~<sub>N</sub>
+ on G induced by the left action of N</b> is given by
+ g ~<sub>N</sub> h if and only if h = ng for some n &isin; N. The
+ equivalence class of g &isin; G (also called the <i>orbit</i> of g) is
+ <b>Ng</b> = {ng | n &isin; N}, called the <b>right coset of N in G containing g</b>.
+ 
+ <li> Def 3.7: A subgroup N of a group G is <b>normal</b> in G,
+ written <b>N &#8884; G</b> (and if N &ne; G, this is written <b>N &#8882; G</b>),
+ if gNg<sup>-1</sup> = N for all g &isin; G.
+ <li> Prop 3.8:  Let N be a subgroup of a group G.  The following are
+   equivalent:  (1) N &#8884; G.  (2) The equivalence relation ~<sub>N</sub>
+   induced by the left action of N on G is compatible with multiplication.
+   (3) gNg<sup>-1</sup> &sube; N for all g &isin; G.
+   (4) N<sub>G</sub>(N) = G.  (5) gN = Ng for all g &isin; G.
+ <li> Prop 3.10:  Let G be a group.  An equivalence relation ~ on G
+   is compatible with multiplication if and only if ~ = ~<sub>N</sub>
+   for some normal subgroup N of G.
+ <!--<li> Prop 3.11:  Let G be a group.
+ <br> (1) Let ~ be an equivalence relation on G that is compatible with
+ multiplication on G.  Then the subset N<sub>~</sub> := {g &isin; G | g ~ e} of
+ G is a normal subgroup of G 
+ and ~ = ~<sub>N<sub>~</sub></sub>.
+ <br>(2) Let N be a normal subgroup of G and let ~<sub>N</sub> be the
+ equivalence relation on G induced by the left action of N on G.  Then
+ ~<sub>N</sub> is compatible with multiplication.-->
+ 
+ <!--and let N<sub>~</sub> = {g &isin; G | G ~ e}.  
+ Then ~ is compatible with
+ multiplication if and only if (N<sub>~</sub> &#8884; G and ~ = ~<sub>N<sub>~</sub></sub>).-->
+ <li> Notation 3.12:  For any normal subgroup N of a group G,
+ the quotient group G/~<sub>N</sub> is denoted <b>G/N</b>.
+  (For any equivalence relation on a group G that is compatible
+  with multiplication, the quotient group G/~ is denoted
+  G/N, where N = N<sub>~</sub> := {g &isin; G | G ~ e}.)
+ <li> Examples
+   <ul> 
+   <li> {1},G &#8884; G and G/{1} &cong; G, G/G &cong; {1}.
+   <li> The <b>infinite dihedral group D<sub>&infin;</sub></b>
+   is the set D<sub>&infin;</sub> = {r<sup>i</sup>,r<sup>i</sup>s | i &isin; <b>Z</b>}
+   with multiplication defined by 
+   (r<sup>i</sup>)(r<sup>j</sup>) = r<sup>i+j</sup>,
+   (r<sup>i</sup>)(r<sup>j</sup>s) = r<sup>i+j</sup>s,
+   (r<sup>i</sup>s)(r<sup>j</sup>) = r<sup>i-j</sup>s, and
+   (r<sup>i</sup>s)(r<sup>j</sup>s) = r<sup>i-j</sup>.  
+   Then &lang; r<sup>n</sup> &rang; &#8884; G and 
+     G/&lang; r<sup>n</sup> &rang; &cong; D<sub>2n</sub>.
+  </ul>
+  <li> Lemma 3.14:  Let G be a group, let H be a subgroup of G, and let p,q &isin; G.
+ The following are equivalent: 
+ (1) There is a g &isin; G with p,q &isin; gH. 
+ (2) pH = qH.  (3) p = qh for some h &isin; H.  (4) p<sup>-1</sup>q &isin; H.
+ (5) q<sup>-1</sup>p &isin; H.
+  <li> Lemma 3.15:  All subgroups of abelian groups are normal.
+  <li> Thm 3.16:  Let H = &lang; S &rang; be a subgroup of  G = &lang; T &rang;.
+  Then H is normal in G if and only if usu<sup>-1</sup> &isin; H for all
+  s &isin; S and u &isin; T &cup; T<sup>-1</sup>.
+  
+ </ul>
+ 
+ 
+
+<p>
+
+
+<li><i>Section B: Interactions with homomorphisms and group actions</i> 
+
+ 
+<p>
+
+ <ul>  
+  <li> Thm 3.20:  Let N &#8884; G.  The <b>quotient</b> map q:G &rarr; G/N
+  defined by q(g) = gN is a group homomorphism with kernel Ker(q) = N.
+  <li> Cor 3.21:  A subgroup N of a group G is normal in G if and only if
+    N is the kernel of a homomorphism with domain G.
+   <li> Prop 3.25: (<b>Homomorphism Building Theorem (HBT) for Quotient Groups</b>): 
+     <!--&sim; be an equivalence relation on a group G
+     that is compatible with multiplication,
+     let N := {g &isin; G | g ~ e},-->
+  Let N be a normal subgroup of a group G
+  and let f: G &rarr; H be a homomorphism satisfying
+  the property that 
+  <!--whenever g,g' &isin; G and gN = g'N then f(g) = f(g'). -->
+  N &sube; Ker(f).  
+    <!-- Let q: G &rarr; G/N be the quotient map.-->
+  Then:
+  <br>
+  (1)  There is a well-defined homomorphism &phi;:G/N &rarr; H
+  defined by &phi;(gN) = f(g) for all gN in G/N.
+  <br>
+  (2)  If f is onto, then &phi; is onto.
+  <br>
+  (3)  If f also satisfies the property that
+  <!--whenever g,g' &isin; G and f(g) = f(g') then gN = g'N,-->
+  Ker(f) &sube; N,
+  then &phi; is one-to-one. 
+    
+    
+   <!--  <li> Lemma 3.19:  Let f: G &rarr; H be a homomorphism.  Define an
+    equivalence relation on G by g ~ h if and only if f(g) = f(h).
+    Then: (1) The equivalence class of g &isin; G satisfies
+    [g] = gKer(f) = f<sup>-1</sup>({f(g)}).  [The latter set is
+    called the <b>fiber</b>  of f(g).]  
+    (2) ~ = ~<sub>Ker(f)</sub> is compatible with multiplication. -->
+   <li> Cor 3.26:  (<b>First Isomorphism Theorem (1IT)</b>): If f: G &rarr; H is
+   a homomorphism, then Ker(f) &#8884; G and G/Ker(f) &cong; f(G).
+   <li> Def 3.29:  For a subgroup H in G, the <b>index</b> of H in G,
+      denoted <b>|G : H|</b>, is the number of left cosets of H in G.
+   <li> Cor 3.30:  If f:G &rarr; H is a homomorphism, then (1) f is injective
+   if and only if Ker(f) = {1}, and (2) |G : Ker(f)| = |f(G)|.
+   <li> Cor 3.31: (<b>Lagrange's Theorem</b>): If H is a subgroup of
+  a finite group G, then |G| = |H| |G:H|. 
+   <li> Examples
+   <li> Thm 3.35:  (<b>Homomorphism Building Theorem (HBT) for Free Groups</b>):
+   Let A be a set, let F(A) be the free group on A, let H be a group,
+   and let j:A &rarr; H be a function.  Then there is a unique homomorphism
+   f:F(A) &rarr; H satisfying f([a]) = j(a) for all a &isin; A.
+   <li> Cor 3.36:  Every group is a quotient of a free group.  Every
+   finitely generated group is a quotient of a finitely generated free group.
+   <li> Def 3.40:  Let G be a group and let A &sube; G.  The <b>normal
+   subgroup of G generated by A</b>, denoted &lang; A &rang;<sup>N</sup>, is
+   the set of all products of conjugates of elements of A and inverses of
+   elements of A.  In symbols,
+   &lang; A &rang;<sup>N</sup> = {
+     g<sub>1</sub>a<sub>1</sub><sup>i<sub>1<sub></sup>g<sub>1</sub><sup>-1</sup>
+     ...
+     g<sub>m</sub>a<sub>m</sub><sup>i<sub>m<sub></sup>g<sub>m</sub><sup>-1</sup> 
+     | m &ge; 0, and each a<sub>j</sub> &isin; A, g<sub>j</sub> &isin; G,
+     i<sub>j</sub> &isin; {1,-1}}.
+   <li> Prop 3.41: Let G be a group and let A be a subset of G.
+  Then &lang; A &rang;<sup>N</sup> is a normal subgroup of G.  Moreover,
+  &lang; A &rang;<sup>N</sup> = &cap;<sub>[A &sube; H and H &#8884; G]</sub> H;
+  that is, &lang; A &rang;<sup>N</sup> is the intersection of all of the normal subgroups 
+   of G that contain A. 
+  <li> Def 3.44:  Let A be a set and let R be a subset of the free group F(A).
+  The quotient group G = F(A)/&lang; R &rang;<sup>N</sup> has 
+  <b>presentation</b> &lang; A | R &rang; = &lang; A | {r = 1 | r &isin; R} &rang;.
+  <li> Examples
+  <li> Thm 3.45:  (<b>Homomorphism Building Theorem (HBT) for Presentations</b>):
+   Let A be a set, let F(A) be the free group on A, let R be a subset
+   of F(A), let H be a group,
+   and let j:A &rarr; H be a function satisfying the property that
+   whenever r = a<sub>1</sub><sup>i<sub>1<sub></sup>
+     ... a<sub>m</sub><sup>i<sub>m<sub></sup> &isin; R
+     (with each a<sub>j</sub> &isin; A, g<sub>j</sub> &isin; G and 
+     i<sub>j</sub> &isin; {1,-1}) then
+     (j(a<sub>1</sub>))<sup>i<sub>1<sub></sup>
+     ... (j(a<sub>m</sub>))<sup>i<sub>m<sub></sup> = 1<sub>H</sub>.
+   Then there is a unique homomorphism
+   f: &lang; A | R &rang; &rarr; H satisfying f([a]) = j(a) for all a &isin; A.
+  <li> Examples
+  <li> Rmk:  There is no algorithm that, upon input of a finite presentation
+  of a group G, can determine whether G = {1}.
+  
+ </ul>
+
+<p>
+
+
+<li><i>Section C: Interactions with isomorphism invariants </i> 
+   
+ 
+<p>
+ 
+  <ul>
+  <li> Def 3.48:  A group G is called 
+  an <b>extension</b> of a group N by a group H
+  if N &#8884; G and G/N &cong; H.
+  <li> <i>Order of the group:</i>
+    <ul>
+    <li> Thm 3.50:  Every quotient of a finite group is finite.
+    Moreover, if G is a finite group and G/N is a quotient of G,
+    then |G/N| divides |G|.
+    <li>  Thm 3.51:  Every extension of finite groups is finite.  That is:
+     If N &#8884; G and both N and G/N are
+     finite groups, then G is finite. 
+    </ul>
+  <li> <i>Orders of elements:</i>
+    <ul>
+    <li> Prop 3.52: If g is an element of a group G and N &#8884; G,
+    then |g| &ge; |gN|.  Moreover, if g has finite order, then
+    |gN| divides |g|.
+    </ul>
+  <li> <i>Abelian:</i>
+    <ul>
+    <li> Thm 3.55:  Every quotient of an abelian group is abelian.
+    <li> Def 3.57:  Let G be a group.  For any g,h &isin; G, the
+    <b>commutator of g with h</b> is the element
+    <b>[g,h]</b> = ghg<sup>-1</sup>h<sup>-1</sup> of G.
+    The <b>commutator subgroup</b> of G
+    is the group <b>G'</b> = &lang; {ghg<sup>-1</sup>h<sup>-1</sup> |
+    g,h &isin; G} &rang;.  The <b>abelianization</b> of G is the
+    quotient group <b>G<sub>ab</sub></b> = G/G'.
+    <li> Prop 3.58:  For any group G, G' &#8884; G and <b>G<sub>ab</sub></b>
+    is the largest abelian quotient of G.
+    <li> Prop 3.59:  The isomorphism class of the abelianization (and hence
+      the order of the abelianization, whether the abelianization is cyclic, etc.)
+      is an isomorphism invariant.
+    </ul>
+  <li> <i>Cyclic:</i>
+    <ul>
+    <li> Thm 3.60:  Every quotient of a cyclic group is cyclic.
+    </ul>
+  <li> <i>Finitely generated:</i>
+    <ul>
+    <li>  Thm 3.63:  Every quotient of a finitely generated group
+    is finitely generated.
+    <li>  Thm 3.65:  Every extension of finitely generated groups is
+     finitely generated.  That is: If N &#8884; G and both N and G/N are
+     finitely generated groups, then G is finitely generated.
+    </ul>
+  
+ 
+ </ul>
+
+
+ 
+<p>
+
+
+<li><i>Section D: Interactions with group constructions </i> 
+
+ 
+<p>
+
+ <ul>  
+ <li>  Examples
+ <li> Prop 3.71:  Let G be a group, let K, N &#8884; G.
+   Then KN, K &cap; N &#8884; G.
+  <li> Thm 3.73: (<b>Second Isomorphism Theorem (2IT)</b>):
+    Let G be a group, let H &le; G and let N &#8884; G.
+    Then H &cap; N &#8884; H, HN &le; G, N &#8884; HN, 
+      and there is an isomorphism
+     H/(H &cap; N) &cong; HN/N given by h (H &cap; N) &rarr; hN.
+    
+  
+  <li> Thm 3.77: (<b>Third Isomorphism Theorem (3IT)</b>):
+    Let G be a group and let H,K &#8884; G with H &le; K.
+    Then H &#8884; K and K/H &#8884; G/H, and there is an isomorphism
+    (G/H)/(K/H) &cong; G/K given by gH(K/H) &rarr; gK.
+  
+  <li> Lemma 3.79:  Homomorphic images (sort of) and preimages of normal subgroups are normal subgroups.  
+   That is:
+   Let G and H be groups and let f: G &rarr; H be a homomorphism.  
+  <br>(1) If A is a normal subgroup of G then f(A) is a normal subgroup of f(G). 
+  <br>(2) If B is a normal subgroup of H then f<sup>-1</sup>(B) is a normal subgroup of G.
+
+  <li> Thm 3.80: (<b>Lattice Isomorphism Theorem (LIT)</b>):
+    Let G be a group, let N be a normal subgroup in G, and let q: G &rarr; G/N be
+    the quotient map.
+    Then the function &Psi; : {subgroups of G containing N} &rarr; {subgroups of G/N}
+    defined by &Psi;(H) = q(H) = H/N  is a bijection 
+    with inverse defined by &Psi;<sup>-1</sup>(M) = q<sup>-1</sup>(M)
+    for each M &le; G/N.  Moreover, &Psi; and &Psi;<sup>-1</sup> preserve subgroup, index,
+    generation, intersection, and normal subgroup structure.  
+ 
+ 
+  
+ </ul>
+
+
+ 
+<p>
+
+
+<li><i>Section E: Decomposing groups:  Subnormal series </i> 
+
+ 
+<p>
+
+ <ul>  
+ <li>  Def 3.82:  Let G be a group.  A <b>subnormal series</b> for G is
+ a sequence of subgroups {e}=N<sub>0</sub> &#8884; N<sub>1</sub> &#8884; ...  
+   &#8884; N<sub>k</sub> = G for some k &ge; 0 such that for all 
+   i &isin; {0,...,k-1} we have N<sub>i</sub> &#8884; N<sub>i+1</sub> &le; G.
+   The integer k is the <b>length</b> of the series, and the quotient groups
+   N<sub>i+1</sub>/N<sub>i</sub> are the <b>factor groups</b>.
+ <li> Def 3.83:  Let P be an isomorphism invariant property.  A group G
+  is <b>poly-P</b> if G has a subnormal series in which each factor group
+  has the property P.
+ <li> Prop 3.84:  If P is an isomorphism invariant property, then so
+  is poly-P.
+ <li> Def 3.85:  A group G is <b>solvable</b> if G is poly-abelian.
+ <li> Examples
+   <ul> 
+   <li> Thm 3.87:  Let n be a natural number.
+    <br>(1) Every element of S<sub>n</sub> is a product of disjoint cycles.
+    <br>(2) An m-cycle in S<sub>n</sub> has order m and is a product of m-1 transpositions.
+    <br>(3) Every element of S<sub>n</sub> is a product of either an
+    even number or an odd number of transpositions, but not both.
+    <br>(4) The subgroup of S<sub>n</sub> of products of even numbers of
+    transpositions, called the <b>alternating group of degree n</b> 
+    and  denoted <b>A<sub>n</sub></b>, has index 
+    |S<sub>n</sub> : A<sub>n</sub>| = 2 and
+    A<sub>n</sub>  &#8884; S<sub>n</sub>.
+    <br>(5) A<sub>n</sub> is not abelian for all n &ge; 4.
+   <li> Lemma 3.88:  S<sub>4</sub>  is polycyclic and solvable.
+  <li> Thm 3.89:  If G is a polycyclic group, then G is
+   solvable.  The group &oplus;<sub>i &isin; <b>Z</b></sub> <b>Z</b>/2<b>Z</b>
+   is solvable but not polycyclic.
+   </ul>
+  <li> Thm 3.90:  Every subgroup and quotient of a solvable group is solvable.
+  <li> Thm 3.91:  (1) Every extension and direct product of solvable groups is 
+   solvable. 
+   <br>(2) Let P be an isomorphism invariant property.
+   Every extension and direct product of poly-P groups 
+   is poly-P.
+  <li> Thm 3.92:  Poly-poly-P = poly-P and hence poly-solvable = solvable.
+  <li> Def 3.94:  A group H is <b>simple</b> if |H| &gt; 1 and the only
+   normal subgroups of H are {e} and H.
+  <li> Def 3.95:  A <b>composition series</b> for a group G is a
+   subnormal series such that every factor group is simple.
+  <li> Thm 3.96:  (<b>Jordan-Holder Theorem</b>):  Every finite group 
+   has a composition series.  Moreover, if 
+  {e}=M<sub>0</sub> &#8884; M<sub>1</sub> &#8884; ... &#8884; M<sub>j</sub> = G
+  and
+  {e}=N<sub>0</sub> &#8884; N<sub>1</sub> &#8884; ... &#8884; N<sub>k</sub> = G
+  are two composition series for G, then j = k and there is a 
+  permutation s &isin; S<sub>k</sub> such that
+  M<sub>i</sub>/M<sub>i-1</sub> &cong; N<sub>s(i)</sub>/N<sub>s(i)-1</sub>
+  for all 1 &le; i &le; j.
+  <li> Thm 3.98:  Let G be a finite group.  The following are
+  equivalent:  (1) G is solvable.  (2) G is polycyclic.  
+  (3) G is poly-(cyclic of prime order).
+
+ </ul>
+
+
+
+</ul>
+<p>
+
+
+
+<B>Chapter 4: Applications of group actions and automorphisms  </B>
+
+<p>
+
+
+<ul>
+<li><i>Section A: Representations and applications </i> 
+ 
+<p>
+
+ <ul>  
+ <li> Def 4.1: A <b>permutation representation</b> of a group G is
+   a homomorphism f: G &rarr; Perm(X) for some set X.  A <b>linear representation</b>
+    of G is  a homomorphism G &rarr; GL<sub>n</sub>(R) for some natural number n
+      and field R.   A representation f is <b>faithful</b> if
+      Kerf(f) = 1.  
+      
+ <li> Rmk:  Note GL<sub>n</sub>(R) &le; Perm(R<sup>n</sup>).
+   Eg R = <b>Q</b>, <b>R</b>,
+    <b>C</b>, <b>Z</b>/p<b>Z</b> for a prime p. 
+    
+ <li> Def 4.3: For a group G acting on a set X, the induced homomorphism
+   f: G &rarr; Perm(X) is the <b>permutation representation induced by the action</b>.
+   The action is <b>faithful</b> if f is faithful.
+   The action is <b>transitive</b> if for all p,q &isin; X there is a g &isin; G
+   such that q=gp.  
+ <li> Thm 4.4: (<b>LOIS</b>):  Let G be a group acting on a set X and let 
+   p &isin; X.  Then Stab<sub>G</sub>(p) is a subgroup of G and 
+   |Orbit<sub>G</sub>(p)| = |G : Stab<sub>G</sub>(p)|.
+ <li> Groups acting on themselves and their cosets by left multiplication:
+ <ul> 
+  <li>  Thm 4.6: Let H be a subgroup of a group H.  Then G acts transitively
+   on the set G/H of left cosets by left multiplication (g &middot; (g'H) = (gg')H), 
+    and Stab<sub>G</sub>(1<sub>G/H</sub>) = H.  If &pi; is the induced permutation
+    representation, then Ker(&pi;) = &cap;<sub>g &isin; G</sub> gHg<sup>-1</sup>
+    is the largest subgroup of G containing H.  
+   <li> Def 4.7:  The group action in Thm 4.6 is the <b>left regular representation
+    of G over H</b>.
+   <li> Thm 4.8:  If G is a finite group of order n and p is the smallest prime
+  dividing |G|, then any subgroup H of G of index p is normal in G.
+  </ul>
+ <li> Groups acting on themselves and their subsets by conjugation:
+  <ul>
+  <li> Def 4.10:  Let G be a group.  Two elements g,g' &isin; G are
+    <b>conjugate</b> if there is an h &isin; G with g' = hgh<sup>-1</sup>.
+    The <b>conjugacy class</b> of an element g &isin; G is
+    <b>[g]<sub>c</sub></b> = {hgh<sup>-1</sup> | h &isin; G}.
+    Two subsets S,S' &sube; G are
+    <b>conjugate</b> if there is an h &isin; G with S' = hSh<sup>-1</sup>.
+  <li> Thm 4.11:  Let G be a group.  
+  <br> (1)Then G acts on G by conjugation
+    (g &middot; g' = gg'g<sup>-1</sup>).  For all g &isin; G,
+    the orbit of g is the conjugacy class of g, and
+    |[g]<sub>c</sub>| = |G : C<sub>G</sub>(g)|.
+  <br> (2)  Then G acts on the power set P(G) by conjugation
+    (g &middot; S = gSg<sup>-1</sup>).  For all S &isin; P(G),
+    |Orbit<sub>G</sub>(S)| = |G : N<sub>G</sub>(S)|.
+  <li> Cor 4.13:  For a finite group G and element g &isin; G, |[g]<sub>c</sub>|
+   divides |G|.
+  <li> Thm 4.15: (<b>Class equation</b>):  Let G be a finite group and let
+    g<sub>1</sub>,...,g<sub>r</sub> &isin; G be a list of unique representatives of
+    all of the conjugacy classes of G of size greater than 1.  Then
+    |G| = |Z(G)| + &sum;<sub>i=1</sub><sup>r</sup> |G : C<sub>G</sub>(g<sub>i</sub>)|.
+  <li> Thm 4.17:  If p is a prime number and G is a finite group of 
+    order p<sup>m</sup>
+    for some m &gt; 0, then Z(G) is not the trivial group.
+  <li> Def 4.18:  For a prime number p (&ge; 2), a <b>p-group</b> is a group of
+    order p<sup>m</sup> for some m > 0.
+  <li> Cor 4.19:  If G is a p-group for some prime number p, then G is solvable.
+  <li> Thm 4.20:  If G/Z(G) is cyclic, then G is abelian. 
+  <li> Examples
+  <ul>
+  <li> Def 4.22:  Let t be an element of S<sub>n</sub>.  The <b>cycle type</b>
+  of t is the set of numbers {m<sub>1</sub>,...,m<sub>n</sub>} such that
+  the disjoint cycle decomposition of t consists of n cycles of lengths
+   m<sub>1</sub>,...,m<sub>n</sub>.
+  <li> Thm 4.23:  Let s,t &isin; S<sub>n</sub>.
+  (1)  The elements s and t are conjugate in S<sub>n</sub> if and only if
+  they have the same cycle type.
+  (2)  Let (a<sub>1,1</sub> ... a<sub>1,m<sub>1</sub></sub>) ...
+  (a<sub>n,1</sub> ... a<sub>n,m<sub>n</sub></sub>) be the disjoint cycle
+  decomposition of s.  Then tst<sup>-1</sup> has disjoint cycle decomposition
+  (t(a<sub>1,1</sub>) ... t(a<sub>1,m<sub>1</sub></sub>)) ...
+  (t(a<sub>n,1</sub>) ... t(a<sub>n,m<sub>n</sub></sub>)).
+  
+  <li> Prop 4.24:  Let G be a group and H &le; G.  Then  H &#8884; G 
+  if and only if H is a union of conjugacy classes of G.
+  <!--(2) For each h &isin; H, the conjugacy class of h in G is a union
+  of orbits of elements of G with respect to the conjugation action of H on G.-->
+  <li> Thm 4.25:  The alternating group A<sub>n</sub> is simple for all n &ge; 5.
+   </ul>
+    
+  </ul>    
+ 
+ 
+ 
+ </ul>
+
+<p>
+
+<li><i>Section B: Automorphisms and semidirect products </i> 
+ 
+<p>
+
+ <ul>  
+ <li> Thm 4.28:  Let G be a group.  Then: (1) Inn(G) &#8884; Aut(G).  
+  (2) For each g &isin; G and &phi; &isin; Aut(G),
+  &phi; &sigma;<sub>g</sub> &phi;<sup>-1</sup> 
+  = &sigma;<sub>&phi;(g)</sub> (where
+  &sigma;<sub>g</sub> denotes the inner automorphism induced by g).
+ <li> Def 4.29:  Let G be a group.  The <b>outer automorphism group</b>
+  of G is <b>Out(G)</b> = Aut(G)/Inn(G).
+ <li> Thm 4.30:  Inn(G) &cong; G/Z(G).
+ <li> Examples
+  <ul>
+  <li> Prop 4.32: For any natural number n, Aut(C<sub>n</sub>) &cong; Out(C<sub>n</sub>)
+  &cong; (<b>Z</b>/n<b>Z</b>)<sup>x</sup> and Inn(C<sub>n</sub>) &cong; 1.
+  </ul>
+ <li> Thm 4.34:  If H &#8884; G, then G/C<sub>G</sub>(H) embeds in Aut(H).
+<!-- 
+ </ul>
+
+<p>
+
+<li><i>Section C: Automorphisms  </i> 
+ 
+<p>
+
+ <ul>  -->
+ <li> Def 4.40:  Let N and K be groups and let &phi;: K &rarr; Aut(N) be
+  a homomorphism.  The <b>semidirect product</b> induced by &phi;
+  is the set N &times; K with the binary operation
+  defined by (n,k)(n',k') = (n((&phi;(k))(n')),kk'); this group is denoted
+  by <b>N &#8906;<sub>&phi;</sub> K</b>.
+ <li> Thm 4.41:  If N and K are groups and &phi;: K &rarr; Aut(N) is
+  a homomorphism, then:  (1) N &#8906;<sub>&phi;</sub> K is a group.
+  (2) N &cong; N' = {(n,1<sub>K</sub>) | n &isin; N} &#8884; N &#8906;<sub>&phi;</sub> K
+  and K &cong; {(1<sub>N</sub>,k) | k &isin; K} &le; N &#8906;<sub>&phi;</sub> K.
+  (3) N &#8906;<sub>&phi;</sub> K / N' &cong; K.
+ <li> Examples
+ <li> Thm 4.42:  N &#8906;<sub>&phi;</sub> K = N &times; K if and only if
+   &phi; is the trivial homomorphism (that is, &phi;(k) = 1<sub>Aut(N)</sub>
+  for all k &isin; K).
+ <li> Thm 4.44:  Let N = &lang; x | x<sup>m</sup> = 1 &rang; and
+ M = &lang; y | y<sup>n</sup> = 1 &rang;, and let 1 &le; j &le; m-1 satisfy
+ gcd(j,m) = 1 and j<sup>n</sup> = 1.  Then there is a unique homomorphism
+ &phi;: K &rarr; Aut(N) satisfying (&phi;(y))(x) = x<sup>j</sup>, and
+ N &#8906;<sub>&phi;</sub> K &cong; &lang; r,s | r<sup>m</sup> = 1,
+ s<sup>n</sup> = 1, srs<sup>-1</sup> = r<sup>j</sup> &rang;.
+  <li> Thm 4.47:  Let G be a group with subgroups N and K satisfying
+  N &#8884; G, G = NK, and N &cap; K = 1.  
+  Then: (1) G &cong; N &#8906;<sub>&phi;</sub> K
+  where &phi;: K &rarr; Aut(N) is defined by &phi;(k)(n) = knk<sup>-1</sup>
+  for all k &isin; K and n &isin; N.  (2) If K &#8884; G also, then 
+  G &cong; N &times; K.
+  <li> Def 4.48:  If N &#8884; G, K &le; G, G = NK, and N &cap; K = 1, then
+  G is an <b>internal semidirect product of N by K</b>.  If K &#8884; G as well,
+  then G is the <b>internal direct product</b> of N and K.
+   <li> Thm 4.49:  If N = &lang; A | R &rang;, K = &lang; B | S &rang;,
+ and &phi;: K &rarr; Aut(N) is a homomorphism, then
+ N &#8906;<sub>&phi;</sub> K &cong;
+ &lang; &lang; A &cup; B | R &cup; S &cup; {&phi;(k)(n) = knk<sup>-1</sup>
+ | k &isin; K and n &isin; N} &rang;.
+
+ </ul>
+
+<p>
+
+<li><i>Section C: Classifying finite groups, and Sylow's Theorem(s) </i> 
+ 
+<p>
+
+ <ul> 
+ <li> Applications of group actions and semidirect products
+  <ul>
+  <li> Thm 4.50:  If G is a group of order p with p prime, then G is cyclic.
+  <li> Thm 4.51:  (Cauchy's Theorem)  If G is a finite group and p is a prime number
+  dividing |G|, then G has an element of order p.  (In fact, at least p-1 elements
+    of order p.)
+  <li> Lemma 4.52:  (1) If n &isin; <b>N</b>, then 
+  Aut(<b>Z</b>/n<b>Z</b>) &cong; (<b>Z</b>/n<b>Z</b>)<sup>x</sup>.
+  Hence if q is prime, then |Aut(<b>Z</b>/q<b>Z</b>)| = q-1.
+  <br>(2) If n &isin; <b>N</b>, then C<sub>n<sup>2</sup></sub> &#8775;
+  C<sub>n</sub> &times; C<sub>n</sub>.
+  <br>(3) If m,n  &isin; <b>N</b> and gcd(m,n) = 1, then 
+  C<sub>mn</sub> &cong; C<sub>m</sub> &times; C<sub>n</sub>.
+  <br>(4) If M is a finite group of order m, N is a finite group of order n,
+  and  gcd(m,n) = 1, then Aut(M &times; N) &cong; Aut(M) &times; Aut(N).
+  <br>(5) If p is a prime and k &isin; <b>N</b>, 
+  then Aut((<b>Z</b>/p<b>Z</b>)<sup>k</sup>)   &cong;
+  GL<sub>k</sub>(<b>Z</b>/p<b>Z</b>).
+  [Here (<b>Z</b>/p<b>Z</b>)<sup>k</sup> denotes the direct product
+  (<b>Z</b>/p<b>Z</b>) &times; ... &times; (<b>Z</b>/p<b>Z</b>) of k copies
+  of <b>Z</b>/p<b>Z</b>.]
+  <li> Cor 4.53:  If G is a group of order pq with p,q prime, p &le; q, and
+   p does not divide q-1, then G is abelian.
+  <li> Cor 4.54:  Let p and q be prime numbers with p < q.
+  <br>(1) If G is a group of order pq, then G is isomorphic to 
+   C<sub>q</sub> &#8906;<sub>&phi;</sub> C<sub>p</sub> for some
+   homomorphism &phi;: C<sub>p</sub> &rarr; Aut(C<sub>q</sub>).
+  <br>(2)  If p &#8740; (q-1),
+  <!--and G is a group of order pq, -->
+  then the only group of order pq
+  is the cyclic group C<sub>pq</sub>, up to isomorphism.
+  <br>(3)  If p | (q-1), then there is a nonabelian group of order pq.
+  <br>(4)  If p | (q-1), then there are exactly two groups of order pq, up to isomorphism.
+  <li> Examples
+  <li> Cor 4.56: If p is a prime number,
+   <!--and G is a group of order p<sup>2</sup>,
+   then G is isomorphic to exactly one of -->
+   then every group of order p<sup>2</sup> is isomorphic to exactly one of
+   C<sub>p<sup>2</sup></sub>
+   or C<sub>p</sub> &times; C<sub>p</sub>.
+  </ul>
+ <li> Sylow's main theorem
+  <ul>
+  <li> Def 4.60:  Let p be a prime and let G be a finite group of order p<sup>n</sup>m
+  where p &#8740; m.  A <b>Sylow p-subgroup</b> of G is a subgroup of G
+   of order p<sup>n</sup>.  Let <b>Syl<sub>p</sub>(G)</b> denote the set
+   of Sylow p-subgroups of G.  Let <b>n<sub>p</sub>(G)</b> =
+    |Syl<sub>p</sub>(G)|.
+  <li> Thm 4.63:  (<b>Sylow's Main Theorem</b>):
+  Let G be a finite group of order p<sup>n</sup>m where p is a prime and p &#8740; m. 
+  <br>(1) Syl<sub>p</sub>(G) &ne; &empty;.
+  <br>(2) If Q &isin; Syl<sub>p</sub>(G) and R &le; G is any p-subgroup of G,
+  then there is a g &isin; G such that R &le; gQg<sup>-1</sup>.
+  <br>(3) |Syl<sub>p</sub>(G)| &equiv; 1 (mod p).
+  <br>(4) If Q &isin; Syl<sub>p</sub>(G), then
+  |G : N<sub>G</sub>(Q)| = |Syl<sub>p</sub>(G)|, and hence
+   |Syl<sub>p</sub>(G)| | m.
+  <li> Example:  D<sub>6</sub>
+  <li> Lemma 4.65:  Let G be a group.
+  <br> (1) If m &isin; <b>N</b> and there is
+  exactly one subgroup H of G of order m, then H &#8884; G.
+  <br>(2) If p is a prime number, then a Sylow p-subgroup of G is normal 
+  if and only if |Syl<sub>p</sub>(G)| = 1.
+  <li> Prop 4.67:  Suppose that G is a finite group, N &#8884; G, K &le; G, 
+  n = |N|, m = |K|, and gcd(m,n) = 1.  Then NK is a subgroup of G
+  of order mn, and NK is an internal semidirect product of N by K.  Consequently,
+  if |G| = mn, then G = NK is an internal semidirect product of N by K.
+  <li> Example: Classification of groups of order 45
+  <li> Thm 4.69:  If p is a prime number and G is a finite group of
+  order pm with p &#8740; m, then G contains
+  (p-1)|Syl<sub>p</sub>(G)| elements of order p.
+  <li> Thm 4.70: Let K be a finite cyclic group and let N be arbitrary group. 
+  Suppose  that &phi;: K &rarr; Aut(N) and &theta;: K &rarr; Aut(N) are homomorphisms
+  satisfying the property that there is a &sigma; &isin; Aut(N) such that
+  &sigma; &phi;(K) &sigma;<sup>-1</sup> = &theta;(K); that is, the images of
+  &phi; and &theta; are conjugate subgroups of Aut(N).  Then
+  N &#8906;<sub>&phi;</sub> K &cong;  N &#8906;<sub>&theta;</sub> K.
+  <li> Prop 4.71:  Let p be a prime number, let n be a natural number, and let
+  (<b>Z</b>/p<b>Z</b>)<sup>n</sup> = 
+  <b>Z</b>/p<b>Z</b> &times; ... &times; <b>Z</b>/p<b>Z</b>
+  be the direct product of n copies of <b>Z</b>/p<b>Z</b>.
+  Then Aut((<b>Z</b>/p<b>Z</b>)<sup>n</sup>) &cong;
+  GL<sub>n</sub>(<b>Z</b>/p<b>Z</b>) is a group of order
+  &prod;<sub>i=0</sub><sup>n-1</sup> (p<sup>n</sup> - p<sup>i</sup>).
+  <li> Prop 4.72:
+  Let K and N be groups and let &phi;,&theta;: K &rarr; Aut(N)
+be homomorphisms.  If there is an automorphism &beta; &isin; Aut(K)
+such that &theta; = &phi; &#8728; &beta;, then
+N &#8906;<sub>&phi;</sub> K &cong;  N &#8906;<sub>&theta;</sub> K.
+  <li> More examples:  Classification of groups of order 30, classification of
+  simple groups of order 48, classification of groups of order 75.
+
+  </ul>
+ <li> Rmk 4.75: 
+   <b>Flow chart/strategies for classifying all finite groups of a given order m</b>:
+  <ul>
+  <li> (1) Factor m = p<sub>1</sub><sup>a<sub>1</sub></sup> ...
+  p<sub>s</sub><sup>a<sub>s</sub></sup> with each p<sub>i</sub> prime,
+  p<sub>1</sub> &lt; ... &lt; p<sub>r</sub>, and each
+  a<sub>i</sub> &isin; <b>N</b>.
+  <li> (2) For each prime p<sub>i</sub> use Sylow Theorem 4.63(4)
+  to write down a set U<sub>i</sub> of natural numbers containing
+  n<sub>p<sub>i</sub></sub>(G) = |Syl<sub>p<sub>i</sub></sub>(G)|
+  (namely the set of divisors of m/(p<sub>i</sub><sup>a<sub>i</sub></sup>)),
+  and use Sylow Theorem 4.63(3) to remove some of the elements
+  of U<sub>i</sub> that are not equal to n<sub>p<sub>i</sub></sub>(G).
+  <li> (3) For all indices 1 &le; i &le; r for which a<sub>i</sub> = 1,
+  use Thm 4.69 to count the number of elements of order p<sub>i</sub> in G.
+  For the other indices i, use Cauchy's theorem to get a lower bound on
+  the number of elements in G of order p<sub>i</sub>.  Also consider
+  (sub)cases of potential values of the n<sub>p<sub>i</sub></sub>(G)
+  and what they imply about the existence of elements of
+  order p<sub>i</sub><sup>j</sup> for various j &isin; <b>N</b>,
+  or alternatively consider (sub)cases of potential values of
+  orders of elements of G, and what they imply about the values
+  of the n<sub>p<sub>i</sub></sub>(G), and/or the isomorphism class
+  of the Sylow p-subgroups of G.
+  Use this information to remove more elements
+  of U<sub>i</sub> that are not equal to n<sub>p<sub>i</sub></sub>(G).
+  <li> (4) Try to show that G is an extension of 
+  smaller nontrivial groups N and G/N (that is, G is not simple) by:
+    <ul>
+    <li> (4a) For an index i with n<sub>p<sub>i</sub></sub>(G) = 1,
+    TOC Lemma 4.65 says that there is a normal Sylow p<sub>i</sub>-subgroup.
+    <li> (4b) For an index i with n<sub>p<sub>i</sub></sub>(G) &ne;  1,
+      the group G acts on the set Syl<sub>p<sub>i</sub></sub>(G) by
+      conjugation; the kernel of the permutation representation
+      &pi;: G &rarr; Perm(Syl<sub>p<sub>i</sub></sub>(G)) is a
+      normal subgroup of G.
+    <li> (4b') For any index i, use Thm 4.17 to find a nontrivial normal
+     subgroup (the center) of each Sylow p<sub>i</sub>-subgroup.
+    <li> (4c) Use products of Sylow subgroups with normal subgroups and
+    Prop 4.67 to build up larger subgroups in G, 
+     and then use Lagrange's Theorem and Thm 4.8 to find normal subgroups.
+    </ul>
+  Then classify the smaller groups N and G/N using the techniques in this flow chart
+  (and Thms 4.50, 4.54, 4.56), and
+  use these classifications to determine information about G.
+  <li> (5) Try to show that every group G of order m is an internal
+  semidirect product of a normal subgroup N of order s by a subgroup K
+  of order t.  Then:
+   <ul>
+   <li> (5a) Classify all groups of orders s and t using the techniques in this
+   flow chart (and Thms 4.50, 4.54, 4.56); 
+   let S be the set of all groups of order s and let T be the set of
+   all groups of order t, up to isomorphism.
+   <li> (5b) Using TOC Lemma 4.52, analyze Aut(N) for each N &isin; S.  Then
+   for each N &isin; S and K &isin; T find the set W(K,N) of
+   all homomorphisms K &rarr; Aut(N).
+   <li> (5c) For each pair of 3-tuples (N,K,&phi;),(N',K',&phi;') with
+   N,N' &isin; S, K,K' &isin; T, &phi; &isin; W(K,N), and &phi;' &isin; W(K',N'),
+   determine whether or not N &#8906;<sub>&phi;</sub> K &cong;
+   N' &#8906;<sub>&phi;'</sub> K'.  
+     <ul>
+     <li> (5ci) To show that N &#8906;<sub>&phi;</sub> K &cong;
+      N' &#8906;<sub>&phi;'</sub> K', 
+     try to use Thm 4.70 or Prop 4.72.
+     <li> (5cii) To show that N &#8906;<sub>&phi;</sub> K &#8775;
+      N' &#8906;<sub>&phi;'</sub> K', 
+      try to show that the abelianizations of these two groups are not isomorphic.
+   </ul>
+  </ul> 
+   
+  </ul>
+ <li> Proof of Sylow's Main Theorem
+  <ul>
+  <li>  Lemma 4.80:  Let G be a finite group, p a prime,
+  Q a Sylow p-subgroup of G, and R any p-subgroup of G.
+  Then R &cap; N<sub>G</sub>(Q) = R &cap; Q.
+  </ul>
+
+ 
+ 
+ <li> Classification of finitely generated abelian groups
+  <ul>
+  <li> Thm 4.85:  Let G be a finite abelian group and factor the order m of G as
+   m = p<sub>1</sub><sup>a<sub>1</sub></sup> ...
+  p<sub>s</sub><sup>a<sub>s</sub></sup> such that s &ge; 0,
+  each p<sub>i</sub> is prime,
+  p<sub>1</sub> &lt; ... &lt; p<sub>s</sub>, and each
+  a<sub>i</sub> &isin; <b>N</b>.  Then
+  <br>(1) <!--For each 1 &le; i &le; r there is a -->
+  G &cong; Q<sub>1</sub> &times; ... &times; Q<sub>s</sub>
+  where |Q<sub>i</sub>| = p<sub>i</sub><sup>a<sub>i</sub></sup> for all i.
+  <br>(2) For each index i, there is a partition
+  a<sub>i</sub> = a<sub>i,1</sub> + ... + a<sub>i,j<sub>i</sub></sub>
+  with each a<sub>i,j</sub> &ge; 1, such that
+  Q<sub>i</sub> &cong; (<b>Z</b>/p<sub>i</sub><sup>a<sub>i,1</sub></sup><b>Z</b>)
+  &times; ... &times;
+  (<b>Z</b>/p<sub>i</sub><sup>a<sub>i,j<sub>i</sub></sub></sup><b>Z</b>).
+  <br>(3) The p<sub>i</sub>'s,
+  j<sub>i</sub>'s and a<sub>i,j</sub>'s are uniquely determined by G.
+  <li> Def 4.86:  In Thm 4.80, the
+  p<sub>i</sub><sup>a<sub>i</sub></sup> are the <b>elementary divisors</b>
+  of G, and the decomposition of G in Thm 4.80(1-2) is the <b>elementary
+  divisor decomposition</b> of G.
+  <li> Def 4.87:  The direct product  <b>Z</b><sup>r</sup> = 
+    <b>Z</b> &times; ... &times; <b>Z</b> of r copies of <b>Z</b>
+    is the <b>free abelian group of rank r</b>.
+  <li> Thm 4.88: (<b>Classification of finitely generated abelian groups (CFGAG)</b>):
+  Let G be a finitely generated abelian group.  Then
+  <br>(1) G &cong; <b>Z</b><sup>r</sup> &times; 
+  (<b>Z</b>/n<sub>1</sub><b>Z</b>)
+  &times; ... &times;
+  (<b>Z</b>/n<sub>s</sub><b>Z</b>) for some r &ge; 0, s &ge; 0,
+  and n<sub>i</sub> &ge; 2 for all i, satisfying
+  n<sub>i+1</sub> | n<sub>i</sub> for all i.  
+  <br>(2) The integers r,s,n<sub>1</sub>,...,n<sub>s</sub> are uniquely
+  determined by G.
+  <li> Def 4.89: In Thm 4.84, the number r is the <b>rank</b> of G,
+    the numbers n<sub>1</sub>,...,n<sub>s</sub> are the
+    <b>invariant factors</b> of G, and the decomposition of G in Thm 4.84(1)
+    is the <b>invariant factor decomposition</b> of G.
+   </ul>
+
+  
+
+
+ </ul>
+
+
+
+</ul>
+<p>
+
+
+
+<B>Chapter 5: Introduction to rings  </B>
+
+<p>
+
+
+<ul>
+<li><i>Section A: Definitions and first examples </i> 
+ 
+<p>
+
+ <ul>  
+ <li> Motivation:  Studying matrices (linear algebra), polynomials,
+   and <b>Z,Q,R,C</b>, and proving things about them all
+   at once instead of individually.
+ <li> Def 5.1:  A <b>monoid</b> is a set S together with a
+  binary operation &sdot; that is associative and has an identity.
+  A <b>semigroup</b> is a set S together with a binary operation
+  &sdot; that is associative.
+ <li> Def 5.2: A <b>ring</b> is a set R together with two binary
+  operations + and &sdot; satisfying the following:
+  <br>(1)  (R,+) is an abelian group (with identity element denoted 0).
+  <br>(2)  (R,&sdot;) is a semigroup.
+  <br>(3)  (R,+,&sdot;) is <b>distributive</b>:
+  For all a,b,c &isin; R, a(b + c) = ab + ac.
+  <li> Def 5.3:  A ring R satisfying the extra condition
+   that  (R,&sdot;) is a monoid (with identity element
+   denoted 1)
+   is a <b>unital ring</b>, also called a <b>ring with 1</b>.
+  <li>  Examples:
+    <ul>
+      <li> The <b>zero ring</b> is R = {0}; denoted by 0.
+      <li> <b>Z,Q,R,C</b> with + and &sdot;.
+      <li> <b>Z</b>/n<b>Z</b> with + and &sdot; modulo n,
+      <li> Def 5.5:  For any ring R and natural number n, 
+     the <b>matrix ring</b> M<sub>n</sub>(R) is the set
+     of n &times; n matrices with entries in R, with
+     the standard rules for matrix addition and multiplication.
+      <li> Def 5.6:  For any abelian group G (with
+      operation denoted by addition), the ring
+      <b>End<sub>Ab</sub>(G)</b> is the set of group endomorphisms: G &rarr; G,
+      with operations defined by:
+      For each f,h &isin; End<sub>Ab</sub>(G), 
+      define f + h, f &sdot; h &isin; End<sub>Ab</sub>(G)
+      by (f + h)(a) = f(a) + h(a) for all a &isin; G, and 
+      f &sdot; h = f &#8728; h.  
+      <!--The <b>ring of group endomorphisms</b> of G is
+      End<sub>Ab</sub>(G) with this addition and multiplication.-->
+     <li> Def 5.7:  For any set X and ring R, the ring
+      <b>Fun(X,R)</b> is the set of functions: X &rarr; R,
+      with operations defined by:
+      For each f,h &isin; Fun(X,R), define 
+      f+h, f &#8728; h &isin; Fun(X,R)
+      by (f+h)(a) = f(a) + h(a) and
+      (f&#8728;h)(a) = f(a) &#8728; h(a)for all a &isin; X.
+    </ul>
+  <li>  Lemma 5.9:  If R is a ring, then
+  for all a,b &isin; G:
+  <br>(1) 0a = 0 = a0.  
+  <br>(2) (-a)b = -(ab) = a(-b).  
+  <br>(3) (-a)(-b) = ab.
+  <br> Moreover if R is a ring with 1, then
+  <br> (4) The multiplicative identity 1 is unique.
+  <br>(5) (-1)a = -a = a(-1) for all a &isin; R.
+
+  </ul>
+
+<p>
+
+
+<li><i>Section B: Homomorphisms and isomorphisms </i> 
+
+ 
+<p>
+
+ <ul>  
+  <li> Def 5.11: A <b>(ring) homomorphism</b> from a ring R
+   to a ring S  is a function f:R &rarr; S satisfying 
+   f(r + r') = f(r) + f(r')  and f(rr') = f(r)f(r') for all
+  r,r' &isin; R.  A <b>(ring) isomorphism</b> from R to S is a homomorphism
+  from R to S that is a bijection.  Two rings R and S are <b>isomorphic</b>,
+  written R &cong; S, if there is an isomorphism from R to S.
+  
+  <li> Thm 5.14:  "Isomorphic" is an equivalence relation on the
+   set of all rings. 
+  Moreover, if &phi;:R &rarr; S and &theta;:S &rarr; T are isomorphisms,
+   then &phi;<sup>-1</sup>:S &rarr; R and &theta; &#8728; &phi;:R &rarr; T
+  are also isomorphisms. 
+   
+  <li> Def 5.15: An <b>Isomorphism Problem</b> algorithm determines,
+  upon input of two rings R and S, whether or not R &cong; S.
+  A <b>Classification Problem</b> algorithm enumerates (lists) all of 
+  the rings up to isomorphism.
+  <li> Def 5.16:  A <b>(ring) isomorphism invariant</b> is a property P of
+   rings such that whenever R &cong; S and R has P then S has P.
+  <li> Lemma 5.17: If P is an isomorphism invariant, R is a ring that
+  has P, and S is a ring that does not have P, then R is not
+  isomorphic to S.
+  <li> Def 5.20:  A ring R is <b>commutative</b> if for every
+    a,b &isin; R, ab = ba.
+  <li> Def 5.21:  A ring R is
+   a <b>division ring</b> if (R - {0},&sdot;) is a group.
+   A ring R is a <b>field</b> if 
+   (R - {0},&sdot;) is an abelian group.
+  <li> Example:
+   <ul> 
+   <li> Lemma 5.22:  <b>Z</b>/n<b>Z</b> is a field if and only if
+    n is prime. 
+   </ul>  
+  <li> Def 5.24: Let R be a ring.  A nonzero element a &isin; R
+   is a  <b>zero divisor</b> if there exists a nonzero element
+    b &isin; R such that either ab = 0 or ba = 0.
+  <li> Def 5.25:  An <b>integral domain</b> is a commutative
+   ring R with 1 &ne; 0 such that R contains no zero divisors.
+  <li> Prop 5.26:  (1)Every field is a division ring.  
+  <br> (2) Every field is an integral domain.  
+  <br> (3)Every division ring contains no zero divisors.
+  <br> (4)  The converses of statements (1-3) are false.
+  <li> Example:
+   <ul> 
+   <li> Def 5.27:  The <b>(real) quaternion ring</b> is the set
+     H = {a + bi + cj + dk | a,b,c,d &isin; <b>R</b>}, with operations
+     defined by (a + bi + cj + dk) + (a' + b'i + c'j + d'k) =
+     (a+a') + (b+b')i + (c+c')j + (d+d')k and
+     (a + bi + cj + dk)(a' + b'i + c'j + d'k) =
+     (aa'-bb'-cc'-dd') + (ab'+ba'+cd'-dc')i + (ac'-bd'+ca'+db')j
+     + (ad'+bc'-cb'+da')k.
+   <li> Lemma 5.29: The real quaternion ring is a noncommutative division ring. 
+   </ul>  
+
+  <li> Def 5.30:  Let R be a ring with 1 &ne; 0.  
+   A <b>unit</b> of R is an element r &isin; R such that
+   there exists an s &isin; R with rs = 1 = sr.  The <b>group
+   of units</b> of R is the set of units of R with
+   group operation given by the multiplication in R,
+   and is denoted <b>R<sup>x</sup></b>.
+  <li> Lemma 5.31:  The group of units of a ring with 1 &ne; 0 is a group.
+  <li> Examples
+  <ul>
+    <li> If R is a field, then <b>R<sup>x</sup></b> = R - {0}.
+    <li>  Def 5.32:  If R is a commutative ring with 1, then the
+    group of units of the ring M<sub>n</sub>(R) is the
+    <b>general linear group</b> GL<sub>n</sub>(R).
+  </ul>
+  <li> Lemma 5.33:  If a is a zero divisor in a ring R,
+   then a is not a unit.  
+  <li> Prop 5.34:  (1) A finite integral domain is a field.
+  (2) A finite ring with 1 &ne; 0 that contains no zero divisors
+  is a division ring.
+  <li> Def 5.35:  An element r of a ring R is called
+  <b>nilpotent</b> if r<sup>m</sup> = 0 for some integer m &ge; 1.
+  <li> Thm 5.36:  Let R be a ring with 1.  If b is a nilpotent
+  element of R, then 1-b is a unit of R. 
+  <li> Thm 5.37: The following are ring isomorphism invariants. 
+   <br> (0) "with 1". 
+   <br> (1) Group isomorphism invariants of the additive group.
+   <br> (2) Semigroup isomorphism invariants of the multiplicative semigroup.
+   <br> (3) "commutative", "division ring", "field", "integral domain".
+   <br> (4) The number of zero divisors.
+   <br> (5) Group isomorphism invariants of the group of units (including the
+     isomorphism class).
+  <li>  More examples:
+  <ul>
+  <li> Def 5.38:  Let R be a commutative ring with 1 &ne; 0
+    and let x be a letter.
+    The <b>polynomial ring R[x]</b> is the set of formal expressions
+    a<sub>0</sub> + a<sub>1</sub>x + ... + a<sub>n</sub> x<sup>n</sup>
+    with  n &ge; 0 and each a<sub>i</sub> &isin; R (called a
+    <b>polynomial</b>), with operations defined by:
+    (&sum;<sub>i=1</sub><sup>n</sup> a<sub>i</sub> x<sup>i</sup>)
+    + (&sum;<sub>j=1</sub><sup>q</sup> b<sub>j</sub> x<sup>j</sup>)
+    = &sum;<sub>i=1</sub><sup>max{n,q}</sup> 
+      (a<sub>i</sub> + b<sub>i</sub>) x<sup>i</sup>, and
+    (&sum;<sub>i=1</sub><sup>n</sup> a<sub>i</sub> x<sup>i</sup>)
+    &sdot; (&sum;<sub>j=1</sub><sup>q</sup> b<sub>j</sub> x<sup>j</sup>)
+    = &sum;<sub>i=1</sub><sup>n</sup> &sum;<sub>j=1</sub><sup>q</sup>
+    (a<sub>i</sub> b<sub>j</sub>) x<sup>i+j</sup>.
+  <li> Def 5.39:  Let R be a commutative ring with 1 &ne; 0
+    and let G be a 
+    group (with operation written multiplicatively).  The
+    <b>group ring RG</b> is the set of formal expressions
+     &sum;<sub>g &isin; G</sub> r<sub>g</sub>g such that 
+     r<sub>g</sub> &isin; R for all g &isin; G and
+     r<sub>g</sub> = 0 for all but a finite number of g's
+    (that is, &sum;<sub>g &isin; G</sub> r<sub>g</sub>g = 
+    a<sub>1</sub>g<sub>1</sub> + ... + 
+     a<sub>n</sub>g<sub>n</sub>
+    with n &ge; 0 and each a<sub>i</sub> &isin; R 
+    and g<sub>i</sub> &isin; G), with operations defined by:
+    (&sum;<sub>g &isin; G</sub> r<sub>g</sub>g) + 
+     (&sum;<sub>g &isin; G</sub> s<sub>g</sub>g)
+    = &sum;<sub>g &isin; G</sub> (r<sub>g</sub> + s<sub>g</sub>)g,
+   and  (&sum;<sub>g &isin; G</sub> r<sub>g</sub>g) &sdot;
+     (&sum;<sub>g &isin; G</sub> s<sub>g</sub>g) 
+   = &sum;<sub>g &isin; G</sub> &sum;<sub>h &isin; G</sub> 
+     r<sub>g</sub>s<sub>h</sub> gh.
+    <li> Def 5.40:  Let R be a commutative ring with 1 &ne; 0
+     and let M be a 
+    monoid (with operation written multiplicatively).  The
+    <b>monoid ring RM</b> is the set of formal expressions
+     &sum;<sub>m &isin; M</sub> r<sub>m</sub>m such that 
+     r<sub>m</sub> &isin; R for all m &isin; M and
+     r<sub>m</sub> = 0 for all but a finite number of m's,
+    <!--(that is, &sum;<sub>m &isin; M</sub> r<sub>m</sub>m = 
+    a<sub>1</sub>m<sub>1</sub> + ... + 
+     a<sub>n</sub>m<sub>n</sub>
+    with n &ge; 0 and each a<sub>i</sub> &isin; R 
+    and m<sub>i</sub> &isin; M),-->
+    with operations defined by:
+    (&sum;<sub>m &isin; M</sub> r<sub>m</sub>m) + 
+     (&sum;<sub>m &isin; M</sub> s<sub>m</sub>m)
+    = &sum;<sub>m &isin; M</sub> (r<sub>m</sub> + s<sub>m</sub>)m,
+   and  (&sum;<sub>m &isin; M</sub> r<sub>m</sub>m) &sdot;
+     (&sum;<sub>m &isin; M</sub> s<sub>m</sub>m) 
+   = &sum;<sub>m &isin; M</sub> &sum;<sub>n &isin; M</sub> 
+     r<sub>m</sub>s<sub>n</sub> mn.
+  <li> Rmk:  A polynomial ring is a monoid ring of the monoid
+    {x}<sup>*</sup> (the set of words over the alphabet {x}).
+  <li> Def 5.41: Let R be a commutative ring with 1 &ne; 0.
+  The <b>noncommutative polynomial ring on n variables x<sub>1</sub>,...,x<sub>n</sub>
+  with coefficients in R</b>
+  is the monoid ring <b>R&lang;x<sub>1</sub>,...,x<sub>n</sub>&rang;</b> =
+  R({x<sub>1</sub>,...,x<sub>n</sub>}^*), and the 
+  <b>commutative polynomial ring on n variables x<sub>1</sub>,...,x<sub>n</sub>
+  with coefficients in R</b> is the monoid ring <b>R[x<sub>1</sub>,...,x<sub>n</sub>]</b> =
+  R(<b>N</b><sup>n</sup>).
+  <li> Lemma 5.42:  If R is a commutative ring with 1 &ne; 0, 
+   then:  
+   (1) R[x] and R[x<sub>1</sub>,...,x<sub>n</sub>]  are
+    commutative rings  with 1 &ne; 0.
+   (2) R&lang;x<sub>1</sub>,...,x<sub>n</sub>&rang;
+   is a ring with 1 &ne; 0, which is noncommutative if
+   n &ge; 2.
+   (3) If G is a group, then RG is a ring with 1 &ne; 0.
+   (4) If M is a monoid, then RM is a ring with 1 &ne; 0.
+  </ul>
+  <li> The big Venn diagram of the universe of rings with 1.
+  
+ 
+ </ul>
+ 
+<p>
+
+
+<li><i>Section C: Ring and homomorphism constructions: Subrings </i> 
+
+ 
+<p>
+
+ <ul>  
+ <li> Definition and examples
+  <ul>
+  <li> Def 5.44:  A <b>subring</b> of a ring R is a subset S of R
+  that is a ring under the operations of R.
+ <li> Lemma 5.45:  A subset S of a ring R is a subring of R if and
+  only if S is nonempty and closed under subtraction and multiplication.  
+<!-- <li> Lemma 5.xx: (1) If S is a subring of R and T is a subring of S, then
+  T is a subring of R.  (2) If S<sub>&alpha;</sub> is a subring of 
+    R for all &alpha; in an index set J, then
+    &cap;<sub>[&alpha; &isin; J]</sub>R<sub>&alpha;</sub> is a
+    subring of R.-->
+ <li> Examples:
+    <ul>
+      <li> <b>Z</b> is a subring of <b>Q</b>, which
+   is a subring of <b Lemma 5.23: Z/nZ is a field if and only if n is prime. >R</b>, which in turn is a subring of <b>C</b>. 
+     <li> 2<b>Z</b> is a subring without 1 of the ring
+      <b>Z</b> with 1.
+      <li> Lemma 5.46:  Let d be a squarefree integer (that is, the 
+      prime factorization of d has no repeated primes).  Then the subset
+     <b>Q</b>(&radic; d) = {a + b&radic; d | a,b &isin; <b>Q</b>}
+     of <b>C</b> is a subring that is a field (called a
+     <b>quadratic field</b>), and
+     <b>Z</b>(&radic; d) = {a + b&radic; d | a,b &isin; <b>Z</b>}
+     is a subring of <b>Q</b>(&radic; d).
+     <li> Lemma 5.47: The set of continuous functions : [0,1]
+     &rarr; <b>R</b> is a subring of Fun([0,1],<b>R</b>),
+     denoted C([0,1]).
+     <li> Lemma 5.48: If R is a ring, then the set
+      S = {D_a | a &isin; R} of
+     M<sub>n</sub>(R), where D_a is the matrix with each diagonal
+     entry equal to a and all nondiagonal entries equal to 0,
+     is a subring of M<sub>n</sub>(R), and R &cong; S.  
+     The subset U of M<sub>n</sub>(R) of upper triangular 
+     matrices is also a subring of M<sub>n</sub>(R).
+<!--    <li> Def 5.48:  An <b>endomorphism</b> of a ring R is a homomorphism
+  : R &rarr; R.  An <b>automorphism</b> of a ring R is an isomorphism
+  : R &rarr; R.
+    The <b>endomorphism ring</b> of a ring R, 
+    denoted End<sub>Ring</sub>(R), is the
+  set of all endomorphisms of R, with 
+   addition and multiplication from End<sub>Ab</sub>(R).
+   <li> Prop 5.xx: If R is a ring, then End<sub>Ring</sub>(R) is 
+    a subring of End<sub>Ab</sub>(R).  -->
+   </ul>
+   <li> Prop 5.49:  The <b>center</b> of a ring R, 
+  namely the set
+ {z &isin; R | zr = rz for all r &isin; R}, is
+   a commutative subring of R.
+   <li> Prop 5.50: (1) If R is a commutative ring with 1 &ne; 0, then:
+     (1a) R is a subring of R[x].  (1b) R is a subring 
+     of R[x<sub>1</sub>,...,x<sub>n</sub>].  (1c) R is a subring of
+   R&lang;x<sub>1</sub>,...,x<sub>n</sub>&rang;.
+   <br> (2) If S is a subring containing 1 of a commutative ring R with 1 &ne; 0, then
+   (2a) S[x] is a subring of R[x].
+   (2b) S[x<sub>1</sub>,...,x<sub>n</sub>] is a subring of
+     R[x<sub>1</sub>,...,x<sub>n</sub>].  
+   (2c) S&lang;x<sub>1</sub>,...,x<sub>n</sub>&rang; is a subring of
+     R&lang;x<sub>1</sub>,...,x<sub>n</sub>&rang;.
+    <br>(3a) If R is a commutative ring with 1 &ne; 0 and H is a subgroup
+   of a group G, then RH is a subring of RG.
+   <br>(3b) If R is a commutative ring with 1 &ne; 0 and M' is a submonoid
+   of a monoid M, then RM' is a subring of RM.
+  </ul>
+  <li> Interactions with ring homomorphisms
+  <ul>
+   <li> Thm 5.52:  Restrictions and extensions of ring homomorphisms are ring homomorphisms.
+    In particular, inclusions are injective ring homomorphisms.
+   <li> Thm 5.53:  Homomorphic images and preimages of subrings are subrings. 
+   <li> Def 5.54:  Let f: R &rarr; S be a ring homomorphism.  The <b>kernel</b> of f
+    is the subring <b>Ker(f)</b> = f<sup>-1</sup>({0}) = 
+      {r &isin; R | f(r) = 0} of R.
+    The <b>image</b> of f is the subring <b>Im(f)</b> = f(R) of S.
+   <li> Def 5.55: An <b>embedding</b> of a ring R in a ring S
+    is an injective homomorphism :R &rarr; S.
+<!--   <li> Prop 5.56:  If f: R &rarr; S is an embedding, then 
+    R &cong; f(R), which is a subring of S.-->
+   <li> Examples:
+     <ul>
+     <li>  Embedding M<sub>2</sub>(<b>R</b>) in 
+         M<sub>3</sub>(<b>R</b>).
+     </ul>
+   </ul>
+  <li> Interactions with isomorphism invariants
+   <ul> 
+   <li> Prop 5.57:  Every subring of a commutative ring is commutative.
+   <li> Prop 5.58:  Every subring with 1 &ne; 0 of an integral domain is an integral domain.
+   <li> Prop 5.59: There exists a subring with 1 &ne; 0 of a field that is not a field.
+   There exists a subring without 1 of a field.
+   </ul>
+
+  </ul> 
+
+<p>
+  
+<li><i>Section D: Ring and homomorphism constructions: Product rings </i> 
+
+<p>
+
+ <ul>  
+ <li> Definition and examples
+  <ul>    
+  <li> Def 5.61:  (a) Let R<sub>i</sub> be a ring for all 1 &le; i &le; n.
+  The <b>direct product</b> of the rings R<sub>i</sub> is
+  the Cartesian product R<sub>1</sub> &times; R<sub>2</sub> &times;
+  ... &times; R<sub>n</sub> with addition defined by
+  (r<sub>1</sub>,...,r<sub>n</sub>)(s<sub>1</sub>,...,s<sub>n</sub>) =
+  (r<sub>1</sub>+s<sub>1</sub>,...,r<sub>n</sub>+s<sub>n</sub>) and
+  multiplication defined by
+  (r<sub>1</sub>,...,r<sub>n</sub>)(s<sub>1</sub>,...,s<sub>n</sub>) =
+  (r<sub>1</sub>s<sub>1</sub>,...,r<sub>n</sub>s<sub>n</sub>).
+  <br>(b)  Let R<sub>&alpha;</sub> be a ring for all &alpha; in an
+  index set J.  The <b>direct product</b> of the rings
+   R<sub>&alpha;</sub> is
+  the Cartesian product <b>&Pi;<sub>[&alpha; &isin; J]</sub> R<sub>&alpha;</sub></b>
+  with addition defined by
+  (r<sub>&alpha;</sub>)<sub>&alpha; &isin; J</sub>(s<sub>&alpha;</sub>)<sub>&alpha; &isin; J</sub>
+  = (r<sub>&alpha;</sub>+s<sub>&alpha;</sub>)<sub>&alpha; &isin; J</sub> and
+  multiplication defined by
+  (r<sub>&alpha;</sub>)<sub>&alpha; &isin; J</sub>(s<sub>&alpha;</sub>)<sub>&alpha; &isin; J</sub>
+  = (r<sub>&alpha;</sub>s<sub>&alpha;</sub>)<sub>&alpha; &isin; J</sub>.
+  The <b>direct sum</b> of the rings
+   R<sub>&alpha;</sub> is the subset
+   <b>&oplus;<sub>[&alpha; &isin; J]</sub> R<sub>&alpha;</sub></b>
+  of the direct product &Pi;<sub>[&alpha; &isin; J]</sub> R<sub>&alpha;</sub>
+  given by &oplus;<sub>[&alpha; &isin; J]</sub> R<sub>&alpha;</sub>
+  = {(r<sub>&alpha;</sub>)<sub>&alpha; &isin; J</sub> |
+  r<sub>&alpha;</sub> = 0<sub>&alpha;</sub> for all but
+  finitely many &alpha;}, with the same multiplication as the direct product.
+
+  <li>Thm 5.62:  The direct product of a collection
+   of rings is a ring, and the direct sum of the collection is
+  a subring of the direct product.
+  <li> Examples  
+   <!--<ul> 
+   <li> <b>Z</b><sup>n</sup>, <b>Q</b><sup>n</sup>, <b>R</b><sup>n</sup>, <b>C</b><sup>n</sup>
+   </ul> --> 
+  </ul>
+ <li>  Interactions with ring homomorphisms
+ <ul>  
+  <li> Thm 5.64:  (1) Projections are ring homomorphisms.  (2) Inclusions into products
+    are embeddings.  (3) Products of ring homomorphisms (with the same domain; see Def 2.57)
+     are ring homomorphisms.
+  <li> Thm 5.65:   If R<sub>&alpha;</sub> &cong; S<sub>&alpha;</sub>
+  for all &alpha; &isin; J, then
+  &Pi;<sub>[&alpha; &isin; J]</sub> R<sub>&alpha;</sub> &cong;
+  &Pi;<sub>[&alpha; &isin; J]</sub> S<sub>&alpha;</sub>.
+  (2) R &times; S &cong; S &times; R.
+  </ul>
+
+ <li>Interactions with isomorphism invariants and ring constructions
+  <ul>
+  <li> Thm 5.67:  (1) A direct product 
+   &Pi;<sub>[&alpha; &isin; J]</sub> R<sub>&alpha;</sub> of rings 
+   R<sub>&alpha;</sub> is a ring
+   with 1 if and only if R<sub>&alpha;</sub> is a ring with 1
+   for all &alpha; &isin; J.
+   (2) A direct product 
+   &Pi;<sub>[&alpha; &isin; J]</sub> R<sub>&alpha;</sub> of rings 
+   R<sub>&alpha;</sub> is commutative if and only if 
+   R<sub>&alpha;</sub> is commutative
+   for all &alpha; &isin; J.
+  <li> Thm 5.68:  Every direct product of two or more nonzero rings contains
+  zero divisors.
+<!--  </ul>
+ <li> Interactions with ring constructions
+ <ul>  -->
+ <li> Thm 5.69:  If S<sub>&alpha;</sub> is a subring of R<sub>&alpha;</sub>
+  for all &alpha; &isin; J, then
+&Pi;<sub>[&alpha; &isin; J]</sub> S<sub>&alpha;</sub>
+is a subring of
+&Pi;<sub>[&alpha; &isin; J]</sub> R<sub>&alpha;</sub>.
+  <li> Examples
+
+   </ul>
+
+  </ul> 
+
+<p>
+  
+<li><i>Section E: Ring and homomorphism constructions: Quotient rings </i> 
+
+<p>
+
+ <ul>  
+ <li> Definition and examples
+  <ul> 
+ <li> Def 5.74:  An equivalence relation ~ on a ring R is <b>compatible
+ with addition and multiplication</b> if whenever r,s,t &isin; R and r ~ s then 
+ r+t ~ s+t, rt ~ st, and tr ~ ts.
+ <li> Rmk 5.75:  Let R be a ring and let ~ be an equivalence relation on R
+ that is compatible with addition and multiplication.  The 
+ set R/~ of equivalence classes, with addition [r]+[s] = [r+s] and 
+ multiplication [r][s] = [rs], is a ring if and only if ~ is 
+ compatible with addition and multiplication.
+ <li> Def 5.76:  An <b>ideal</b> (or <b>2-sided ideal</b>) of a ring R is
+ an additive subgroup I of R satisfying the property that rI &sube; I
+ and Ir &sube; I for all r &isin; R.
+ <li> Lemma 5.77:  A subset I of a ring R is an ideal of R if and only if
+ I is nonempty, closed under subtraction, and closed under multiplication
+ (on either side) by elements of R.  
+ 
+ <li> Prop 5.78:  Let I be a subring of a ring R.  The following are
+   equivalent:  (1) I is an ideal of R.  (2) The equivalence relation ~<sub>I</sub>
+   induced by the left action of the additive group I on the additive group R 
+   is compatible with addition and multiplication.
+   (3) The quotient group R/I (under addition) is a ring with multiplication 
+   (r+I)(s+I) = rs+I.
+ <li> Def 5.80:  Let I be an ideal of a ring R.  The <b>quotient ring</b>
+ is the set R/I of left cosets of the 
+ additive group I on the additive group R, with the operations
+  (r+I) + (s+I) = (r+s)+I and (r+I)(s+I) = rs+I for all r+I,s+I &isin; R/I.
+  <!--The function q: R &rarr; R/I defined by q(r) = r+I for all r &isin; R is
+  the <b>quotient map</b>.-->
+  <li> Cor 5.81:  Let I be an ideal of a ring R.  The quotient ring R/I is a ring.
+    <!--and the quotient map q: R &rarr; R/I is a ring homomorphism. --> 
+ <li> Examples
+   <ul> 
+   <li> For any ring R, {0},R are  ideals of R, and R/{0} &cong; R
+   and R/R &cong; 0.
+   <li> For any ring R with 1 and ideal I, 1 &isin; I if and only if I = R.
+   <li> 2<b>Z</b> is an ideal of <b>Z</b> and <b>Z</b>/2<b>Z</b> = <b>Z</b>/2<b>Z</b>.
+   <li> For any commutative ring R with 1, 
+   the subset xR[x] of R[x] is an ideal and R[x]/xR[x] &cong; R.
+   </ul>
+ </ul>
+ <li> Interactions with homomorphisms 
+ <ul>  
+  <li> Thm 5.84:  Let I be an ideal of a ring R.  The <b>quotient</b> map q:R &rarr; R/I
+  defined by q(r) = r+I is a ring homomorphism with kernel Ker(q) = I.
+  <li> Cor 5.85:  A subring I of a ring R is an ideal in R if and only if
+    I is the kernel of a ring homomorphism with domain R.
+  <li> Prop 5.88: (<b>Homomorphism Building Theorem (HBT) for Quotient Rings</b>): 
+  Let I be an ideal of a ring R 
+  and let f: R &rarr; S be a ring homomorphism satisfying
+  the property that 
+  <!--whenever g,g' &isin; G and gN = g'N then f(g) = f(g'). -->
+  I &sube; Ker(f).  
+    <!-- Let q: G &rarr; G/N be the quotient map.-->
+  Then:
+  <br>
+  (1)  There is a well-defined homomorphism &phi;:R/I &rarr; S
+  defined by &phi;(r+I) = f(r) for all r+I in R/I.
+  <br>
+  (2)  If f is onto, then &phi; is onto.
+  <br>
+  (3)  If f also satisfies the property that
+  <!--whenever g,g' &isin; G and f(g) = f(g') then gN = g'N,-->
+  Ker(f) &sube; I,
+  then &phi; is one-to-one. 
+    
+    
+   <!--  <li> Lemma 3.19:  Let f: G &rarr; H be a homomorphism.  Define an
+    equivalence relation on G by g ~ h if and only if f(g) = f(h).
+    Then: (1) The equivalence class of g &isin; G satisfies
+    [g] = gKer(f) = f<sup>-1</sup>({f(g)}).  [The latter set is
+    called the <b>fiber</b>  of f(g).]  
+    (2) ~ = ~<sub>Ker(f)</sub> is compatible with multiplication. -->
+   <li> Cor 5.89:  (<b>First Isomorphism Theorem for Rings(1ITR)</b>): If f: R &rarr; S is
+   a ring homomorphism, then Ker(f) is an ideal of R, f(R) is a subring of S, and
+   R/Ker(f) &cong; f(R).
+   <li> Cor 5.90:  If f:R &rarr; S is a ring homomorphism, then f is injective
+   if and only if Ker(f) = {0}.
+   <li> Examples
+    <ul>
+    <li> Lemma 5.92: For any commutative ring R with 1, 
+    the kernel of the ring homomorphism f: R[x] &rarr; R,
+    defined by f(p) = p(0) for all p &isin; R[x], is the ideal xR[x].
+    <li> Lemma 5.93: For any ideal I of a commutative ring R with 1,
+    I[x] is an ideal of R[x] and R[x]/I[x] &cong; (R/I)[x].
+    <li> Lemma 5.94: For any ideal I of a ring R, M<sub>n</sub>(I) is an ideal of
+    M<sub>n</sub>(R), and M<sub>n</sub>(R)/M<sub>n</sub>(I) &cong; M<sub>n</sub>(R/I).
+    <li> For any commutative ring with 1 &ne; 0 and any group G with normal subgroup N,
+    the group ring RN is an ideal of RG if and only if N = G.
+    <li> <b>R</b>[x]/((x<sup>2</sup> - 1)(<b>R</b>[x])) &cong; <b>C</b>.
+    </ul>
+  </ul>
+  <li>Interactions with isomorphism invariants 
+  <ul>
+  <li> Thm 5.97:  (1) Every quotient of a ring with 1 is a ring with 1.
+  <br>(2) Every quotient of a commutative ring is a commutative ring.
+  <li> Rmk 5.98: There is an example of a quotient of a field that is
+  not an integral domain.
+  </ul>
+  <li>Interactions with ring constructions
+  <ul>
+   <li> Prop 5.100:  Let R be a ring.  
+   <!--<br>(1)--> Let I,J be ideals of R.
+   Then I+J, I &cap; J, and 
+   <b>IJ</b> = {&sum;<sub>k=1</sub><sup>n</sup> i<sub>k</sub>j<sub>k</sub> |
+   n &ge; 0 and each i<sub>k</sub> &isin; I and j<sub>k</sub> &isin; J}
+   are ideals of R.
+   <!--<br>(2) Let I<sub>&alpha;</sub> be an ideal of R for every &alpha; &isin; J
+   (where J is a nonempty index set).  
+   Then &cap;<sub>[&alpha; &isin; J]</sub> I<sub>&alpha;</sub> is an ideal of R.-->
+  <li> Thm 5.101: (<b>Second Isomorphism Theorem for Rings (2ITR)</b>):
+    Let S be a subring and let I be an ideal of R.  Then S + I = {s + i | s &isin; S,
+     i &isin; I} is a subring of R, S &cap; I is an ideal of S, and
+     (S+I)/I &cong; S/(S &cap; I).
+  <li> Thm 5.102: (<b>Third Isomorphism Theorem for rings (3ITR)</b>):
+   Let I and J be ideals of a ring R with I &sube; J.  Then J/I is an ideal of R/I
+   and (R/I)/(J/I) &cong; R/J. 
+  <li> Prop 5.104:  Homomorphic images (sort of) and preimages of ideals are ideals.  
+   That is:
+   Let R and S be rings and let f: R &rarr; S be a ring homomorphism.  
+  <br>(1) If I is an ideal of R then f(I) is an ideal of f(R). 
+  <br>(2) If J is an ideal of S then f<sup>-1</sup>(J) is an ideal of R.
+
+  <li> Thm 5.105: (<b>Lattice Isomorphism Theorem for Rings (LITR)</b>):
+    Let I be an ideal of a ring R, and let q: R &rarr; R/I be
+    the quotient map.
+    Then the function &Psi; : {subrings of R containing I} &rarr; {subrings of R/I}
+    defined by &Psi;(S) = q(S) = S + I  is a bijection 
+    with inverse defined by &Psi;<sup>-1</sup>(T) = q<sup>-1</sup>(T)
+    for each subring T of R/I.  Moreover, for a subring S of R containing I,
+    S is an ideal of R if and only if S/I is an ideal of R/I
+    (that is,    &Psi; and &Psi;<sup>-1</sup> preserve ideals).  
+
+  </ul>
+
+ </ul> 
+
+<p>
+  
+<li><i>Section F: Presenting rings, and ring homomorphism building theorems </i> 
+
+<p>
+
+ <ul> 
+
+  
+  <li>  Prop 5.108:  (<b>Homomorphism Building Theorem (HBT)
+  for Z and Z/nZ</b>):  Let S be a ring with 1.
+  (a) If R = <b>Z</b>, then for 
+  there is a unique ring homomorphism f: R &rarr; S
+  such that f(1<sub>R</sub>) = 1<sub>S</sub>.  
+  (b)  If R = <b>Z</b>/n<b>Z</b>
+  and n &sdot; 1<sub>S</sub> = 0, then
+   there is
+  a unique ring homomorphism f: R &rarr; S
+  such that f(1<sub>R</sub>) = 1<sub>S</sub>.
+  <li> Rmk:  The "free", or largest, ring with 1 &ne; 0 that can be
+  "generated" by a single element x is <b>Z</b>[x].
+  <li> Prop 5.109: (<b>Homomorphism Building Theorem (HBT)
+  for Polynomial Rings</b>):
+  Let R and S be commutative rings, let h:R &rarr; S be a ring
+  homomorphism, and let j: {x<sub>1</sub>,...,x<sub>n</sub>}
+  &rarr; S be a function.  Then:
+  <br>(1) There is a unique
+  ring homomorphism
+  f: R[x<sub>1</sub>,...,x<sub>n</sub>] &rarr; S
+  such that f|<sub>R</sub> = h and 
+  f(x<sub>i</sub>) = j(x<sub>i</sub>) for all i (namely
+  f(&sum;<sub>[e<sub>1</sub>,...,e<sub>n</sub> &ge; 0]</sub>
+  r<sub>e<sub>1</sub>,...,e<sub>n</sub></sub>
+  x<sub>1</sub><sup>e<sub>1</sub></sup> ...
+  x<sub>n</sub><sup>e<sub>n</sub></sup>) = 
+  &sum;<sub>[e<sub>1</sub>,...,e<sub>n</sub> &ge; 0]</sub>
+  h(r<sub>e<sub>1</sub>,...,e<sub>n</sub></sub>)
+  (j(x<sub>1</sub>))<sup>e<sub>1</sub></sup> ...
+  (j(x<sub>n</sub>))<sup>e<sub>n</sub></sup>).
+  <br>(2) There is a unique
+  ring homomorphism
+  f: R&lang;x<sub>1</sub>,...,x<sub>n</sub>&rang; &rarr; S
+  such that f|<sub>R</sub> = h and 
+  f(x<sub>i</sub>) = j(x<sub>i</sub>) for all i.
+  <li> Cor 5.110:  If R and S are commutative rings and
+  h:R &rarr; S is a ring homomorphism, then there is a 
+  unique ring homomorphism
+  f: R[x<sub>1</sub>,...,x<sub>n</sub>] &rarr; 
+  S[x<sub>1</sub>,...,x<sub>n</sub>] such that
+  f|<sub>R</sub><sup>S</sup> = h and f(x<sub>i</sub>) =
+  h(x<sub>i</sub>) for all i (namely
+  f(&sum;<sub>[e<sub>1</sub>,...,e<sub>n</sub> &ge; 0]</sub>
+  r<sub>e<sub>1</sub>,...,e<sub>n</sub></sub>
+  x<sub>1</sub><sup>e<sub>1</sub></sup> ...
+  x<sub>n</sub><sup>e<sub>n</sub></sup>) = 
+  &sum;<sub>[e<sub>1</sub>,...,e<sub>n</sub> &ge; 0]</sub>
+  h(r<sub>e<sub>1</sub>,...,e<sub>n</sub></sub>)
+  x<sub>1</sub><sup>e<sub>1</sub></sup> ...
+  x<sub>n</sub><sup>e<sub>n</sub></sup>).
+
+  <li> Def 5.113:  Let R be a ring 
+  and let A &sube; R.
+  <br> (1) The <b>subring of R generated by A</b> 
+  is the set of all sums and differences
+   of products of elements of A;
+  that is, {(&sum;<sub>i=1</sub><sup>m</sup> 
+   a<sub>i1</sub>...a<sub>in<sub>i</sub></sub>) 
+   - (&sum;<sub>i=1</sub><sup>m'</sup> 
+   a<sub>i1</sub>'...a<sub>in<sub>i</sub>'</sub>')|  
+   m,m' &ge; 0, each n<sub>i</sub>,n<sub>i</sub>' &ge; 1, 
+   and each a<sub>ij</sub>,a<sub>ij</sub>' &isin; A}.
+   <br> (2) The <b>ideal of R generated by A</b>, denoted <b>(A)</b>, 
+   is the set of all sums and differences of elements
+   of A and elements of A multiplied on the left and/or right by elements of R.
+   If A = {a}, then
+  (A) is denoted <b>(a)</b>.
+  <li> Prop 5.114:  Let R be a ring 
+  and let A &sube; R.  Then:  
+  <br> (0) If R is a ring with 1 &ne; 0, then
+  (A) = {&sum;<sub>i=1</sub><sup>m</sup> 
+   r<sub>i</sub>a<sub>i</sub>s<sub>i</sub> |  
+   m &ge; 0, each a<sub>i</sub> &isin; A, and each
+   r<sub>i</sub>,s<sub>i</sub> &isin; R}.
+  <br> (1) (A) is an ideal.  
+  <br> (2) (A) is the smallest ideal of R containing A.
+  <br> (3) (A) = 
+  &cap;<sub>[A &sube; I and I is an ideal of R]</sub> I; that is,
+  (A) is the intersection of all ideals of R containing A.
+   <li> Prop 5.115:  Let R be a ring 
+  and let A &sube; R. If S is the subring of R generated by A, then
+  S is the smallest subring of R containing A, and S is the
+   intersection of all subrings of R containing A. 
+  <li> Def 5.116: Let I be an ideal of a ring R.  The ideal I is <b>principal</b> if
+  I = (a) for some a &isin; R, and I is <b>finitely generated</b>
+  if I = (A) for some finite subset A of R.
+  
+  <li> Examples
+   <ul>
+   <li> Prop 5.118: For any ring R with 1, the subring of R generated
+     by 1 is (ring) isomorphic to either <b>Z</b> or 
+     <b>Z</b>/n<b>Z</b> for some n. 
+   <li> Def 5.119:  Let R be a ring with 1. If the subring of R generated by 1
+     is isomorphic to <b>Z</b>/n<b>Z</b>, then n is called the
+     <b>characteristic</b> of R; if the subring generated by 1 is isomorphic to 
+     <b>Z</b> then the <b>characteristic</b> of R is 0.
+   <li> Lemma 5.120:  The characteristic of a ring with 1 is
+    an isomorphism invariant.
+   <li> For any ring R with 1, (1) = R.
+   <li>  <b>Z</b>[x] is generated as a ring by {1,x}.  
+   <b>Z</b>[x] is generated
+   as a group under addition by {x<sup>n</sup> | n &ge; 0} but not by {1,x}.
+   <li>  Let J be the ideal of R = <b>Z</b>[x] 
+   defined by J = (2,x<sup>2</sup>+x+1) and let
+   I be the ideal of S = <b>Z</b>/2<b>Z</b>[x] defined by
+   I = (x<sup>2</sup>+x+1).  Then
+    R/J &cong; S/I is a field, and the only ideals of R 
+    containing J are J and R.
+   <li> Prop 5.121: A commutative ring R with 1 &ne; 0
+  is a field if and only if
+   the only ideals of R are 0 and R.
+   <li> 2<b>Z</b> &#8775; 3<b>Z</b>.
+   </ul>
+   
+  <li> Thm 5.123:  (<b>Homomorphism Building Theorem (HBT)
+  for Quotients of Polynomial Rings</b>):
+  Let R be a commutative ring with 1 &ne; 0, let S be a
+   commutative ring, 
+  let h:R &rarr; S be a ring
+  homomorphism, let A &sube; R[x<sub>1</sub>,...,x<sub>n</sub>], 
+  and let j: {x<sub>1</sub>,...,x<sub>n</sub>}
+  &rarr; S be a function satisfying the property that
+  whenever  
+  &sum;<sub>i=1</sub><sup>m</sup>
+  r<sub>i</sub>
+  x<sub>1</sub><sup>e<sub>i,1</sub></sup> ...
+  x<sub>n</sub><sup>e<sub>i,n</sub></sup> &isin; A
+  (with m &ge; 1 and each r<sub>i</sub> &isin; R
+  and e<sub>i,j</sub> &ge; 0)
+  then
+  &sum;<sub>i=1</sub><sup>m</sup>
+  h(r<sub>i</sub>)
+  (j(x<sub>1</sub>))<sup>e<sub>i,1</sub></sup> ...
+  (j(x<sub>n</sub>))<sup>e<sub>i,n</sub></sup> = 0.
+   Then there is a unique
+  ring homomorphism
+  f: R[x<sub>1</sub>,...,x<sub>n</sub>] / (A) &rarr; S
+  such that f(r+(A)) = h(r) for all r &isin; R and 
+  f(x<sub>i</sub>+(A)) = j(x<sub>i</sub>) for all i.
+  <li> More examples
+  <li> Thm 5.124:  (<b>Homomorphism Building Theorem (HBT)
+  for Group Rings</b>):
+  Let R be a commutative ring with 1 &ne; 0, let G and H be groups with
+  identity elements e<sub>G</sub> and e<sub>H</sub> respectively,
+  and let h: G &rarr; H be a group homomorphism.  Then there is
+  a unique ring homomorphism f: RG &rarr; RH satisfying
+  f(g) = h(g) for all g &isin; G and f(re<sub>G</sub>) = re<sub>H</sub>
+  for all r &isin; R.
+  
+ </ul> 
+
+<p>
+  
+<!--
+<li><i>Section G: Further interactions with quotients and
+products </i> 
+
+<p>
+
+ <ul> 
+ <li> Interactions between quotients and isomorphism invariants, II
+  <ul>
+  <li> Ideal theory
+  <li> Building fields
+  </ul>
+ <li> The Chinese Remainder Theorem
+  <ul>
+  <li>
+  </ul>
+-->
+
+
+
+
+  </ul>
+ 
+ </ul>
+</ul>
+
+<font size=-1><i>S. Hermiller
+</i></font>
+<p>
+</BODY>
+</HTML>
+
+
+
